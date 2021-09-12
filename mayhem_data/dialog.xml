@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<dialogs>
+  <window flags="#PB_Window_SystemMenu | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget | #PB_Window_SizeGadget | #PB_Window_ScreenCentered" minwidth="830" text="Mayhem Galaxy Generator" minheight="786" name="window_1">
+    <vbox spacing="8" expand="item:5">
+      <hbox expand="item:2">
+        <text text="X3 Root Folder:" width="105" name="text_1"/>
+        <string flags="#PB_String_ReadOnly" name="string_1"/>
+        <button text="Change" name="button_1" onevent="Control::ChangeRoot()"/>
+        <button text="Default" name="button_9" onevent="Control::ChangeRootDefault()"/>
+        <button text="Open" name="button_12" onevent="Control::OpenRoot()"/>
+      </hbox>
+      <hbox expand="item:2">
+        <text text="X3 Savegame Folder:" width="105" name="text_2"/>
+        <string flags="#PB_String_ReadOnly" name="string_2"/>
+        <button text="Change" name="button_2" onevent="Control::ChangeSave()"/>
+        <button text="Default" name="button_10" onevent="Control::ChangeSaveDefault()"/>
+        <button text="Open" name="button_13" onevent="Control::OpenSave()"/>
+        <button text="Backup" disabled="yes" name="button_14" onevent="Control::ManualBackup()"/>
+        <button text="Restore" disabled="yes" name="button_15" onevent="Control::ManualRestore()"/>
+      </hbox>
+      <frame text="Options" name="frame_5">
+        <hbox expand="item:5">
+          <checkbox text="Do not handle my savegames" name="checkbox_17" onevent="Control::CheckHandleSave()"/>
+          <checkbox text="Show galaxy preview" name="checkbox_22" onevent="Control::CheckGalaxyPreview()"/>
+          <checkbox text="Skip intro" name="checkbox_14" onevent="Control::CheckNoIntro()"/>
+          <checkbox text="No splash screen" name="checkbox_15" onevent="Control::CheckNoSplash()"/>
+          <checkbox text="Keep this open" name="checkbox_16" onevent="Control::CheckKeepOpen()"/>
+          <hyperlink text="Donation" flags="#PB_Hyperlink_Underline" name="hyperlink_1" onevent="Control::Donate()"/>
+        </hbox>
+      </frame>
+      <hbox expand="equal">
+        <text text="Generated Galaxies:" name="text_3"/>
+        <text text="New Galaxy:" name="text_13"/>
+      </hbox>
+      <hbox expand="equal">
+        <vbox spacing="10">
+          <listview name="listview_1" onleftclick="Control::SelectWorld()"/>
+          <canvas flags="#PB_Canvas_Border" name="canvas_1"/>
+        </vbox>
+        <vbox align="" expand="no">
+          <hbox expand="item:2">
+            <text text="Name:" width="50" name="text_4"/>
+            <string name="string_3"/>
+            <button text="Random" name="button_11" onevent="Control::RandomName()"/>
+          </hbox>
+          <hbox expand="item:2">
+            <text text="Size:" width="50" name="text_5"/>
+            <trackbar min="8" max="16" value="12" flags="#PB_TrackBar_Ticks" text="Width" width="100" height="24" name="trackbar_1"/>
+          </hbox>
+          <hbox expand="item:2">
+            <text text="Fog:" width="50" name="text_6"/>
+            <trackbar min="0" max="4" value="0" text="Height" width="100" height="24" flags="#PB_TrackBar_Ticks" name="trackbar_2"/>
+          </hbox>
+          <hbox>
+            <checkbox text="Use the alternate soundtrack file" name="checkbox_13"/>
+            <checkbox text="Use space particles" name="checkbox_23"/>
+          </hbox>
+          <frame text="History" name="frame_1">
+            <vbox>
+              <frame text="Galaxy expansion: (unknown sectors, AI starting factories)" name="frame_6">
+                <vbox>
+                  <hbox>
+                    <option text="None" name="option_16" onevent="Control::OptionAge()"/>
+                    <option text="Early" name="option_1" onevent="Control::OptionAge()"/>
+                    <option text="Average" name="option_2" onevent="Control::OptionAge()"/>
+                    <option text="Advanced" name="option_3" onevent="Control::OptionAge()"/>
+                  </hbox>
+                </vbox>
+              </frame>
+              <frame text="Dominant race: (more starting sectors)" name="frame_7">
+                <vbox>
+                  <hbox>
+                    <option text="None" name="option_14" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Empire" name="option_4" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="New Republic" name="option_5" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Rebel Alliance" name="option_7" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Separatist CIS" name="option_6" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Republic" name="option_8" onevent="Control::CheckDominanceMinority()"/>
+                  </hbox>
+                </vbox>
+              </frame>
+              <frame text="Minority race: (less starting sectors)" name="frame_8">
+                <vbox>
+                  <hbox>
+                    <option text="None" name="option_15" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Empire" name="option_9" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="New Republic" name="option_10" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Rebel Alliance" name="option_12" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Separatist CIS" name="option_11" onevent="Control::CheckDominanceMinority()"/>
+                    <option text="Republic" name="option_13" onevent="Control::CheckDominanceMinority()"/>
+                  </hbox>
+                </vbox>
+              </frame>
+              <frame text="Relations" name="frame_4">
+                <vbox>
+                  <listicon height="126" flags="#PB_ListIcon_CheckBoxes | #PB_ListIcon_GridLines" name="listicon_1" onleftclick="Control::CheckRaceRelations()"/>
+                </vbox>
+              </frame>
+            </vbox>
+          </frame>
+          <frame text="Traits" name="frame_2">
+            <vbox>
+              <hbox expand="equal">
+                <vbox>
+                  <checkbox text="Shattered galaxy" name="checkbox_18" onevent="Control::CheckScatteredHollowed()"/>
+                  <checkbox text="Extra sector stats" name="checkbox_19"/>
+                  <checkbox text="Clustered Xenons" name="checkbox_20"/>
+                </vbox>
+                <vbox>
+                  <checkbox text="Hollowed galaxy" name="checkbox_10" onevent="Control::CheckScatteredHollowed()"/>
+                  <checkbox text="Random distribution" name="checkbox_2"/>
+                  <checkbox text="Limited enclaves" name="checkbox_4"/>
+                </vbox>
+              </hbox>
+            </vbox>
+          </frame>
+        </vbox>
+      </hbox>
+      <hbox expand="equal">
+        <vbox>
+          <button text="Delete" disabled="yes" name="button_3" onevent="Control::Delete()"/>
+          <button text="Run" disabled="yes" name="button_4" onevent="Control::Run()"/>
+        </vbox>
+        <vbox>
+          <button text="Generate" name="button_6" onevent="Control::Generate()"/>
+          <button text="Randomize" name="button_8" onevent="Control::RandomizeAll()"/>
+        </vbox>
+      </hbox>
+    </vbox>
+  </window>
+</dialogs><!--DDesign0R Definition: PureBasic|0|0|0-->
