@@ -6,17 +6,16 @@ To download, click Code -> Download ZIP.
 * The Rebel Alliance and the Empire will build more ships from the New Republic and the Remnant, respectively, as their territory expands
 
 ## Factions:
-* Argon - Empire / Remnant (terran)
-* Boron - Rebellion / New Republic (terran)
+* Argon - Empire / Remnant
+* Boron - New Republic
 * Goner - N/A
-* Kha'ak - Old Republic
-* OCV - OCV
+* Kha'ak - Sith
+* OCV - Sith
 * Paranid - CIS
-* Split - Mandalorians
-* Teladi - Republic / Jedi combined
-* Terran - Remnant / New Republic
-* Xenon - Sith Empire
-* Yaki - Pirates
+* Split - Rebellion
+* Teladi - Republic / Old Republic / Jedi
+* Xenon - Sith
+* Yaki - Mandalorian / Pirates
 
 ## Installation:
 1. Download and install Litcube's Universe
