@@ -3,6 +3,7 @@ https://github.com/temetvince/swm3/projects/1
 
 2021/09/15 - temetvince
 - Fixed M1/M2 models not appearing in game
+- Fixed wrong faction name being used for ships/jobs
 - Added animated main menu
 - All docks now use Star Wars models
 - Faction ranks are now Star Wars based
