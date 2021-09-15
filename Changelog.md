@@ -1,6 +1,11 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/09/15 - temetvince
+- Fixed M1/M2 models not appearing in game
+- Added animated main menu
+- All docks now use Star Wars models
+
 2021/09/13 - Hector
 - Galaxy Generator SW flavor (mayhem_data/dialog.xml and localization.xml)
 - laser compendium races (Mayhem.GetLaser.Race)
