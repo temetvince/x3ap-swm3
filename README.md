@@ -31,7 +31,7 @@ To download, click Code -> Download ZIP.
 * https://www.moddb.com/mods/mayhem/downloads/mayhem-3-ambient-soundtrack
 
 5. Download and install the Star Wars Data Pack
-* https://drive.google.com/file/d/1XUHqdy3MsNVAInUd_Ia8O6p0E1V7AaGf/view?usp=sharing
+* https://drive.google.com/file/d/1kPFsLyper2JoQg6mwqrXbVOl7V8gPiNZ/view?usp=sharing
 
 6. Optional: Download and install the Backgrounds Pack
 * https://forum.egosoft.com/viewtopic.php?p=4997068#p4997068
