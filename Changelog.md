@@ -5,6 +5,7 @@ https://github.com/temetvince/swm3/projects/1
 - Fixed M1/M2 models not appearing in game
 - Added animated main menu
 - All docks now use Star Wars models
+- Faction ranks are now Star Wars based
 
 2021/09/13 - Hector
 - Galaxy Generator SW flavor (mayhem_data/dialog.xml and localization.xml)
