@@ -1,6 +1,22 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/09/24 - Hector
+- NPC outpost production booster (for new stations and existing stations when new galaxy progress triggers)
+
+2021/09/22 - Hector
+- Rebels jump between outposts, t-file optional
+
+2021/09/19 - Hector
+- starter SW ships
+- any text changes now in the new t-file
+- bugfix laser races
+- smaller M6 merc groups
+- removed remaining Xenon ship types
+- removed NPC terran ship construction
+- removed all timers from empire size factor + Yaki plot trigger
+- removed racename vocals by limiting duration of the sound to 1 ms in the index file (mov/00044.xml)
+
 2021/09/15 - temetvince
 - Fixed M1/M2 models not appearing in game
 - Fixed wrong faction name being used for ships/jobs

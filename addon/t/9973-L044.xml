@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language id="44">
+	<page id="9973" title="SWM3 customization">
+		<t id="1">1</t> <!-- Activate Era system (0 to disable and prevent NPC squadrons from changing at certain plot stages) -->
+		<t id="2">1</t> <!-- Rebels use their outposts like jump beacons (on by default, 0 to disable) -->
+		<t id="3">1</t> <!-- Faction and plot stage dependent NPC production boosters. Examples: Republic midgame has powerful Clone Wars militarization. Rebel Alliance always builds more cost efficient due to secret support. New Republic very lategame boom, etc. (on by default, 0 to disable) -->
+	</page>
+
+	<page id="1263" title="Shipclass IDs">
+		<t id="19101">I</t> 
+		<t id="19102">N</t>
+		<t id="19103">A</t>
+		<t id="19104">C</t>
+		<t id="19105">R</t>
+		<t id="19106">S</t>
+		<t id="19108">H</t>
+		<t id="19110">M</t>
+	</page>
+
+	<page id="1266" title="Racenames">
+		<t id="3">Rebel Alliance</t> 
+		<t id="6">Sith</t> 
+		<t id="7">Sith Scouts</t> 
+		<t id="8">Pirates</t> 
+		<t id="16">Sith OCV</t> 
+	</page>
+
+	<page id="17" title="Boardcomp. objects">
+		<t id="15351">Imperial Outpost</t> 
+		<t id="15353">New Republic Outpost</t> 
+		<t id="15355">Separatist Outpost</t> 
+		<t id="15357">Alliance Outpost</t> 
+		<t id="15359">Republic Outpost</t> 
+		<t id="15361">Mandalorian Outpost</t> 
+	</page>
+</language>

@@ -222,7 +222,7 @@
 			<text>sector</text>
 		</line>
 		<line linenr="017" indent="&#160;&#160;">
-			<comment>* First spawn an M3 temporary leader.</comment>
+			<comment>* First spawn an M5 temporary leader.</comment>
 		</line>
 		<line linenr="018" indent="&#160;&#160;" interruptable="@">
 			<var>$shipType</var>
@@ -246,7 +246,7 @@
 			<text> </text>
 			<text>class</text>
 			<text>=</text>
-			<var>[M3]</var>
+			<var>[M5]</var>
 			<text> </text>
 			<text>miner</text>
 			<text>=</text>
@@ -1416,7 +1416,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="12" />
-					<sval type="int" val="2023" />
+					<sval type="int" val="2025" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="9" />
 					<sval type="int" val="131075" />
@@ -2032,7 +2032,7 @@
 				<sval type="array" size="3">
 					<sval type="int" val="15" />
 					<sval type="int" val="1" />
-					<sval type="string" val="First spawn an M3 temporary leader." />
+					<sval type="string" val="First spawn an M5 temporary leader." />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="24" />
