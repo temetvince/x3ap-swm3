@@ -1,0 +1,58 @@
+{
+  "argon"  : [
+      {
+        "m3": "SS_SH_TR_M3_TIE_B",
+        "ts": "SS_SH_TR_TS_SENTINEL",
+		"m4": "SS_SH_TR_M4_TIE_I",
+		"m6": "SS_SH_TR_M6_TARTAN"
+      }
+    ],
+  "boron"  : [
+      {
+        "m3": "SS_SH_B_M3_TWINTAIL",
+        "ts": "SS_SH_B_TS_YT2000_NEW",
+		"m4": "SS_SH_B_M4_EWING",
+		"m6": "SS_SH_B_M6_DP20_ADV"
+      }
+    ],
+  "paranid": [
+      {
+        "m3": "SS_SH_P_M3_SITH_SCIMITAR",
+        "ts": "SS_SH_P_TS_ACTIONVI",
+		"m4": "SS_SH_P_M4_TRI",
+		"m6": "SS_SH_P_M6_LONGHORN"
+      }
+    ],
+  "split"  : [
+      {
+        "m3": "SS_SH_A_M3_YWING",
+        "ts": "SS_SH_A_TS_GR75",
+		"m4": "SS_SH_A_M4_XWINGRED",
+		"m6": "SS_SH_A_M6_CR90"
+      }
+    ],
+  "teladi" : [
+      {
+        "m3": "SS_SH_Y_M3_RAVEN_V",
+        "ts": "SS_SH_Y_TS_ORSHUTTLE",
+		"m4": "SS_SH_Y_M4_AUREK",
+		"m6": "SS_SH_Y_M6_BT7"
+      }
+    ],
+  "terran" : [
+      {
+        "m3": "SS_SH_TR_M3_ARROW",
+        "ts": "SS_SH_TR_TS",
+		"m4": "SS_SH_ATF_M4_HEL",
+		"m6": "SS_SH_TR_M6"
+      }
+    ],
+  "yaki"  : [
+      {
+        "m3": "SS_SH_Y_M3",
+        "ts": "SS_SH_T_TS",
+		"m4": "SS_SH_Y_M4",
+		"m6": "SS_SH_Y_M6_SENSHI"
+      }
+    ]  
+}
