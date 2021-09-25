@@ -1,6 +1,14 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/09/25 - temetvince
+- Reduced price of ships:
+    - M5/M4/M3: divided by 4
+    - M6/TM/TL/M8: divided by 5
+    - TS/TP: divided by 8
+    - M7/M1/M2: divided by 6
+- Updated readme to remove install instructions for the rebalance mod
+
 2021/09/24 - Hector
 - NPC outpost production booster (for new stations and existing stations when new galaxy progress triggers)
 
