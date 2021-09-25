@@ -1,6 +1,40 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/09/26 - Hector
+- lasers balanced
+- SW ship WareLists. Also added video goggles like in M3R
+- removed all laser knockback effects
+- Vulture Droid gets better 5 MJ shield
+- removed 1 200MJ shield from TIE-Defender, B-Wing Adv. and TIE-Scimitar Miner (all 3 still op enough)
+- all resource volumes divided by 2 , Ore/Silicon by 8
+- Alliance job names
+- Betty silenced for all job racenames
+
+
+2021/09/25 - Hector#2
+- included M3R lategame unknown sector spam fix
+- allow Empire to wipe Rebels out
+- weak empires cannot claim unknown sectors which are reserved for player
+- Republic era 1 invasion prevention
+- Rebel invasion prevention
+- Rebel deep strike ability
+- plot TL didn't have shields
+
+2021/09/25 - Hector
+- added Rebel Cell ability
+- text fixes in conquer and truce scripts
+- added a custom vanilla Mayhem 3 t-file with a few recommended settings
+    - higher invasion protection threshold
+    - slower pirate respawns
+    - NPC fleets retreat slightly earlier to limit their combat losses
+    - unlocking the final plot stage only requires to terraform 3 planets
+    - no higher research costs for random ship types
+    - disabled Mayhem's coalition system
+    - additional waits in the capship turret script
+    - no NPC factions builds only half size squadrons
+    - reduced AI cheat wait time to get equipment for free
+
 2021/09/25 - temetvince
 - Reduced price of ships:
     - M5/M4/M3: divided by 4
