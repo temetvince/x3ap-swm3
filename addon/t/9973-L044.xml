@@ -4,6 +4,14 @@
 		<t id="1">1</t> <!-- Activate Era system (0 to disable and prevent NPC squadrons from changing at certain plot stages) -->
 		<t id="2">1</t> <!-- Rebels use their outposts like jump beacons (on by default, 0 to disable) -->
 		<t id="3">1</t> <!-- Faction and plot stage dependent NPC production boosters. Examples: Republic midgame has powerful Clone Wars militarization. Rebel Alliance always builds more cost efficient due to secret support. New Republic very lategame boom, etc. (on by default, 0 to disable) -->
+		<t id="4">1</t> <!-- Rebel Cell ability - random NPC sectors frequently join (on by default, 0 to disable) -->
+		<t id="5">16</t> <!-- amount of rebel sectors up to which Rebel Cell ability is active (default 16) -->
+		<t id="6">64800</t> <!-- Minimum time between two Rebel Cell ability activations, in seconds (default 18h: 64800) -->
+		<t id="7">108000</t> <!-- Maximum time between two Rebel Cell ability activations, in seconds (default 30h: 108000) -->
+		<t id="8">1</t> <!-- Empire is allowed to annihilate the Rebels. They won't actually be successful if you play with Rebel Cells activated (on by default, 0 to disable) -->
+		<t id="9">8</t> <!-- AI will not invade rebel faction that owns less than or equal to this number of sectors. (default: 8) -->
+		<t id="10">12</t> <!-- before Mandalorian Uprising event happens AI will not invade republic faction that owns less than or equal to this number of sectors. (default: 12) -->
+		<t id="11">1</t> <!-- Rebels do deep strike invasions like Mandalorians (on by default, 0 to disable) -->
 	</page>
 
 	<page id="1263" title="Shipclass IDs">
@@ -25,7 +33,7 @@
 		<t id="16">Sith OCV</t> 
 	</page>
 
-	<page id="17" title="Boardcomp. objects">
+	<page id="17" title="Boardcomp. objects" voice="yes">
 		<t id="15351">Imperial Outpost</t> 
 		<t id="15353">New Republic Outpost</t> 
 		<t id="15355">Separatist Outpost</t> 
@@ -33,4 +41,12 @@
 		<t id="15359">Republic Outpost</t> 
 		<t id="15361">Mandalorian Outpost</t> 
 	</page>
+
+<page id="1000" title="Job names" descr="Unique shipnames and jobnames" voice="yes">
+		<t id="103">Alliance</t> 
+	</page>
+
+
+
+
 </language>

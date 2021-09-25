@@ -337,13 +337,13 @@
 			<text> </text>
 			<text>install</text>
 			<text> </text>
-			<var>2</var>
+			<var>6</var>
 			<text> </text>
 			<text>units</text>
 			<text> </text>
 			<text>of</text>
 			<text> </text>
-			<var>{750MJ Shield}</var>
+			<var>{200MJ Shield}</var>
 		</line>
 		<line linenr="030" indent="&#160;">
 			<var>$ship</var>
@@ -523,7 +523,7 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[Old Republic]</var>
+			<var>[Sith Scouts]</var>
 			<text> </text>
 			<text>flags</text>
 			<text>=</text>
@@ -865,9 +865,9 @@
 					<sval type="int" val="5" />
 					<sval type="int" val="-2147483647" />
 					<sval type="int" val="4" />
-					<sval type="int" val="2" />
+					<sval type="int" val="6" />
 					<sval type="int" val="9" />
-					<sval type="int" val="589828" />
+					<sval type="int" val="589827" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1196" />
