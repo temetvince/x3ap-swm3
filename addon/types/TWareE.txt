@@ -1,4 +1,0 @@
-// Created with X3 Editor 2 (2.0.27.0)
-// Plugin T File Editor (1.1.19.0)
-47;1;
-25;158;0;0;0;0;2013;2;4;30;30;2;4;0;0;0;SS_WARE_ENERGY;
