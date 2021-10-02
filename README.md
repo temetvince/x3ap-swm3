@@ -2,10 +2,9 @@
 To download, click Code -> Download ZIP.
 
 
-We need Mayhem veterans to help with balancing
-Just play the game and provide feedback.
+We need Mayhem veterans to help with balancing. Just play the game and provide feedback!
 
-But keep in mind that this is supposed to play quite different from Mayhem 3. So please read the Beta Guidelines below before posting about issues. Many 'imbalances' are actually intended!
+Keep in mind that pacing is supposed to be much different from Mayhem 3. So please read the Beta Guidelines below before posting about issues. Many 'imbalances' between factions are actually intended!
 
 
 ## Features:
@@ -59,18 +58,18 @@ But keep in mind that this is supposed to play quite different from Mayhem 3. So
 9. Rename "addon/RenameToHighest.cat" and "addon/RenameToHighest.dat" to the next highest cat/dat number.
 
 
-## Other Changes:
+## General Changes:
 * most ships have much fewer different weapon choices (bit like in M3R, but often less extreme). This was necessary to stop NPCs from using bad guns
 * there is usually only 1 good loadout per ship and all the crappy rest got removed. Ion weapons are only available to player, pirates, Sith and mercs
 * Laser energy is basically irrelevant (also like in M3R). This helps to balance OOS battles
 * no laser knockback effects. This improves capships a lot during in-sector battles against fighters
 
-## Includes some M3R features:
+### Includes some M3R features:
 * preinstalled video goggles (but for Transporter you need the upcoming SWM3R submod)
 * AI claims unknown sectors unrestricted if the player owns more than 15 sectors
 * toDo: faster repairs + hacking UI helpers
 
-## Custom Mayhem Settings:
+### Custom Mayhem Settings:
 SWM3 also makes changes to Mayhem 3's standart t-file. These options are supposed to prevent certain extreme outcomes during your playthrough. Most of them are recommended for SWM3, but you can also replace the file and use your preferred custom Mayhem 3 settings if you like.
 
 * general invasion protection threshold below which small factions get ignored and no longer invaded by others increased from 3 to 5 sectors (certain SWM3 features have unique exceptions to this rule)
@@ -85,9 +84,8 @@ SWM3 also makes changes to Mayhem 3's standart t-file. These options are suppose
 
 
 
-### Beta Guidelines:
+# Beta Guidelines:
 ## Differences to Mayhem 3:
-
 * factions start very slow and escalate from early to middle to lategame
 * each phase got special rules, different fleet compositions and uses different ship types
 * the 3 phases are separated by 2 milestones that the player must achieve: owning 4 sectors and completion of the terraforming quest or owning 20 sectors
@@ -111,9 +109,8 @@ Everything below is still mostly just theory. With how it's designed it should a
 * 'Strategic Evaluation' describes how the faction should develop and behave in 90% of cases
 
 ## Feedback we are interested in:
-
 * do factions really develop the way they are supposed to?
-* do the phases change properly? Are new ship types getting built? Here you find an overview, when and how new ships unlock + all dynamic fleet compositions
+* do the phases change properly? Are new ship types getting built? Here you find an overview, when and how new ships unlock + all dynamic fleet compositions https://docs.google.com/spreadsheets/d/1NPQHVd0JuL-ihS8eoQotkDhuUva8TzNj-j3q4EZQ2Hs/edit?usp=sharing
 * does any faction have major resource shortages at certain plot stages?
 * serious performance issues with large NPC fleets? (looking at you CIS and Empire)
 * any inappropriate worker ships in use by NPCs? (too slow, too little cargospace, or seemingly too fragile against pirates)
@@ -123,7 +120,7 @@ Everything below is still mostly just theory. With how it's designed it should a
 * are NPC outpost specialization levels properly updated in all outposts? (can be checked with a debug option in your player console) This is how outposts should develop during phase 1/2/3: Empire: 50/60/80 Rebels: 65/70/80 New Republic: 50/60/90 CIS: 50/60/80 Republic: 50/70/80  Mandalorians: -/70/80
 * missing text updates
 
-### The typical SWM3 playthrough:
+# The typical SWM3 playthrough:
 
 ## Galaxy Creation:
 * unfortunately you always need to select Republic as a major faction and Rebels as minor faction
@@ -177,7 +174,7 @@ After the special 'Katana Fleet' event for the New Republic gets implemented in 
 
 
 
-### Faction Dossiers:
+# Faction Dossiers:
 
 ## Galactic Empire:
 
