@@ -1,6 +1,11 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/10/02 -temetvince
+- Merge Hector's changes
+- Incorporate Hector's Backgrounds Mod
+- Modify Readme - new sw datapack
+
 2021/10/02 - Hector
 - ship weapon compatibility
 - main plot flavor texts (should be almost complete now)
