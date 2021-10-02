@@ -113,7 +113,7 @@
 			<text> </text>
 			<text>&lt;</text>
 			<text> </text>
-			<var>12</var>
+			<var>20</var>
 		</line>
 		<line linenr="013" indent="&#160;">
 			<text>return</text>
@@ -253,7 +253,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
 					<sval type="int" val="4" />
-					<sval type="int" val="12" />
+					<sval type="int" val="20" />
 					<sval type="int" val="15" />
 					<sval type="int" val="3" />
 					<sval type="int" val="3" />

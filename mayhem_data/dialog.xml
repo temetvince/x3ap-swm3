@@ -105,7 +105,7 @@
                 <vbox>
                   <checkbox text="Shattered galaxy" name="checkbox_18" onevent="Control::CheckScatteredHollowed()"/>
                   <checkbox text="Extra sector stats" name="checkbox_19"/>
-                  <checkbox text="Clustered Xenons" name="checkbox_20"/>
+                  <checkbox text="Clustered Sith" name="checkbox_20"/>
                 </vbox>
                 <vbox>
                   <checkbox text="Hollowed galaxy" name="checkbox_10" onevent="Control::CheckScatteredHollowed()"/>

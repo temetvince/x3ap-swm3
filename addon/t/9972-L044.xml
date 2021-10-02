@@ -115,10 +115,10 @@
 		<t id="231">0</t> <!-- Player cheat: ignore all docking restrictions. (default: 0) -->
 		<t id="233">20</t> <!-- Production queue limit for each Outpost. (default: 20) -->
 		<t id="234">0</t> <!-- Enable Outpost events lore messages (id 2700 to 2704). (default: 0) -->
-		<t id="235">10</t> <!-- Default import threshold for player. (default: 10) -->
+		<t id="235">20</t> <!-- Default import threshold for player. (default: 10) -->
 		<t id="236">40</t> <!-- Default export threshold for player. (default: 40) -->
-		<t id="237">20</t> <!-- Default import threshold for AI. (default: 20) -->
-		<t id="238">40</t> <!-- Default export threshold for AI. (default: 40) -->
+		<t id="237">40</t> <!-- Default import threshold for AI. (default: 20) -->
+		<t id="238">50</t> <!-- Default export threshold for AI. (default: 40) -->
 		<t id="239">43200</t> <!-- Hive Queen min delay. (default: 43200) -->
 		<t id="240">54000</t> <!-- Hive Queen max delay. (default: 54000) -->
 		<t id="241">3</t> <!-- Number of planets you need to terraform on behalf of Terracorp. (default: 10) -->
