@@ -643,7 +643,7 @@
 			<comment>* Weak empires have less restrictions. (removed by SWM3)</comment>
 		</line>
 		<line linenr="079" indent="&#160;">
-			<comment>*if $nbSectors &gt; 4</comment>
+			<comment>* if $nbSectors &gt; 4</comment>
 		</line>
 		<line linenr="080" indent="&#160;">
 			<comment>* Cannot claim more Unknown Sectors than the Player owns + X depending on $galaxy.age; except if we're in the OCV stage.</comment>
@@ -728,7 +728,7 @@
 			<var>$plSectors</var>
 		</line>
 		<line linenr="086" indent="&#160;&#160;&#160;">
-			<comment>*large player empire removes all restrictions (fix from M3R included in SWM3)</comment>
+			<comment>* large player empire removes all restrictions (fix from M3R included in SWM3)</comment>
 		</line>
 		<line linenr="087" indent="&#160;&#160;&#160;">
 			<text>if</text>
@@ -737,7 +737,7 @@
 			<text> </text>
 			<text>&lt;</text>
 			<text> </text>
-			<var>21</var>
+			<var>16</var>
 		</line>
 		<line linenr="088" indent="&#160;&#160;&#160;&#160;">
 			<text>if</text>
@@ -828,7 +828,7 @@
 			<text>end</text>
 		</line>
 		<line linenr="100" indent="&#160;&#160;">
-			<comment>*end</comment>
+			<comment>* end</comment>
 		</line>
 		<line linenr="101" indent="&#160;&#160;">
 			<comment>* Cannot claim an Unknown sector if there are not much left in the galaxy, except if we're in OCV stage. (3.11: removed)</comment>
@@ -1066,7 +1066,7 @@
 			<var>$nbSectors</var>
 		</line>
 		<line linenr="136" indent="&#160;&#160;">
-			<comment>*Republic has higher annihilationLimit but only before Clone Wars (Mando arrival)</comment>
+			<comment>* Republic has higher annihilationLimit but only before Clone Wars (Mando arrival)</comment>
 		</line>
 		<line linenr="137" indent="&#160;&#160;">
 			<var>$galaxyProgress</var>
@@ -1121,7 +1121,7 @@
 			<text>end</text>
 		</line>
 		<line linenr="141" indent="&#160;&#160;">
-			<comment>*Rebels always have higher annihilationLimit</comment>
+			<comment>* Rebels always have higher annihilationLimit</comment>
 		</line>
 		<line linenr="142" indent="&#160;&#160;">
 			<text>if</text>
@@ -1717,7 +1717,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="16" />
 					<sval type="int" val="4" />
-					<sval type="int" val="21" />
+					<sval type="int" val="16" />
 					<sval type="int" val="15" />
 					<sval type="int" val="3" />
 					<sval type="int" val="3" />

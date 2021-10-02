@@ -1,6 +1,12 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/10/02 - Hector
+- ship weapon compatibility
+- main plot flavor texts (should be almost complete now)
+- some fixes
+- TL cargospace divided by 34
+
 2021/09/26 - Hector
 - lasers balanced
 - SW ship WareLists. Also added video goggles like in M3R
