@@ -45,7 +45,7 @@ Keep in mind that pacing is supposed to be much different from Mayhem 3. So plea
     * https://www.moddb.com/mods/mayhem/downloads/mayhem-3-ambient-soundtrack
 
 5. Download and install the Star Wars Data Pack
-    * https://drive.google.com/file/d/1kPFsLyper2JoQg6mwqrXbVOl7V8gPiNZ/view?usp=sharing
+    * https://drive.google.com/file/d/1-DQHxfKdEYsp99IL1_Bf4suZeCPKwyEo/view?usp=sharing
 
 6. Optional: Download and install the Backgrounds Pack
     * https://forum.egosoft.com/viewtopic.php?p=4997068#p4997068
@@ -54,9 +54,6 @@ Keep in mind that pacing is supposed to be much different from Mayhem 3. So plea
     * https://forum.egosoft.com/viewtopic.php?f=94&t=441824&sid=afdedee043647f8001edf81c29e3c677
 
 8. Copy the files found with this README to your game installation directory.
-
-9. Rename "addon/RenameToHighest.cat" and "addon/RenameToHighest.dat" to the next highest cat/dat number.
-
 
 ## General Changes:
 * most ships have much fewer different weapon choices (bit like in M3R, but often less extreme). This was necessary to stop NPCs from using bad guns
@@ -82,8 +79,6 @@ SWM3 also makes changes to Mayhem 3's standart t-file. These options are suppose
 * no NPC factions builds only half size squadrons when they own few sectors (SWM3 has NPC production discounts)
 * AI ships which are waiting very long to be outfitted but can't due to a lack of resources get their weapons for free after just 1h instead of having to wait 4h
 
-
-
 # Beta Guidelines:
 ## Differences to Mayhem 3:
 * factions start very slow and escalate from early to middle to lategame
@@ -93,12 +88,9 @@ SWM3 also makes changes to Mayhem 3's standart t-file. These options are suppose
 * faction phases are loosely based on iconic SW lore or certain themes from the movies or expanded universe
 * OCV waves are MUCH easier. Supposed to already start at the end of your mid-game. The true endgame is supposed to be a megawar between the Empire and the New Republic
 
-
 !!! Certain key developments are supposed to happen roughly similar in almost every playthrough! SW factions are asymetric !!!
 
 For example the Galactic Empire is always meant to be more powerful than the Rebel Alliance. But their sectors frequently turn against them with a new mechanic. The Empire does have strong fleets, but they are supposed to waste a lot of time conquering all this lost territory back. Making the Empire feel more like a defensive faction with internal problems. And the Rebels are more like a guerilla group who actually switch their base locations during the playthrough.
-
-
 
 ## This is why we need testing:
 Everything below is still mostly just theory. With how it's designed it should already work, but certain things likely need adjustment. Please report if your factions develop vastly different from how its described here. So that we can  put additional safeties in. We are able to do a lot in terms of balancing, like tweaking special abilities or invasion protections, provide production buffs or nerfs and  also change fleet compositions to be different in each phase and for each faction.
@@ -172,8 +164,6 @@ After the special 'Katana Fleet' event for the New Republic gets implemented in 
 * the Republic is supposed to fall behind like in the early game and mostly get conquered by others
 * when the New Republic has grown to a certain size the Rebels loose their sector turning ability. That allows the Empire to focus on the NR because they don't need to chase after lost sectors all the time
 
-
-
 # Faction Dossiers:
 
 ## Galactic Empire:
@@ -194,7 +184,6 @@ Strategic evaluation:
 * starts with slow, iconic Imperial class 1 Star Destroyers, using mostly carrier tactics and basic TIE fighter swarms
 * later unlocks many new ship types like Strike cruisers, Lancer frigates and advanced fighters like the TIE Defender. Late capitals focus more on firepower. Also unlocks more medium fleets which can travel faster on the galaxy map.
 * large endgame fleets with many advanced capitals
-
 
 ## Rebel Alliance:
 
@@ -222,7 +211,6 @@ Strategic evaluation:
 * invades unpredictable and everywhere
 * starts the game without any large capitals but later builds MonCalamari cruisers in limited numbers
 
-
 ## New Republic:
 
 Lore Summary:
@@ -243,7 +231,6 @@ Strategic evaluation:
 * potential to grow into a monster faction with insane economy boost and many advanced post-Endor capships. Terrible foe if they ever own the galaxy.
 * player can wipe them out easily in phase 2
 
-
 ## Separatist CIS:
 
 Fleet Lore Summary:
@@ -258,7 +245,6 @@ Strategic evaluation:
 * underestimated damage potential
 * fragile ships, frequent losses
 * some squadrons only consist of Droid fighters which can travel very fast
-
 
 ## Republic:
 
@@ -279,7 +265,6 @@ Strategic evaluation:
 * Clone Wars unlock Venator carrier tactics with heavy fighters and lots of supporting frigates, but they never like to use many M6 or M2.
 * faction might grow large on its own some time after reaching the Clone Wars era, but if initial losses were too much to handle they also might need your help.
 * this faction starts with a huge economic advantage  and gets buffed greatly during the midgame. But if you want to support them you should really use that middle stage of your playthrough. Because lategame they'll fall behind again.
-
 
 ## Mandalorians:
 
