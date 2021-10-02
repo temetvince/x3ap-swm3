@@ -7,11 +7,11 @@
 	<ln id="tooltip_checkbox_13">Alternate soundtrack uses the file mayhem_data\custom_musics.txt instead of ...\custom_musics_lu.txt.</ln>
 	<ln id="tooltip_listicon_1">Friend is Unbreakable Alliance, Foe is Total War, Dynamic is default. Untick to deactivate a race. 1 race minimum.</ln>
 	<ln id="tooltip_checkbox_2">Sectors of the Commonwealth are randomly assigned instead of forming a coherent territory.</ln>
-	<ln id="tooltip_checkbox_4">The Commonwealth have less single isolated sectors.</ln>
+	<ln id="tooltip_checkbox_4">The main factions have less single isolated sectors.</ln>
 	<ln id="tooltip_checkbox_10">The galaxy has one giant hole in the middle. Incompatible with Shattered galaxy.</ln>
 	<ln id="tooltip_checkbox_18">The galaxy has less sectors. Incompatible with Hollowed galaxy.</ln>
 	<ln id="tooltip_checkbox_19">Each sector receives extra population, research and support.</ln>
-	<ln id="tooltip_checkbox_20">Xenons tend to regroup around the same areas instead of being randomly spawned.</ln>
+	<ln id="tooltip_checkbox_20">Sith tend to regroup around the same areas instead of being randomly spawned.</ln>
 	<ln id="tooltip_checkbox_17">By default, this program creates backup folders and restore/delete your savegames when changing galaxy. If you don't want this to happen, tick this checkbox.</ln>
 	<ln id="tooltip_checkbox_22">Draw a rough preview of the galaxy layout. Disabled by default to avoid any spoil. Cannot preview non-generated galaxies.</ln>
 	<ln id="tooltip_checkbox_14">Skip the introduction cinematic.</ln>
@@ -71,7 +71,7 @@
 	<ln id="desc_dejure">Dejure owner: {1}</ln>
 	<ln id="desc_company">Company: {1}</ln>
 	<ln id="desc_signals">Abnormal signals: {1} %</ln>
-	<ln id="desc_memory">Advanced ships: {1}</ln>
+	<ln id="desc_memory">Hyperlane: {1}</ln>
 	<ln id="desc_pop">Max. population: {1}</ln>
 	<ln id="desc_support">Station support: {1}</ln>
 	<ln id="desc_research">Research rate: {1} %</ln>

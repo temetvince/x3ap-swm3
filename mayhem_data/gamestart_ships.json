@@ -17,7 +17,7 @@
     ],
   "paranid": [
       {
-        "m3": "SS_SH_P_M3_SITH_SCIMITAR",
+        "m3": "SS_SH_P_M3_UMBARAN_FIGHTER",
         "ts": "SS_SH_P_TS_ACTIONVI",
 		"m4": "SS_SH_P_M4_TRI",
 		"m6": "SS_SH_P_M6_LONGHORN"
@@ -27,7 +27,7 @@
       {
         "m3": "SS_SH_A_M3_YWING",
         "ts": "SS_SH_A_TS_GR75",
-		"m4": "SS_SH_A_M4_XWINGRED",
+		"m4": "SS_SH_A_M4_Z95A",
 		"m6": "SS_SH_A_M6_CR90"
       }
     ],

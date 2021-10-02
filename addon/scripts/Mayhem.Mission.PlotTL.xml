@@ -228,7 +228,7 @@
 			<text> </text>
 			<text>author</text>
 			<text>=</text>
-			<text>'Niklas'</text>
+			<text>'Volkhart'</text>
 		</line>
 		<line linenr="021" indent="&#160;" interruptable="@">
 			<text>=</text>
@@ -799,7 +799,7 @@
 					<sval type="int" val="4" />
 					<sval type="int" val="4000" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Niklas" />
+					<sval type="string" val="Volkhart" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="105" />
