@@ -47,13 +47,14 @@ Keep in mind that pacing is supposed to be much different from Mayhem 3. So plea
 5. Download and install the Star Wars Data Pack
     * https://drive.google.com/file/d/1-DQHxfKdEYsp99IL1_Bf4suZeCPKwyEo/view?usp=sharing
 
-6. Optional: Download and install temetvince's Mod
+6. Optional: rename 'no engine trails no laser trails'.cat/dat into '20'.cat/dat (recommended)
+
+7. Optional: Download and install temetvince's Mod
     * https://forum.egosoft.com/viewtopic.php?f=94&t=441824&sid=afdedee043647f8001edf81c29e3c677
 
-7. Copy the files found with this README to your game installation directory.
+8. Copy the files found with this README to your game installation directory.
 
-
-8. Optional: Include all backgrounds during galaxy generation (some intrusive ones disabled on default)
+9. Optional: to include all backgrounds during galaxy generation (some intrusive ones disabled on default)
     * delete mayhem_data/custom_backgrounds.txt and replace it by renaming the optional file
 
 ## General Changes:
