@@ -1,6 +1,12 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/10/03 -Hector
+- added optional backgrounds template file for galaxy generator
+- fixed missing t-file descriptions
+- added t-file option to hide spammy claim and protactorate expiration messages
+- changed squadrons: more early activity due to less global border patrol ships and slightly better BGs, stronger Mando attack in phase 2, Rebels + Republic weaker allround, Empire stronger allround
+
 2021/10/02 -temetvince
 - Merge Hector's changes
 - Incorporate Hector's Backgrounds Mod
