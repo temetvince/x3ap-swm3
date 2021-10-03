@@ -55,7 +55,7 @@ Keep in mind that pacing is supposed to be much different from Mayhem 3. So plea
 8. Optional: rename 'no engine trails no laser trails'.cat/dat into '21'.cat/dat (recommended)
 
 9. Optional: to include all backgrounds during galaxy generation (some intrusive ones disabled on default)
-    * delete mayhem_data/custom_backgrounds.txt and replace it by renaming the optional file
+    * backup "mayhem_data/custom_backgrounds.txt" and replace it by renaming the optional file "custom_backgrounds-ALL-OPTIONAL.txt" to "custom_backgrounds.txt"
 
 ## General Changes:
 * most ships have much fewer different weapon choices (bit like in M3R, but often less extreme). This was necessary to stop NPCs from using bad guns
