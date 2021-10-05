@@ -1,5 +1,5 @@
 # Star Wars Mayhem 3
-To download, click Code -> Download ZIP.
+To download, go to the latest release and click 'Source code (zip)': https://github.com/temetvince/x3ap-swm3/releases/
 
 
 We need Mayhem veterans to help with balancing. Just play the game and provide feedback!
