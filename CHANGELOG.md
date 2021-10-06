@@ -2,6 +2,7 @@ Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
 2021/10/06 -Hector
+- Republic more weak phase 1 defender squadrons
 - GameCreator: Rebels sectors scatter and give 50% territory to Republic
 - GameCreator: New Republic gives 15% territory to Empire
 - M3 t-file: reverted NPC retreat threshold back to 4:1
