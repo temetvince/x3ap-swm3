@@ -35,11 +35,14 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 5. Download and install the Star Wars Data Pack
     * https://www.moddb.com/games/star-wars-mayhem-3/
 
-6. Optional: Download and install temetvince's Mod
+6. Download and install Star Wars Mayhem 3
+   * https://github.com/temetvince/x3ap-swm3/releases/
+
+7. Optional: Download and install temetvince's Mod
     * https://github.com/temetvince/x3ap-m3
 
-7. Copy the files found with this README to your game installation directory.
+8. Copy the files found with this README to your game installation directory.
 
-8. Optional: rename 'no engine trails no laser trails'.cat/dat into '21'.cat/dat (recommended)
+9. Optional: rename 'no engine trails no laser trails'.cat/dat into '21'.cat/dat (recommended)
 
-9. Optional: certain intrusive backgrounds disabled during galaxy generation. To enable all backrounds go backup 'mayhem_data/custom_backgrounds.txt' and replace it by renaming the optional file called 'custom_backgrounds-ALL-OPTIONAL.txt' into 'custom_backgrounds.txt'
+10. Optional: certain intrusive backgrounds disabled during galaxy generation. To enable all backrounds go backup 'mayhem_data/custom_backgrounds.txt' and replace it by renaming the optional file called 'custom_backgrounds-ALL-OPTIONAL.txt' into 'custom_backgrounds.txt'
