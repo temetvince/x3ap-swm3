@@ -36,7 +36,7 @@ To download, go to the latest release and click 'Source code (zip)': https://git
     * https://www.moddb.com/games/star-wars-mayhem-3/
 
 6. Optional: Download and install temetvince's Mod
-    * https://forum.egosoft.com/viewtopic.php?f=94&t=441824&sid=afdedee043647f8001edf81c29e3c677
+    * https://github.com/temetvince/x3ap-m3
 
 7. Copy the files found with this README to your game installation directory.
 
