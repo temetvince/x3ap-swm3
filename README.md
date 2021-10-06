@@ -20,6 +20,8 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 * Yaki - Mandalorian / Pirates
 
 ## Installation
+* Video Guide: https://www.youtube.com/playlist?list=PLl4mHpHKbi1mvLs39MaBupL2LoJk67tuJ
+
 1. Download and install Litcube's Universe
     * http://litcube.xtimelines.net/wiki/index.php/Main_Page
 
