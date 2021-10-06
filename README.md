@@ -12,7 +12,7 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 ## Features
 * Star Wars ships and stations
 * Fleets evolve in a new 'Era System'. Player progress unlocks new phases which are based on different themes from SW lore.
-* Customizable t-file
+* Customizable t-file ('addon/t/9973-L044.xml')
 * Very Mayhem newcomer friendly: tutorials expanded, much weaker bad guys (Xenon/OCV), less challenging start, reduced endgame grind, removed all time sensitive difficulty scaling
 
 ## Factions
