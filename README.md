@@ -4,6 +4,11 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 ## Discord
 * https://discord.gg/S587CRb
 
+## Credits
+* Special thanks to Joubarbe for making Mayhem. You can show your support by buying Joubarbe a coffee:
+    * https://www.buymeacoffee.com/Joubarbe
+* Also thanks to Hector for doing the majority of the work, and for graciously allowing me to distribute Star Wars Mayhem 3
+
 ## Features
 * Star Wars ships and stations
 * Fleets evolve in a new 'Era System'. Player progress unlocks new phases which are based on different themes from SW lore.
