@@ -7,7 +7,7 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 ## Credits
 * Special thanks to Joubarbe for making Mayhem. You can show your support by buying Joubarbe a coffee:
     * https://www.buymeacoffee.com/Joubarbe
-* Also thanks to Hector for doing the majority of the work, and for graciously allowing me to distribute Star Wars Mayhem 3
+* Also thanks to Hector for doing the majority of the work, and for graciously allowing me to distribute SWM3
 
 ## Features
 * Star Wars ships and stations
