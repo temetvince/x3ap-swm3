@@ -15,7 +15,7 @@
 		<t id="18">1700</t> <!-- Minimum time between the OCV waves, in seconds (global invasion). (default: 1700) -->
 		<t id="19">1900</t> <!-- Maximum time between the OCV waves, in seconds (global invasion). (default: 1900) -->
 		<t id="204">3600</t> <!-- Xenon small invasions delay, in seconds. (default: 3600) -->
-		<t id="207">14400</t> <!-- Xenon big invasions delay, in seconds. (default: 14400) -->
+		<t id="207">21600</t> <!-- Xenon big invasions delay, in seconds. (default: 14400) -->
 		<t id="209">1350</t> <!-- Pirate fighters spawning delay, in seconds. (default: 900) -->
 		<t id="219">50</t> <!-- Pirate limit in all the galaxy. (default: 50) -->
 		<t id="212">8</t> <!-- Maximum number of pirate bases in the galaxy. (default: 8) -->
@@ -27,8 +27,8 @@
 		<t id="74">20000</t> <!-- Total project size needed to increase shield specialization by 1%. (default: 20000) -->
 		<t id="175">20000</t> <!-- Total project size needed to increase station specialization by 1%. (default: 20000) -->
 		<t id="142">50</t> <!-- Maximum specialization level. (default: 50) -->
-		<t id="164">600</t> <!-- Maintenance cycle, in seconds. (default: 600) -->	
-		<t id="75">100</t> <!-- Maintenance cost multiplier. (default: 100) -->
+		<t id="164">1200</t> <!-- Maintenance cycle, in seconds. (default: 600) -->	
+		<t id="75">200</t> <!-- Maintenance cost multiplier. (default: 100) -->
 		<t id="177">0</t> <!-- Free maintenance for the ship you're piloting yourself. (default: 0) -->
 		<t id="98">100</t> <!-- Tax multiplier. Tax is based on number of people and is collected every hour. (default: 100) -->
 		<t id="119">0</t> <!-- Player cheat: all ships you craft receive full lasers and shields. (default: 0) -->	
@@ -53,7 +53,7 @@
 		<t id="149">2</t> <!-- Fleet ratio per X sectors owned (negative is per sector) - Police. (default: 2) -->
 		<t id="150">1</t> <!-- Fleet ratio per X sectors owned (negative is per sector) - Escort. (default: 1) -->
 		<t id="151">2</t> <!-- Initiative ratio. That's how stronger a Battle Group or a Task Force AI fleet needs to be to attack another one. (default: 2) -->
-		<t id="152">3</t> <!-- Retreat ratio. Ratio at which an AI fleet will retreat to the nearest safe Outpost and wait for full reinforcement. Does not affect Police and Escort. (default: 4) -->
+		<t id="152">4</t> <!-- Retreat ratio. Ratio at which an AI fleet will retreat to the nearest safe Outpost and wait for full reinforcement. Does not affect Police and Escort. (default: 4) -->
 		<t id="153">0</t> <!-- AI cheat: debt system. The AI will build anything when it needs it, and will pay the costs later, if it can. (default: 0) -->
 		<t id="208">1</t> <!-- AI cheat: debt system, only for stations. (default: 1) -->
 		<t id="217">1</t> <!-- AI cheat: debt system, only for Yakis. (default: 1) -->
