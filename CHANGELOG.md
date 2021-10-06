@@ -1,6 +1,19 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/10/06 -Hector
+- GameCreator: Rebels sectors scatter and give 50% territory to Republic
+- GameCreator: New Republic gives 15% territory to Empire
+- M3 t-file: reverted NPC retreat threshold back to 4:1
+- M3 t-file: maintenance cost and cycle doubled (cost remains the same but increase over time halved)
+- increased Republic phase 1 invasion protection threshold from 12 to 18 sectors
+- reduced maximum time till next Rebel Cell activation from 30h to 26h
+- most Sith ships use weaker lasers
+- greatly slowed down all Sith ships
+- +50% delay between 'big' Sith invasions (with capships)
+- very slow capship speed increased a bit
+- pirate M6 spawn chance halved
+
 2021/10/04 -Hector
 - OOS damage fixed
 
