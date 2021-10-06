@@ -8,12 +8,14 @@
 		<t id="4">1</t> <!-- Rebel Cell ability - random NPC sectors frequently join (on by default, 0 to disable) -->
 		<t id="5">16</t> <!-- amount of rebel sectors up to which Rebel Cell ability is active (default 16) -->
 		<t id="6">64800</t> <!-- Minimum time between two Rebel Cell ability activations, in seconds (default 18h: 64800) -->
-		<t id="7">108000</t> <!-- Maximum time between two Rebel Cell ability activations, in seconds (default 30h: 108000) -->
+		<t id="7">93600</t> <!-- Maximum time between two Rebel Cell ability activations, in seconds (default 26h: 93600) -->
 		<t id="8">1</t> <!-- Empire is allowed to annihilate the Rebels. They won't actually be successful if you play with Rebel Cells activated (on by default, 0 to disable) -->
 		<t id="9">8</t> <!-- AI will not invade rebel faction that owns less than or equal to this number of sectors. (default: 8) -->
-		<t id="10">12</t> <!-- before Mandalorian Uprising event happens AI will not invade republic faction that owns less than or equal to this number of sectors. (default: 12) -->
+		<t id="10">18</t> <!-- before Mandalorian Uprising event happens AI will not invade republic faction that owns less than or equal to this number of sectors. (default: 18) -->
 		<t id="11">1</t> <!-- Rebels do deep strike invasions like Mandalorians (on by default, 0 to disable) -->
 		<t id="12">0</t> <!-- show rather useless onscreen messages about claims or protectorates expiring (hidden by default, 1 to show) -->
+		<t id="13">50</t> <!-- remaining percentage of Rebel sectors after gamestart, rest given to Republic (default 50) -->
+		<t id="14">85</t> <!-- remaining percentage of New Republic sectors after gamestart, rest given to Empire (default 85) -->
 	</page>
 
 	<page id="17" title="Boardcomp. objects" desc="" voice="yes">
