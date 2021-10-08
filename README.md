@@ -1,8 +1,9 @@
 # Star Wars Mayhem 3
 To download, go to the latest release and click 'Source code (zip)': https://github.com/temetvince/x3ap-swm3/releases/
 
-## Discord
-* https://discord.gg/S587CRb
+## Support
+* Discord: https://discord.gg/S587CRb
+* Egosoft Forum: https://forum.egosoft.com/viewtopic.php?f=94&t=442473&p=5083623#p5083623
 
 ## Credits
 * Special thanks to Joubarbe for making Mayhem. You can show your support by buying Joubarbe a coffee:
