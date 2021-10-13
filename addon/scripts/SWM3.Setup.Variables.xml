@@ -391,11 +391,206 @@
 			<text>=</text>
 			<text>'mayhemSW_OwnershipNRtoEmpire'</text>
 		</line>
-		<line linenr="022" indent="" />
+		<line linenr="022" indent="">
+			<comment>*check for change in t-file</comment>
+		</line>
 		<line linenr="023" indent="">
+			<var>$val</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>read</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>15</var>
+		</line>
+		<line linenr="024" indent="">
+			<var>$val</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>string</text>
+			<text> </text>
+			<var>$val</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>integer</text>
+		</line>
+		<line linenr="025" indent="">
+			<var>$PlayerMiners</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_PlayerMiners'</text>
+		</line>
+		<line linenr="026" indent="">
+			<text>if</text>
+			<text> </text>
+			<text>!</text>
+			<var>$PlayerMiners</var>
+			<text> </text>
+			<text>OR</text>
+			<text> </text>
+			<text>(</text>
+			<var>$PlayerMiners</var>
+			<text> </text>
+			<text>!=</text>
+			<text> </text>
+			<var>$val</var>
+			<text>)</text>
+		</line>
+		<line linenr="027" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>15</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_PlayerMiners'</text>
+		</line>
+		<line linenr="028" indent="&#160;">
+			<text>gosub</text>
+			<text> </text>
+			<var>UpdateWorkerAssignments</var>
+			<text>:</text>
+		</line>
+		<line linenr="029" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="030" indent="" />
+		<line linenr="031" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
+		</line>
+		<line linenr="032" indent="" />
+		<line linenr="033" indent="">
+			<var>UpdateWorkerAssignments</var>
+			<text>:</text>
+		</line>
+		<line linenr="034" indent="&#160;">
+			<comment>*reset all Workers</comment>
+		</line>
+		<line linenr="035" indent="&#160;" interruptable="@">
+			<var>$Outposts</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetOutposts</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>[Player]</var>
+		</line>
+		<line linenr="036" indent="&#160;">
+			<var>$XS.Iterator1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$Outposts</var>
+		</line>
+		<line linenr="037" indent="&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="038" indent="&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="039" indent="&#160;">
+			<var>$outpostType</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Outposts</var>
+			<text>[</text>
+			<var>$XS.Iterator1</var>
+			<text>]</text>
+		</line>
+		<line linenr="040" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>1</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="041" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>$outpostType</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetDefaultAssignments</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>station</text>
+			<text>=</text>
+			<var>$outpostType</var>
+		</line>
+		<line linenr="042" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="043" indent="">
+			<text>endsub</text>
 		</line>
 	</sourcetext>
 	<codearray>
@@ -405,8 +600,14 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="int" val="0" />
-			<sval type="array" size="15">
+			<sval type="array" size="5">
+				<sval type="string" val="val" />
+				<sval type="string" val="PlayerMiners" />
+				<sval type="string" val="Outposts" />
+				<sval type="string" val="outpostType" />
+				<sval type="string" val="XS.Iterator1" />
+			</sval>
+			<sval type="array" size="31">
 				<sval type="array" size="12">
 					<sval type="int" val="102" />
 					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
@@ -603,14 +804,142 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="mayhemSW_OwnershipNRtoEmpire" />
 				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="126" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1078" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_PlayerMiners" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="24">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607613" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="10" />
+					<sval type="int" val="8" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-4" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_PlayerMiners" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="21" />
+				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
 				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="UpdateWorkerAssignments" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetOutposts" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610605047" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetDefaultAssignments" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="24" />
+				</sval>
+				<sval type="array" size="1">
+					<sval type="int" val="1168" />
+				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="8">
+			<sval type="array" size="13">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -645,9 +974,31 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
 				</sval>
-				<sval type="array" size="2">
+				<sval type="array" size="3">
 					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+					<sval type="string" val="check for change in t-file" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="20" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="20" />
 					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="21" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="22" />
+					<sval type="int" val="1" />
+					<sval type="string" val="reset all Workers" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="30" />
+					<sval type="int" val="4" />
 				</sval>
 			</sval>
 			<sval type="int" val="0" />

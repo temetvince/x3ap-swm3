@@ -48,28 +48,29 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="009" indent="">
+		<line linenr="009" indent="" />
+		<line linenr="010" indent="">
 			<text>gosub</text>
 			<text> </text>
 			<var>Maintenance</var>
 			<text>:</text>
 		</line>
-		<line linenr="010" indent="" />
-		<line linenr="011" indent="">
+		<line linenr="011" indent="" />
+		<line linenr="012" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="012" indent="" />
-		<line linenr="013" indent="">
+		<line linenr="013" indent="" />
+		<line linenr="014" indent="">
 			<comment>* =================================================</comment>
 		</line>
-		<line linenr="014" indent="" />
-		<line linenr="015" indent="">
+		<line linenr="015" indent="" />
+		<line linenr="016" indent="">
 			<var>Maintenance</var>
 			<text>:</text>
 		</line>
-		<line linenr="016" indent="&#160;">
+		<line linenr="017" indent="&#160;">
 			<var>$gameVersion</var>
 			<text> </text>
 			<text>=</text>
@@ -85,21 +86,21 @@
 			<text>=</text>
 			<text>'SWmayhemVersion'</text>
 		</line>
-		<line linenr="017" indent="&#160;" />
-		<line linenr="018" indent="&#160;">
+		<line linenr="018" indent="&#160;" />
+		<line linenr="019" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<text>!</text>
 			<var>$gameVersion</var>
 		</line>
-		<line linenr="019" indent="&#160;&#160;">
+		<line linenr="020" indent="&#160;&#160;">
 			<var>$versionText</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<text>'Star Wars Mayhem 3 has been installed.'</text>
 		</line>
-		<line linenr="020" indent="&#160;&#160;">
+		<line linenr="021" indent="&#160;&#160;">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -115,7 +116,7 @@
 			<text>=</text>
 			<var>$currentVersion</var>
 		</line>
-		<line linenr="021" indent="&#160;&#160;" interruptable="@">
+		<line linenr="022" indent="&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -129,7 +130,7 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="022" indent="&#160;">
+		<line linenr="023" indent="&#160;">
 			<text>else</text>
 			<text> </text>
 			<text>if</text>
@@ -140,7 +141,7 @@
 			<text> </text>
 			<var>$currentVersion</var>
 		</line>
-		<line linenr="023" indent="&#160;&#160;">
+		<line linenr="024" indent="&#160;&#160;">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -156,11 +157,11 @@
 			<text>=</text>
 			<var>$currentVersion</var>
 		</line>
-		<line linenr="024" indent="&#160;&#160;" />
-		<line linenr="025" indent="&#160;&#160;">
+		<line linenr="025" indent="&#160;&#160;" />
+		<line linenr="026" indent="&#160;&#160;">
 			<comment>* Update encyclopedia and equipment price at each new update.</comment>
 		</line>
-		<line linenr="026" indent="&#160;&#160;">
+		<line linenr="027" indent="&#160;&#160;">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -176,7 +177,7 @@
 			<text>=</text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="027" indent="&#160;&#160;" interruptable="@">
+		<line linenr="028" indent="&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -190,14 +191,14 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="028" indent="&#160;&#160;">
+		<line linenr="029" indent="&#160;&#160;">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
 			<text> </text>
 			<var>$versionText</var>
 		</line>
-		<line linenr="029" indent="&#160;&#160;&#160;">
+		<line linenr="030" indent="&#160;&#160;&#160;">
 			<text>write</text>
 			<text> </text>
 			<text>to</text>
@@ -208,12 +209,12 @@
 			<text> </text>
 			<var>$versionText</var>
 		</line>
-		<line linenr="030" indent="&#160;">
+		<line linenr="031" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="031" indent="&#160;" />
 		<line linenr="032" indent="&#160;" />
-		<line linenr="033" indent="">
+		<line linenr="033" indent="&#160;" />
+		<line linenr="034" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -367,7 +368,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="15">
+			<sval type="array" size="16">
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
@@ -389,6 +390,10 @@
 					<sval type="int" val="2" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Each load." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="4" />

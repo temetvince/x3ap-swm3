@@ -16,6 +16,7 @@
 		<t id="12">0</t> <!-- show rather useless onscreen messages about claims or protectorates expiring (hidden by default, 1 to show) -->
 		<t id="13">50</t> <!-- remaining percentage of Rebel sectors after gamestart, rest given to Republic (default 50) -->
 		<t id="14">85</t> <!-- remaining percentage of New Republic sectors after gamestart, rest given to Empire (default 85) -->
+		<t id="15">4</t> <!-- amount of Miner Workers allowed on player outposts. WARNING any change to ongoing savegames requires that you restart ALL outpost Workers  (default 4) -->
 	</page>
 
 	<page id="17" title="Boardcomp. objects" desc="" voice="yes">

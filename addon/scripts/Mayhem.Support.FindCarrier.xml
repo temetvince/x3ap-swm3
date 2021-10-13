@@ -1,0 +1,744 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Mayhem.Support.FindCarrier</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="ship" type="Var/Ship" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="" />
+		<line linenr="002" indent="">
+			<comment>* This script does not assign a new homebase for $ship. It just finds the best carrier in his fleet or formation.</comment>
+		</line>
+		<line linenr="003" indent="">
+			<comment>* In Mayhem 3, only Fighters are automatically assigned to carriers; the tactic advantage of carrying an M6 being low.</comment>
+		</line>
+		<line linenr="004" indent="">
+			<comment>* SWM3 removes the fleet commander from being chosen</comment>
+		</line>
+		<line linenr="005" indent="" />
+		<line linenr="006" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>is</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>class</text>
+			<text> </text>
+			<var>[Fighter]</var>
+		</line>
+		<line linenr="007" indent="&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="008" indent="" />
+		<line linenr="009" indent="" interruptable="@">
+			<var>$leader</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetLeader</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ship</text>
+			<text>=</text>
+			<var>$ship</var>
+		</line>
+		<line linenr="010" indent="" />
+		<line linenr="011" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$leader</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>exists</text>
+		</line>
+		<line linenr="012" indent="&#160;">
+			<comment>* Leaders cannot be in a carrier.</comment>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$leader</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>$ship</var>
+		</line>
+		<line linenr="014" indent="&#160;&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="015" indent="&#160;">
+			<comment>*do if [NULL]-&gt; call script 'Joubarbe.Lib.CanDock' : ship=$ship dock=$leader</comment>
+		</line>
+		<line linenr="016" indent="&#160;">
+			<comment>*return $leader</comment>
+		</line>
+		<line linenr="017" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="018" indent="" />
+		<line linenr="019" indent="" interruptable="@">
+			<var>$followers</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.GetFleetShips</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>leader</text>
+			<text>=</text>
+			<var>$ship</var>
+			<text> </text>
+			<text>includeLeader</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text> </text>
+			<text>withFleetOnly</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="020" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$followers</var>
+		</line>
+		<line linenr="021" indent="&#160;" interruptable="@">
+			<var>$followers</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Squadron.GetFollowers</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>squadron</text>
+			<text>=</text>
+			<var>$ship</var>
+		</line>
+		<line linenr="022" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$followers</var>
+		</line>
+		<line linenr="023" indent="&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="024" indent="" />
+		<line linenr="025" indent="">
+			<comment>* First try the same sector...</comment>
+		</line>
+		<line linenr="026" indent="">
+			<var>$XS.Iterator1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$followers</var>
+		</line>
+		<line linenr="027" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="028" indent="&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="029" indent="&#160;">
+			<var>$follower</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$followers</var>
+			<text>[</text>
+			<var>$XS.Iterator1</var>
+			<text>]</text>
+		</line>
+		<line linenr="030" indent="&#160;&#160;">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generated'</text>
+		</line>
+		<line linenr="031" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>10</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="032" indent="&#160;&#160;">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$follower</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>is</text>
+			<text> </text>
+			<text>in</text>
+			<text> </text>
+			<text>same</text>
+			<text> </text>
+			<text>sector</text>
+			<text> </text>
+			<text>as</text>
+			<text> </text>
+			<var>$ship</var>
+		</line>
+		<line linenr="033" indent="">
+			<text>continue</text>
+		</line>
+		<line linenr="034" indent="" interruptable="@">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.CanDock</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ship</text>
+			<text>=</text>
+			<var>$ship</var>
+			<text> </text>
+			<text>dock</text>
+			<text>=</text>
+			<var>$follower</var>
+		</line>
+		<line linenr="035" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>$follower</var>
+		</line>
+		<line linenr="036" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="037" indent="&#160;" />
+		<line linenr="038" indent="&#160;&#160;">
+			<comment>* ... then the whole formation.</comment>
+		</line>
+		<line linenr="039" indent="&#160;">
+			<var>$XS.Iterator2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$followers</var>
+		</line>
+		<line linenr="040" indent="&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator2</var>
+		</line>
+		<line linenr="041" indent="">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator2</var>
+		</line>
+		<line linenr="042" indent="">
+			<var>$follower</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$followers</var>
+			<text>[</text>
+			<var>$XS.Iterator2</var>
+			<text>]</text>
+		</line>
+		<line linenr="043" indent="">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generated'</text>
+		</line>
+		<line linenr="044" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>10</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="045" indent="" interruptable="@">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.CanDock</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ship</text>
+			<text>=</text>
+			<var>$ship</var>
+			<text> </text>
+			<text>dock</text>
+			<text>=</text>
+			<var>$follower</var>
+		</line>
+		<line linenr="046" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>$follower</var>
+		</line>
+		<line linenr="047" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="048" indent="" />
+		<line linenr="049" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Mayhem.Support.FindCarrier" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="6">
+				<sval type="string" val="ship" />
+				<sval type="string" val="leader" />
+				<sval type="string" val="followers" />
+				<sval type="string" val="follower" />
+				<sval type="string" val="XS.Iterator1" />
+				<sval type="string" val="XS.Iterator2" />
+			</sval>
+			<sval type="array" size="32">
+				<sval type="array" size="6">
+					<sval type="int" val="705" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-536870393" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2034" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetLeader" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="706" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1610611197" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610611192" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.GetFleetShips" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="-536868601" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Squadron.GetFollowers" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="-536868089" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607095" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generated" />
+					<sval type="int" val="-1610608376" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="733" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-536866041" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.CanDock" />
+					<sval type="int" val="-1610607352" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604791" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generated" />
+					<sval type="int" val="-1610605560" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.CanDock" />
+					<sval type="int" val="-1610605048" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="23" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="21" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="20">
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="This script does not assign a new homebase for $ship. It just finds the best carrier in his fleet or formation." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="In Mayhem 3, only Fighters are automatically assigned to carriers; the tactic advantage of carrying an M6 being low." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="SWM3 removes the fleet commander from being chosen" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="2" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Leaders cannot be in a carrier." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="6" />
+					<sval type="int" val="1" />
+					<sval type="string" val="do if [NULL]-&gt; call script 'Joubarbe.Lib.CanDock' : ship=$ship dock=$leader" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="6" />
+					<sval type="int" val="1" />
+					<sval type="string" val="return $leader" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="6" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="6" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="11" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="11" />
+					<sval type="int" val="1" />
+					<sval type="string" val="First try the same sector..." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="19" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="22" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="22" />
+					<sval type="int" val="1" />
+					<sval type="string" val="... then the whole formation." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="31" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="31" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>
