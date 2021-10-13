@@ -1,6 +1,16 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/10/13 -Hector
+- fight script overhaul (!fight.attack.object)
+- fleetcommander can't be carrier for support ships (Mayhem.Support.FindCarrier)
+- faster strafing (globals)
+- tBullet speeds, sizes + little tweaks
+- removed vanilla ships from generic missions
+- spacesuit faster (tships) + SETA (warelist)
+- typo in ministry of war
+- player miners t-file option
+
 2021/10/06 -Hector
 - Republic more weak phase 1 defender squadrons
 - GameCreator: Rebels sectors scatter and give 50% territory to Republic
