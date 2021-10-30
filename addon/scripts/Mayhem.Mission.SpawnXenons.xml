@@ -642,7 +642,7 @@
 			<text> </text>
 			<text>text</text>
 			<text>=</text>
-			<text>'Xenons'</text>
+			<text>'Sith'</text>
 			<text> </text>
 			<text>color</text>
 			<text>=</text>
@@ -1167,7 +1167,7 @@
 					<sval type="int" val="12" />
 					<sval type="int" val="2" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Xenons" />
+					<sval type="string" val="Sith" />
 					<sval type="int" val="5" />
 					<sval type="string" val="r" />
 				</sval>
