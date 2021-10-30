@@ -1,6 +1,25 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+
+2021/10/30 -Hector
+- hyperlane quest (t-file optional)
+- new t-file option player Jump Beacons only work between certain sectors
+- vastly increased abandoned ships at gamestart (not claimable by NPC tugs). New game only
+- added abandoned ship classes M4 + TP
+- Ascension goals don't ask for very specific classes. Only for freighters or fighters in general.
+- reduced long research grind to unlock alternate ship blueprints. 20% of your generated research points add to a global discount which reduces all future project costs (t-file customizable)
+- fixed repair laser
+- increased speed of all mining ships
+- all fighter miner variants are now haulers.
+- Star Wars-ialized vanilla naming in the outpost station construction UI
+- Mandalorians got a TS Miner (Republic YV-100 clone)
+- followers and escorts don't dock if enemies are nearby
+- battlegroup squadron followers who are getting under fire while attacking stations now call their leader into the fight if he is still stuck attacking the station
+- removed a restriction which prevented ships from counterattacking if they already had a target which is close (there are still many more restrictions other than that)
+- battlegroups which only consist of fighters and which invade a sector will first try to clear a short range perimeter of all enemy fighters before doing anything else. This gets repeated if the current leader dies and a new one gets assigned. (overall better response of fighter battlegroups against new hostiles before going back to kill stations again)
+
+
 2021/10/13 -Hector
 - fight script overhaul (!fight.attack.object)
 - fleetcommander can't be carrier for support ships (Mayhem.Support.FindCarrier)
