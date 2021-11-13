@@ -1,6 +1,20 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/11/13 -Hector
+- Mandalorian plot complete implementation
+- Midgame Quickstart
+- encyclopedia update
+- M3R drydock restoration
+- 5km scanning range
+- faster capship repair
+- M3R hacking UI helpers
+- reduce Republic/Mando phase 3 production spec to 50% + smaller fleets
+- buffed Republic phase 2 to 80%
+- new blobbing prevention (NPC owning 40% of galaxy waits with more invasions until phase 3)
+- M6/TM dynamic (slightly closer) engagement range against capships
+- new fighter combat script (M2 acp version with added fallback and evasive flying)
+- no fallback on M6/TM
 
 2021/10/30 -Hector
 - hyperlane quest (t-file optional)
