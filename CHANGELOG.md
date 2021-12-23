@@ -1,6 +1,22 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/12/23 -Hector
+- lategame total war of Galactic Empire vs. New Republic (with t-file options)
+- early game Katana search quest
+- fighter rebalance
+- slightly reduced Outpost natural population growth rate
+- research station tutorial message
+- encyclopedia fixes/revisions/additions
+- fixed check for nearby enemies before docking. Now has a 20km minimum range (fleets with low scanning range didn't work well)
+- fighters never use stationary tactics again (too much friendly fire when player enters sector)
+- added 'State of the Galaxy' journal section (current special rules, gifted factions, etc.)
+- increased default starting territory for Mandalorians from 5% to 8% of the galaxy
+- Mandalorian Task Forces could spawn a vanilla Mammoth
+- added Explorer Whitelist. Enables you to monitor enemy sectors and/or override the standart blacklist so it only affects other Workers
+- fixed Lasertower using mining laser
+
+
 2021/11/13 -Hector
 - Mandalorian plot complete implementation
 - Midgame Quickstart
