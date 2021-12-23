@@ -122,7 +122,7 @@
 		<t id="239">43200</t> <!-- Hive Queen min delay. (default: 43200) -->
 		<t id="240">54000</t> <!-- Hive Queen max delay. (default: 54000) -->
 		<t id="241">3</t> <!-- Number of planets you need to terraform on behalf of Terracorp. (default: 10) -->
-		<t id="242">5</t> <!-- Maximum number of sectors the Yakis will conquer, in percentage of total galaxy. (default: 5) -->
+		<t id="242">8</t> <!-- Maximum number of sectors the Yakis will conquer, in percentage of total galaxy. (default: 5) -->
 		<t id="243">100</t> <!-- Taxi credits payment multiplier, in percent. (default: 100) -->
 		<t id="244">100</t> <!-- Taxi reputation payment multiplier, in percent. (default: 100) -->
 		<t id="245">500000</t> <!-- Threshold, in credits, under which a strategic resource is considered in shortage (see the Diplomacy menu). (default: 500000) -->

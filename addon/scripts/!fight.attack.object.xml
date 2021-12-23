@@ -3,7 +3,7 @@
 <!-- Generated using X-Studio -->
 <script>
 	<name>!fight.attack.object</name>
-	<version>12</version>
+	<version>14</version>
 	<engineversion>50</engineversion>
 	<description>Attack an object switch</description>
 	<arguments>
@@ -5111,14 +5111,6 @@
 			<text>if</text>
 			<text> </text>
 			<var>$isFighter</var>
-			<text> </text>
-			<text>AND</text>
-			<text> </text>
-			<var>$target</var>
-			<text> </text>
-			<text>!=</text>
-			<text> </text>
-			<var>[Station]</var>
 		</line>
 		<line linenr="534" indent="" interruptable="@">
 			<text>=</text>
@@ -5296,7 +5288,7 @@
 			<sval type="string" val="!fight.attack.object" />
 			<sval type="int" val="50" />
 			<sval type="string" val="Attack an object switch" />
-			<sval type="int" val="12" />
+			<sval type="int" val="14" />
 			<sval type="int" val="0" />
 			<sval type="array" size="74">
 				<sval type="string" val="target" />
@@ -8763,26 +8755,14 @@
 					<sval type="int" val="112" />
 					<sval type="int" val="402" />
 				</sval>
-				<sval type="array" size="19">
+				<sval type="array" size="7">
 					<sval type="int" val="104" />
 					<sval type="int" val="-1610512120" />
-					<sval type="int" val="5" />
+					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="20" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="12" />
-					<sval type="int" val="2016" />
-					<sval type="int" val="15" />
 					<sval type="int" val="1" />
-					<sval type="int" val="15" />
-					<sval type="int" val="9" />
-					<sval type="int" val="5" />
 					<sval type="int" val="-1" />
-					<sval type="int" val="9" />
-					<sval type="int" val="-2" />
-					<sval type="int" val="1" />
-					<sval type="int" val="-3" />
 				</sval>
 				<sval type="array" size="12">
 					<sval type="int" val="102" />
