@@ -1,6 +1,21 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/12/25 -Hector
+- savegame compatibility
+- changes to the fighter flanking maneuver
+- increased minimum required distance to the enemy
+- less aggressive flanking positions (doesn't overshoot the enemy as often)
+- flanking position is now speed dependent
+- fast fighters fly much further around the enemy before attacking. Slow fighters stick much closer to their fleet.
+- enabled flanking also for carrier support fighters
+- fleets will not send their fastest ships ahead to attack military targets which are further away than 40km. (this makes NPC fleets very deadly because they stick in tight formation until right before the battle) Does not apply when attacking civilian targets (stations, satellites and freighters)
+- player fleets now completely ignore enemy satellites and freighters
+- added 2 new targeting priorities: 'Freighters' and 'Stationary Ships' (satellites) Use these settings on separate fleets if you want to hunt down such targets
+- added Transporter Device as default equipment on all ships (there were still way too many issues with unresponsive ships 'waiting for docking clearance'. this is dirty but fixes it like in M3R)
+- Explorer Workers only load 5 satellites instead of 10
+- increased general ship following distance
+
 2021/12/23 -Hector
 - lategame total war of Galactic Empire vs. New Republic (with t-file options)
 - early game Katana search quest
