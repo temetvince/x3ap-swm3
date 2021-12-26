@@ -1,6 +1,9 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2021/12/26 -Hector
+- fixed green corp sometimes trading in Energy + Waste (rare but unintended, new games only)
+
 2021/12/25 -Hector
 - savegame compatibility
 - changes to the fighter flanking maneuver
