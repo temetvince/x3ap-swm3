@@ -35,5 +35,4 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 ### Downloads
 * Star Wars Mayhem 3 Data Pack: https://www.moddb.com/games/star-wars-mayhem-3/
 * Star Wars Mayhem 3: https://github.com/temetvince/x3ap-swm3/releases/
-* Temetvince's Alaankwa mod is compatible with SWM3 and includes bug fixes for M3 plus some features that mesh well with SWM3:
-* https://github.com/temetvince/x3ap-lu
+* Temetvince's Alaankwa mod is compatible with SWM3 and includes bug fixes for M3 plus some features that mesh well with SWM3: https://github.com/temetvince/x3ap-lu
