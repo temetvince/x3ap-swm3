@@ -29,9 +29,11 @@ To download, go to the latest release and click 'Source code (zip)': https://git
 * Yaki - Mandalorian / Pirates
 
 ## Installation
-### Insructions
+### Instructions
 * https://www.youtube.com/playlist?list=PLl4mHpHKbi1mvLs39MaBupL2LoJk67tuJ
 * Optional (not recommended): Certain intrusive backgrounds are disabled during galaxy generation. To enable all backrounds, backup 'mayhem_data/custom_backgrounds.txt' and replace it by renaming the optional file called 'custom_backgrounds-ALL-OPTIONAL.txt' to 'custom_backgrounds.txt'
 ### Downloads
 * Star Wars Mayhem 3 Data Pack: https://www.moddb.com/games/star-wars-mayhem-3/
 * Star Wars Mayhem 3: https://github.com/temetvince/x3ap-swm3/releases/
+* Temetvince's Alaankwa mod is compatible with SWM3 and includes bug fixes for M3 plus some features that mesh well with SWM3:
+* https://github.com/temetvince/x3ap-lu

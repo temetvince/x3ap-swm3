@@ -2842,9 +2842,12 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
 			<text>get</text>
 			<text> </text>
-			<text>global</text>
+			<text>local</text>
 			<text> </text>
 			<text>variable</text>
 			<text>:</text>
@@ -2952,9 +2955,12 @@
 			<text>'Resupply drone'</text>
 		</line>
 		<line linenr="298" indent="">
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
 			<text>set</text>
 			<text> </text>
-			<text>global</text>
+			<text>local</text>
 			<text> </text>
 			<text>variable</text>
 			<text>:</text>
@@ -7641,7 +7647,7 @@
 			<text> </text>
 			<text>!=</text>
 			<text> </text>
-			<var>[Yaki]</var>
+			<var>[Mandalorian]</var>
 		</line>
 		<line linenr="688" indent="&#160;&#160;&#160;">
 			<var>$specProgress</var>
@@ -10491,8 +10497,10 @@
 				<sval type="array" size="1">
 					<sval type="int" val="1168" />
 				</sval>
-				<sval type="array" size="4">
-					<sval type="int" val="158" />
+				<sval type="array" size="6">
+					<sval type="int" val="156" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
 					<sval type="int" val="5" />
 					<sval type="string" val="mayhem_resupplyDrone" />
 					<sval type="int" val="68" />
@@ -10544,8 +10552,10 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="Resupply drone" />
 				</sval>
-				<sval type="array" size="5">
-					<sval type="int" val="157" />
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
 					<sval type="int" val="5" />
 					<sval type="string" val="mayhem_resupplyDrone" />
 					<sval type="int" val="131074" />
