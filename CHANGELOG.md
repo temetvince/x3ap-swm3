@@ -1,6 +1,14 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2022/01/02 -temetvince
+- All ships now have Angular Acceleration set to 50.
+- Class rotation variables have been increased by these amounts:
+    - M1/M2/TL = 200%
+    - M7 = 50%
+    - M6 = 25%
+    s- TM/TP/TS = 10%
+
 2021/12/26 -Hector
 - fixed green corp sometimes trading in Energy + Waste (rare but unintended, new games only)
 
