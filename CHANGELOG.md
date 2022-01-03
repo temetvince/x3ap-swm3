@@ -1,8 +1,14 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2022/01/03 -temetvince
+- All ships returned to their original Angular Acceleration values
+- Class rotation variables have been increased by these amounts:
+    - M3 = 40%
+    - M4 = 25%
+
 2022/01/02 -temetvince
-- All ships now have Angular Acceleration set to 50.
+- All ships now have Angular Acceleration set to 50
 - Class rotation variables have been increased by these amounts:
     - M1/M2/TL = 200%
     - M7 = 50%
