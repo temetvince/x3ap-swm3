@@ -1,6 +1,11 @@
 Task Tracking for v1.0.0
 https://github.com/temetvince/swm3/projects/1
 
+2022/01/08 -Hector
+- Quick-Trade added
+- external trade limit default 200k for player
+- strict import disabled on default
+
 2022/01/03 -temetvince
 - All ships returned to their original Angular Acceleration values
 - Class rotation variables have been increased by these amounts:
