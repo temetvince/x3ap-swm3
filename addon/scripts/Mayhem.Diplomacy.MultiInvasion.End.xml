@@ -1,0 +1,613 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Mayhem.Diplomacy.MultiInvasion.End</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="sector" type="Var/Sector" desc="" />
+		<argument index="2" name="race" type="Var/Race" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<comment>* triggered either by Mayhem.Conquer or Mayhem.Diplomacy.Update (if all member BG are dead)</comment>
+		</line>
+		<line linenr="002" indent="" />
+		<line linenr="003" indent="">
+			<var>$Diplo.MultiInvasionStatus</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'Diplo.MultiInvasionStatus'</text>
+		</line>
+		<line linenr="004" indent="">
+			<var>$Diplo.MultiInvasionStatus.races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>keys</text>
+			<text>:</text>
+			<text> </text>
+			<text>table</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionStatus</var>
+		</line>
+		<line linenr="005" indent="">
+			<var>$Diplo.MultiInvasionTargets</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'Diplo.MultiInvasionTargets'</text>
+		</line>
+		<line linenr="006" indent="">
+			<var>$Diplo.MultiInvasionTargets.races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>keys</text>
+			<text>:</text>
+			<text> </text>
+			<text>table</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionTargets</var>
+		</line>
+		<line linenr="007" indent="">
+			<var>$Diplo.MultiInvasionMembers</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'Diplo.MultiInvasionMembers'</text>
+		</line>
+		<line linenr="008" indent="">
+			<var>$Diplo.MultiInvasionMembers.races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>keys</text>
+			<text>:</text>
+			<text> </text>
+			<text>table</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionMembers</var>
+		</line>
+		<line linenr="009" indent="">
+			<var>$members</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionMembers</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="010" indent="">
+			<comment>* remove Battlegroups from operation</comment>
+		</line>
+		<line linenr="011" indent="">
+			<var>$XS.Iterator1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$members</var>
+		</line>
+		<line linenr="012" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="014" indent="">
+			<var>$member</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$members</var>
+			<text>[</text>
+			<var>$XS.Iterator1</var>
+			<text>]</text>
+		</line>
+		<line linenr="015" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>1</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="016" indent="">
+			<var>$member</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'rallyGate'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="017" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="018" indent="">
+			<comment>* remove sector from operation</comment>
+		</line>
+		<line linenr="019" indent="">
+			<var>$sector</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'MultiInvasion'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="020" indent="">
+			<comment>* remove operation data</comment>
+		</line>
+		<line linenr="021" indent="">
+			<var>$MultiInvasionStatus</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionStatus</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="022" indent="">
+			<var>$MultiInvasionTarget</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionTargets</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="023" indent="">
+			<var>$members</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionMembers</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="024" indent="">
+			<var>$MultiInvasionStatus</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="025" indent="">
+			<var>$MultiInvasionTarget</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="026" indent="">
+			<var>$members</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="027" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionStatus</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MultiInvasionStatus</var>
+		</line>
+		<line linenr="028" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionTargets</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MultiInvasionTarget</var>
+		</line>
+		<line linenr="029" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionMembers</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$members</var>
+		</line>
+		<line linenr="030" indent="" />
+		<line linenr="031" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Mayhem.Diplomacy.MultiInvasion.End" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="13">
+				<sval type="string" val="sector" />
+				<sval type="string" val="race" />
+				<sval type="string" val="Diplo.MultiInvasionStatus" />
+				<sval type="string" val="Diplo.MultiInvasionStatus.races" />
+				<sval type="string" val="Diplo.MultiInvasionTargets" />
+				<sval type="string" val="Diplo.MultiInvasionTargets.races" />
+				<sval type="string" val="Diplo.MultiInvasionMembers" />
+				<sval type="string" val="Diplo.MultiInvasionMembers.races" />
+				<sval type="string" val="members" />
+				<sval type="string" val="member" />
+				<sval type="string" val="XS.Iterator1" />
+				<sval type="string" val="MultiInvasionStatus" />
+				<sval type="string" val="MultiInvasionTarget" />
+			</sval>
+			<sval type="array" size="25">
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Diplo.MultiInvasionStatus" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1710" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Diplo.MultiInvasionTargets" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1710" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Diplo.MultiInvasionMembers" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1710" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609143" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="5" />
+					<sval type="string" val="rallyGate" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="MultiInvasion" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="8" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="array" size="2">
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="string" val="" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="16" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="7">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="triggered either by Mayhem.Conquer or Mayhem.Diplomacy.Update (if all member BG are dead)" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="7" />
+					<sval type="int" val="1" />
+					<sval type="string" val="remove Battlegroups from operation" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+					<sval type="string" val="remove sector from operation" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="string" val="remove operation data" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="24" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

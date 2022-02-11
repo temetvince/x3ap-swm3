@@ -120,7 +120,7 @@
 			<text> </text>
 			<text>/</text>
 			<text> </text>
-			<var>3</var>
+			<var>10</var>
 		</line>
 		<line linenr="010" indent="">
 			<text>else</text>
@@ -146,7 +146,7 @@
 			<text> </text>
 			<text>/</text>
 			<text> </text>
-			<var>2</var>
+			<var>6</var>
 		</line>
 		<line linenr="012" indent="">
 			<text>end</text>
@@ -401,7 +401,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="5" />
 					<sval type="int" val="4" />
-					<sval type="int" val="3" />
+					<sval type="int" val="10" />
 					<sval type="int" val="15" />
 					<sval type="int" val="14" />
 					<sval type="int" val="3" />
@@ -441,7 +441,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="5" />
 					<sval type="int" val="4" />
-					<sval type="int" val="2" />
+					<sval type="int" val="6" />
 					<sval type="int" val="15" />
 					<sval type="int" val="14" />
 					<sval type="int" val="3" />

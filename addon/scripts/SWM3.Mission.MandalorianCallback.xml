@@ -309,7 +309,7 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 			<text> </text>
 			<text>nbOfPoints</text>
 			<text>=</text>
@@ -489,7 +489,7 @@
 			<text> </text>
 			<text>raceOrObject</text>
 			<text>=</text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 		</line>
 		<line linenr="045" indent="&#160;&#160;&#160;">
 			<var>$rep</var>
@@ -504,7 +504,7 @@
 			<text> </text>
 			<text>race</text>
 			<text> </text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 			<text> </text>
 			<text>to</text>
 			<text> </text>
@@ -567,7 +567,7 @@
 			<text> </text>
 			<text>race1</text>
 			<text>=</text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 			<text> </text>
 			<text>race2</text>
 			<text>=</text>
@@ -1143,7 +1143,7 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 		</line>
 		<line linenr="096" indent="&#160;&#160;" interruptable="@">
 			<text>START</text>
@@ -1450,7 +1450,18 @@
 			<text>=</text>
 			<text>'mayhem_maxSpecializationLevel'</text>
 		</line>
-		<line linenr="116" indent="&#160;&#160;" interruptable="@">
+		<line linenr="116" indent="&#160;&#160;">
+			<var>$maxSpec</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$maxSpec</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>25</var>
+		</line>
+		<line linenr="117" indent="&#160;&#160;" interruptable="@">
 			<var>$PlayerOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1470,7 +1481,7 @@
 			<text>=</text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="117" indent="&#160;&#160;">
+		<line linenr="118" indent="&#160;&#160;">
 			<var>$PlayerOutpostNb</var>
 			<text> </text>
 			<text>=</text>
@@ -1483,21 +1494,21 @@
 			<text> </text>
 			<var>$PlayerOutposts</var>
 		</line>
-		<line linenr="118" indent="&#160;&#160;">
-			<comment>* highest possible bonus is 20%. It degrades when you own more than 4 outposts</comment>
-		</line>
 		<line linenr="119" indent="&#160;&#160;">
+			<comment>* highest possible bonus is 10%. It degrades when you own more than 4 outposts</comment>
+		</line>
+		<line linenr="120" indent="&#160;&#160;">
 			<var>$bonusSpec</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>80</var>
+			<var>40</var>
 			<text> </text>
 			<text>/</text>
 			<text> </text>
 			<var>$PlayerOutpostNb</var>
 		</line>
-		<line linenr="120" indent="&#160;&#160;&#160;">
+		<line linenr="121" indent="&#160;&#160;&#160;">
 			<var>$spec</var>
 			<text> </text>
 			<text>=</text>
@@ -1508,10 +1519,10 @@
 			<text> </text>
 			<var>$bonusSpec</var>
 		</line>
-		<line linenr="121" indent="&#160;&#160;">
+		<line linenr="122" indent="&#160;&#160;">
 			<comment>* there is a final cap if some players have raised max production spec in the t-file too much</comment>
 		</line>
-		<line linenr="122" indent="&#160;&#160;&#160;">
+		<line linenr="123" indent="&#160;&#160;&#160;">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -1522,14 +1533,14 @@
 			<text> </text>
 			<var>90</var>
 		</line>
-		<line linenr="123" indent="&#160;&#160;&#160;">
+		<line linenr="124" indent="&#160;&#160;&#160;">
 			<var>$spec</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>90</var>
 		</line>
-		<line linenr="124" indent="&#160;&#160;">
+		<line linenr="125" indent="&#160;&#160;">
 			<var>$XS.Iterator2</var>
 			<text> </text>
 			<text>=</text>
@@ -1542,17 +1553,17 @@
 			<text> </text>
 			<var>$PlayerOutposts</var>
 		</line>
-		<line linenr="125" indent="&#160;&#160;">
+		<line linenr="126" indent="&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator2</var>
 		</line>
-		<line linenr="126" indent="&#160;&#160;">
+		<line linenr="127" indent="&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator2</var>
 		</line>
-		<line linenr="127" indent="&#160;&#160;">
+		<line linenr="128" indent="&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -1562,7 +1573,7 @@
 			<var>$XS.Iterator2</var>
 			<text>]</text>
 		</line>
-		<line linenr="128" indent="&#160;&#160;" interruptable="@">
+		<line linenr="129" indent="&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1571,7 +1582,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="129" indent="&#160;&#160;" interruptable="@">
+		<line linenr="130" indent="&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -1589,13 +1600,13 @@
 			<text>=</text>
 			<var>$spec</var>
 		</line>
-		<line linenr="130" indent="&#160;&#160;">
+		<line linenr="131" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="131" indent="&#160;&#160;">
+		<line linenr="132" indent="&#160;&#160;">
 			<comment>* 1 Favor point is needed but never gets consumed</comment>
 		</line>
-		<line linenr="132" indent="&#160;&#160;" interruptable="@">
+		<line linenr="133" indent="&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -1617,10 +1628,10 @@
 			<text>=</text>
 			<var>1</var>
 		</line>
-		<line linenr="133" indent="&#160;">
+		<line linenr="134" indent="&#160;">
 			<comment>* start 2 day OCV Timer.</comment>
 		</line>
-		<line linenr="134" indent="&#160;&#160;">
+		<line linenr="135" indent="&#160;&#160;">
 			<var>$playtime</var>
 			<text> </text>
 			<text>=</text>
@@ -1629,7 +1640,7 @@
 			<text> </text>
 			<text>time</text>
 		</line>
-		<line linenr="135" indent="&#160;&#160;">
+		<line linenr="136" indent="&#160;&#160;">
 			<var>$timeout</var>
 			<text> </text>
 			<text>=</text>
@@ -1640,7 +1651,7 @@
 			<text> </text>
 			<var>172800</var>
 		</line>
-		<line linenr="136" indent="&#160;&#160;">
+		<line linenr="137" indent="&#160;&#160;">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -1656,7 +1667,7 @@
 			<text>=</text>
 			<var>$timeout</var>
 		</line>
-		<line linenr="137" indent="&#160;">
+		<line linenr="138" indent="&#160;">
 			<var>$t</var>
 			<text> </text>
 			<text>=</text>
@@ -1687,7 +1698,7 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="138" indent="&#160;" interruptable="@">
+		<line linenr="139" indent="&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -1721,7 +1732,7 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="139" indent="">
+		<line linenr="140" indent="">
 			<text>else</text>
 			<text> </text>
 			<text>if</text>
@@ -1732,7 +1743,7 @@
 			<text> </text>
 			<text>'Neutral'</text>
 		</line>
-		<line linenr="140" indent="">
+		<line linenr="141" indent="">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -1748,7 +1759,7 @@
 			<text>=</text>
 			<var>2</var>
 		</line>
-		<line linenr="141" indent="">
+		<line linenr="142" indent="">
 			<var>$t</var>
 			<text> </text>
 			<text>=</text>
@@ -1779,7 +1790,7 @@
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="142" indent="" interruptable="@">
+		<line linenr="143" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -1813,18 +1824,18 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="143" indent="">
+		<line linenr="144" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="144" indent="">
+		<line linenr="145" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="145" indent="">
+		<line linenr="146" indent="">
 			<text>endsub</text>
 		</line>
-		<line linenr="146" indent="" />
+		<line linenr="147" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -1854,7 +1865,7 @@
 				<sval type="string" val="outpostType" />
 				<sval type="string" val="XS.Iterator2" />
 			</sval>
-			<sval type="array" size="113">
+			<sval type="array" size="114">
 				<sval type="array" size="5">
 					<sval type="int" val="157" />
 					<sval type="int" val="5" />
@@ -2540,11 +2551,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="111" />
+					<sval type="int" val="112" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610585339" />
+					<sval type="int" val="-1610585083" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
@@ -2827,6 +2838,21 @@
 					<sval type="string" val="mayhem_maxSpecializationLevel" />
 					<sval type="int" val="12" />
 				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="4" />
+					<sval type="int" val="25" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
+				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.GetOutposts" />
@@ -2848,7 +2874,7 @@
 					<sval type="int" val="15" />
 					<sval type="int" val="3" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="40" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="14" />
 					<sval type="int" val="15" />
@@ -2875,7 +2901,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610588920" />
+					<sval type="int" val="-1610588664" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="16" />
@@ -2905,7 +2931,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610587127" />
+					<sval type="int" val="-1610586871" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="18" />
@@ -2942,7 +2968,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="94" />
+					<sval type="int" val="95" />
 				</sval>
 				<sval type="array" size="10">
 					<sval type="int" val="102" />
@@ -3020,11 +3046,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="111" />
+					<sval type="int" val="112" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610584315" />
+					<sval type="int" val="-1610584059" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
@@ -3250,35 +3276,35 @@
 					<sval type="string" val="all player outposts level up in production efficiency" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="89" />
+					<sval type="int" val="90" />
 					<sval type="int" val="1" />
-					<sval type="string" val="highest possible bonus is 20%. It degrades when you own more than 4 outposts" />
+					<sval type="string" val="highest possible bonus is 10%. It degrades when you own more than 4 outposts" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="91" />
+					<sval type="int" val="92" />
 					<sval type="int" val="1" />
 					<sval type="string" val="there is a final cap if some players have raised max production spec in the t-file too much" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="100" />
+					<sval type="int" val="101" />
 					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="3">
-					<sval type="int" val="100" />
-					<sval type="int" val="1" />
-					<sval type="string" val="1 Favor point is needed but never gets consumed" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="101" />
 					<sval type="int" val="1" />
+					<sval type="string" val="1 Favor point is needed but never gets consumed" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="102" />
+					<sval type="int" val="1" />
 					<sval type="string" val="start 2 day OCV Timer." />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="111" />
+					<sval type="int" val="112" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="113" />
+					<sval type="int" val="114" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

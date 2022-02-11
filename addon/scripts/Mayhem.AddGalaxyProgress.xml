@@ -175,7 +175,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>80</var>
+			<var>70</var>
 		</line>
 		<line linenr="018" indent="&#160;&#160;&#160;">
 			<text>end</text>
@@ -258,7 +258,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>70</var>
+			<var>65</var>
 		</line>
 		<line linenr="026" indent="&#160;&#160;">
 			<text>end</text>
@@ -341,7 +341,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>70</var>
+			<var>65</var>
 		</line>
 		<line linenr="034" indent="&#160;&#160;&#160;">
 			<text>end</text>
@@ -424,7 +424,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>60</var>
+			<var>55</var>
 		</line>
 		<line linenr="042" indent="&#160;">
 			<text>end</text>
@@ -507,7 +507,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>60</var>
+			<var>55</var>
 		</line>
 		<line linenr="050" indent="&#160;">
 			<text>end</text>
@@ -530,7 +530,7 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 		</line>
 		<line linenr="052" indent="&#160;">
 			<var>$XS.Iterator6</var>
@@ -590,7 +590,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>60</var>
+			<var>55</var>
 		</line>
 		<line linenr="058" indent="&#160;">
 			<text>end</text>
@@ -1031,7 +1031,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>80</var>
+			<var>70</var>
 		</line>
 		<line linenr="093" indent="">
 			<text>end</text>
@@ -1197,7 +1197,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>80</var>
+			<var>70</var>
 		</line>
 		<line linenr="109" indent="">
 			<text>end</text>
@@ -1280,7 +1280,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>80</var>
+			<var>70</var>
 		</line>
 		<line linenr="117" indent="">
 			<text>end</text>
@@ -1303,7 +1303,7 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 		</line>
 		<line linenr="119" indent="">
 			<var>$XS.Iterator12</var>
@@ -1363,7 +1363,7 @@
 			<text> </text>
 			<text>level</text>
 			<text>=</text>
-			<var>90</var>
+			<var>75</var>
 		</line>
 		<line linenr="125" indent="">
 			<text>end</text>
@@ -1552,7 +1552,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="70" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -1609,7 +1609,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="70" />
+					<sval type="int" val="65" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -1666,7 +1666,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="70" />
+					<sval type="int" val="65" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -1723,7 +1723,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="60" />
+					<sval type="int" val="55" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -1780,7 +1780,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="60" />
+					<sval type="int" val="55" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -1837,7 +1837,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="60" />
+					<sval type="int" val="55" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -2131,7 +2131,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="70" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -2245,7 +2245,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="70" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -2302,7 +2302,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="70" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
@@ -2359,7 +2359,7 @@
 					<sval type="int" val="3" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="90" />
+					<sval type="int" val="75" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />

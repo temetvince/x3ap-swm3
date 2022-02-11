@@ -1,0 +1,1627 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Mayhem.Diplomacy.Motivation</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments>
+		<argument index="1" name="race" type="Value" desc="" />
+		<argument index="2" name="event" type="Value" desc="" />
+		<argument index="3" name="Battlegroup" type="Value" desc="" />
+	</arguments>
+	<sourcetext>
+		<line linenr="001" indent="">
+			<comment>* updates NPC war Motivation</comment>
+		</line>
+		<line linenr="002" indent="" />
+		<line linenr="003" indent="">
+			<var>$Multiplier</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_MotivationMultiplier'</text>
+		</line>
+		<line linenr="004" indent="">
+			<var>$dejureGain</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_DeJureConquerMotivation'</text>
+		</line>
+		<line linenr="005" indent="">
+			<var>$ReductionsMultiplier</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_MotivationReductionsMultiplier'</text>
+		</line>
+		<line linenr="006" indent="">
+			<var>$passiveMotivationMultiplier</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_passiveMotivationMultiplier'</text>
+		</line>
+		<line linenr="007" indent="">
+			<var>$passiveMotivationThreshold</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_passiveMotivationThreshold'</text>
+		</line>
+		<line linenr="008" indent="">
+			<var>$WarThreshold</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_MotivationWarThreshold'</text>
+		</line>
+		<line linenr="009" indent="" />
+		<line linenr="010" indent="" />
+		<line linenr="011" indent="">
+			<var>$Diplo.Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'Diplo.Motivation'</text>
+		</line>
+		<line linenr="012" indent="">
+			<var>$Motivation.races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>keys</text>
+			<text>:</text>
+			<text> </text>
+			<text>table</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Diplo.Motivation</var>
+		</line>
+		<line linenr="013" indent="">
+			<var>$Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$Diplo.Motivation</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="014" indent="" />
+		<line linenr="015" indent="">
+			<comment>* Motivation reductions dont take immediate effect and only get saved for the next Mayhem.Diplomacy.Update cycle</comment>
+		</line>
+		<line linenr="016" indent="">
+			<var>$Diplo.Motivation.PendingDrops</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'Diplo.Motivation.PendingDrops'</text>
+		</line>
+		<line linenr="017" indent="">
+			<var>$MotivationPendingDrops.races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>keys</text>
+			<text>:</text>
+			<text> </text>
+			<text>table</text>
+			<text>=</text>
+			<text> </text>
+			<var>$Diplo.Motivation.PendingDrops</var>
+		</line>
+		<line linenr="018" indent="">
+			<var>$MotivationPendingDrop</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$Diplo.Motivation.PendingDrops</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="019" indent="" />
+		<line linenr="020" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'claim'</text>
+		</line>
+		<line linenr="021" indent="&#160;">
+			<comment>* Mayhem.Claim (player destroys 1st station)</comment>
+		</line>
+		<line linenr="022" indent="&#160;">
+			<var>$Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>5</var>
+		</line>
+		<line linenr="023" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'conquer'</text>
+		</line>
+		<line linenr="024" indent="&#160;">
+			<comment>* Mayhem.Conquer</comment>
+		</line>
+		<line linenr="025" indent="&#160;">
+			<var>$Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>35</var>
+		</line>
+		<line linenr="026" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'conquerDejure'</text>
+		</line>
+		<line linenr="027" indent="&#160;">
+			<var>$Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$dejureGain</var>
+		</line>
+		<line linenr="028" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'counterInvasion'</text>
+		</line>
+		<line linenr="029" indent="&#160;">
+			<comment>* Mayhem.Task.Squadron.BattleGroup (NPC Battlegroup claims a player sector, invades an already claimed one, or gets the go code during a coordinated invasion)</comment>
+		</line>
+		<line linenr="030" indent="&#160;">
+			<comment>* Motivation reduction depends on fleet value</comment>
+		</line>
+		<line linenr="031" indent="&#160;" interruptable="@">
+			<var>$followers</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Squadron.GetFormation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>squadron</text>
+			<text>=</text>
+			<var>$Battlegroup</var>
+		</line>
+		<line linenr="032" indent="&#160;" interruptable="@">
+			<var>$squadron.value</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetShipsValue</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ships</text>
+			<text>=</text>
+			<var>$followers</var>
+		</line>
+		<line linenr="033" indent="&#160;">
+			<var>$MotivationPendingDrop</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation.PendingDrop</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>(</text>
+			<var>30</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>$squadron.value</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>3000</var>
+			<text>)</text>
+		</line>
+		<line linenr="034" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'counterRaidJumpBeacon'</text>
+		</line>
+		<line linenr="035" indent="&#160;">
+			<comment>* Mayhem.Task.Squadron.TaskForce (attacking player jump beacon)</comment>
+		</line>
+		<line linenr="036" indent="&#160;">
+			<var>$MotivationPendingDrop</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation.PendingDrop</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>3</var>
+		</line>
+		<line linenr="037" indent="">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'playerSectorLoss'</text>
+		</line>
+		<line linenr="038" indent="&#160;">
+			<comment>* Mayhem.Conquer</comment>
+		</line>
+		<line linenr="039" indent="&#160;" interruptable="@">
+			<var>$plSectors</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetOwnedSectors</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>randomize</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="040" indent="&#160;">
+			<var>$plSectors.s</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$plSectors</var>
+		</line>
+		<line linenr="041" indent="&#160;">
+			<var>$MotivationPendingDrop</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation.PendingDrop</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>(</text>
+			<var>500</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>$plSectors.s</var>
+			<text>)</text>
+		</line>
+		<line linenr="042" indent="&#160;">
+			<comment>* else if $event == 'abandonSector'</comment>
+		</line>
+		<line linenr="043" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="044" indent="" />
+		<line linenr="045" indent="">
+			<var>$Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>$Multiplier</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>100</var>
+		</line>
+		<line linenr="046" indent="">
+			<var>$Motivation.PendingDrop</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation.PendingDrop</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>$ReductionsMultiplier</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>100</var>
+		</line>
+		<line linenr="047" indent="" />
+		<line linenr="048" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$event</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<text>'passiveGain'</text>
+		</line>
+		<line linenr="049" indent="&#160;">
+			<var>$rng</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>random</text>
+			<text> </text>
+			<text>value</text>
+			<text> </text>
+			<text>between</text>
+			<text> </text>
+			<var>5</var>
+			<text> </text>
+			<text>and</text>
+			<text> </text>
+			<var>20</var>
+		</line>
+		<line linenr="050" indent="&#160;">
+			<var>$rng</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$rng</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>$passiveMotivationMultiplier</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>100</var>
+		</line>
+		<line linenr="051" indent="&#160;">
+			<var>$Motivation</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>$rng</var>
+		</line>
+		<line linenr="052" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="053" indent="">
+			<comment>* passiveLoss handled by Mayhem.Diplomacy.Update</comment>
+		</line>
+		<line linenr="054" indent="" />
+		<line linenr="055" indent="">
+			<comment>* Tutorial messages</comment>
+		</line>
+		<line linenr="056" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>&gt;=</text>
+			<text> </text>
+			<var>$passiveMotivationThreshold</var>
+		</line>
+		<line linenr="057" indent="&#160;">
+			<var>$tutorial.1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_DiploTutorialSent.passiveMotivationThreshold'</text>
+		</line>
+		<line linenr="058" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>!</text>
+			<var>$tutorial.1</var>
+		</line>
+		<line linenr="059" indent="&#160;&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>1</var>
+			<text>,</text>
+			<text> </text>
+			<var>$race</var>
+			<text>,</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="060" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.SendMessage</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>message</text>
+			<text>=</text>
+			<var>$t</var>
+			<text> </text>
+			<text>log</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>forceDisplay</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text> </text>
+			<text>delayMs</text>
+			<text>=</text>
+			<var>1000</var>
+			<text> </text>
+			<text>author</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="061" indent="&#160;&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_DiploTutorialSent.passiveMotivationThreshold'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="062" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="063" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text> </text>
+			<text>&gt;=</text>
+			<text> </text>
+			<var>$WarThreshold</var>
+		</line>
+		<line linenr="064" indent="&#160;&#160;">
+			<var>$tutorial.2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_DiploTutorialSent.WarThreshold'</text>
+		</line>
+		<line linenr="065" indent="&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>!</text>
+			<var>$tutorial.2</var>
+		</line>
+		<line linenr="066" indent="&#160;&#160;&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>2</var>
+			<text>,</text>
+			<text> </text>
+			<var>$race</var>
+			<text>,</text>
+			<text> </text>
+			<var>$Motivation</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="067" indent="&#160;&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.SendMessage</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>message</text>
+			<text>=</text>
+			<var>$t</var>
+			<text> </text>
+			<text>log</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>forceDisplay</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+			<text> </text>
+			<text>delayMs</text>
+			<text>=</text>
+			<var>1000</var>
+			<text> </text>
+			<text>author</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="068" indent="&#160;&#160;&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhemSW_DiploTutorialSent.WarThreshold'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="069" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="070" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="071" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="072" indent="" />
+		<line linenr="073" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$Diplo.Motivation</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$Motivation</var>
+		</line>
+		<line linenr="074" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$Diplo.MotivationPendingDrops</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$MotivationPendingDrop</var>
+		</line>
+		<line linenr="075" indent="" />
+		<line linenr="076" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Mayhem.Diplomacy.Motivation" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="0" />
+			<sval type="array" size="25">
+				<sval type="string" val="race" />
+				<sval type="string" val="event" />
+				<sval type="string" val="Battlegroup" />
+				<sval type="string" val="Multiplier" />
+				<sval type="string" val="dejureGain" />
+				<sval type="string" val="ReductionsMultiplier" />
+				<sval type="string" val="passiveMotivationMultiplier" />
+				<sval type="string" val="passiveMotivationThreshold" />
+				<sval type="string" val="WarThreshold" />
+				<sval type="string" val="Diplo.Motivation" />
+				<sval type="string" val="Motivation.races" />
+				<sval type="string" val="Motivation" />
+				<sval type="string" val="Diplo.Motivation.PendingDrops" />
+				<sval type="string" val="MotivationPendingDrops.races" />
+				<sval type="string" val="MotivationPendingDrop" />
+				<sval type="string" val="followers" />
+				<sval type="string" val="squadron.value" />
+				<sval type="string" val="Motivation.PendingDrop" />
+				<sval type="string" val="plSectors" />
+				<sval type="string" val="plSectors.s" />
+				<sval type="string" val="rng" />
+				<sval type="string" val="tutorial.1" />
+				<sval type="string" val="t" />
+				<sval type="string" val="tutorial.2" />
+				<sval type="string" val="Diplo.MotivationPendingDrops" />
+			</sval>
+			<sval type="array" size="54">
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_MotivationMultiplier" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DeJureConquerMotivation" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_MotivationReductionsMultiplier" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_passiveMotivationMultiplier" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_passiveMotivationThreshold" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_MotivationWarThreshold" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Diplo.Motivation" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1710" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Diplo.Motivation.PendingDrops" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1710" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608893" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="claim" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610608123" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="conquer" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="4" />
+					<sval type="int" val="35" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610607355" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="conquerDejure" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610606075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="counterInvasion" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Squadron.GetFormation" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetShipsValue" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="27">
+					<sval type="int" val="104" />
+					<sval type="int" val="14" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="4" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3000" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="9" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-3" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-5" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610605307" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="counterRaidJumpBeacon" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="14" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604283" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="playerSectorLoss" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetOwnedSectors" />
+					<sval type="int" val="18" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="19" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="18" />
+				</sval>
+				<sval type="array" size="21">
+					<sval type="int" val="104" />
+					<sval type="int" val="14" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="4" />
+					<sval type="int" val="500" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="19" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="7" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-3" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-4" />
+				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="17" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-4" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610602749" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="passiveGain" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="110" />
+					<sval type="int" val="20" />
+					<sval type="int" val="4" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="21" />
+				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="20" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-4" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599677" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="15" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DiploTutorialSent.passiveMotivationThreshold" />
+					<sval type="int" val="21" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610601213" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="21" />
+					<sval type="int" val="15" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="2" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.SendMessage" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DiploTutorialSent.passiveMotivationThreshold" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599677" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="15" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DiploTutorialSent.WarThreshold" />
+					<sval type="int" val="23" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599677" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="23" />
+					<sval type="int" val="15" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="2" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.SendMessage" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DiploTutorialSent.WarThreshold" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="24" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+			</sval>
+			<sval type="array" size="3">
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="string" val="" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="string" val="" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="string" val="" />
+				</sval>
+			</sval>
+			<sval type="array" size="27">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="updates NPC war Motivation" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="6" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="6" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Motivation reductions dont take immediate effect and only get saved for the next Mayhem.Diplomacy.Update cycle" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="13" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Mayhem.Claim (player destroys 1st station)" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="16" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Mayhem.Conquer" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="22" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Mayhem.Task.Squadron.BattleGroup (NPC Battlegroup claims a player sector, invades an already claimed one, or gets the go code during a coordinated invasion)" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="22" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Motivation reduction depends on fleet value" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="27" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Mayhem.Task.Squadron.TaskForce (attacking player jump beacon)" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="30" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Mayhem.Conquer" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="33" />
+					<sval type="int" val="1" />
+					<sval type="string" val="else if $event == 'abandonSector'" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="33" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="33" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="35" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="39" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="39" />
+					<sval type="int" val="1" />
+					<sval type="string" val="passiveLoss handled by Mayhem.Diplomacy.Update" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="39" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="39" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Tutorial messages" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="45" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="51" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="53" />
+					<sval type="int" val="2" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

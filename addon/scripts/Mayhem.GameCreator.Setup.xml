@@ -1,0 +1,4577 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
+<!-- Generated using X-Studio -->
+<script>
+	<name>Mayhem.GameCreator.Setup</name>
+	<version>1</version>
+	<engineversion>50</engineversion>
+	<description></description>
+	<arguments />
+	<sourcetext>
+		<line linenr="001" indent="" />
+		<line linenr="002" indent="">
+			<comment>* This script only runs at gamestart.</comment>
+		</line>
+		<line linenr="003" indent="" />
+		<line linenr="004" indent="">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generated'</text>
+		</line>
+		<line linenr="005" indent="&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="006" indent="">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generating'</text>
+		</line>
+		<line linenr="007" indent="&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="008" indent="" />
+		<line linenr="009" indent="">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generating'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="010" indent="" />
+		<line linenr="011" indent="">
+			<comment>* &quot;Welcome onboard!&quot;</comment>
+		</line>
+		<line linenr="012" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<text>speak</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>13</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>1100065</var>
+			<text> </text>
+			<text>priority</text>
+			<text>=</text>
+			<var>100</var>
+		</line>
+		<line linenr="013" indent="" />
+		<line linenr="014" indent="">
+			<text>display</text>
+			<text> </text>
+			<text>info</text>
+			<text> </text>
+			<text>box</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text> </text>
+			<text>'Preparing galaxy...'</text>
+			<text>,</text>
+			<text> </text>
+			<text>icon</text>
+			<text>=</text>
+			<text> </text>
+			<var>51</var>
+			<text>,</text>
+			<text> </text>
+			<text>timeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>50000</var>
+			<text>,</text>
+			<text> </text>
+			<text>fadeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>1000</var>
+		</line>
+		<line linenr="015" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>500</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="016" indent="">
+			<comment>* display subtitle text: text='Please do not save your game while the galaxy is being generated.' duration=900000 ms</comment>
+		</line>
+		<line linenr="017" indent="" />
+		<line linenr="018" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.ImportShipSizes</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="019" indent="" />
+		<line linenr="020" indent="">
+			<comment>* Make sure the galaxy is loaded and inventory set before going on.</comment>
+		</line>
+		<line linenr="021" indent="" interruptable="@">
+			<var>$playerOrigin</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.GetPlayerSector</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="022" indent="" />
+		<line linenr="023" indent="">
+			<comment>* Prologue.</comment>
+		</line>
+		<line linenr="024" indent="">
+			<var>$playerShipMaker</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>maker</text>
+			<text> </text>
+			<text>race</text>
+		</line>
+		<line linenr="025" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>$playerShipMaker</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[Terran]</var>
+		</line>
+		<line linenr="026" indent="&#160;">
+			<var>$playerOrigin</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>owner</text>
+			<text> </text>
+			<text>race</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>[Player]</var>
+		</line>
+		<line linenr="027" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="028" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="029" indent="" />
+		<line linenr="030" indent="">
+			<comment>* Variables that need to be initialized only once.</comment>
+		</line>
+		<line linenr="031" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Init.Variables</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="032" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Init.Templates</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="033" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Init.HighResearchCost</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="034" indent="" />
+		<line linenr="035" indent="">
+			<text>gosub</text>
+			<text> </text>
+			<var>GamestartCheck</var>
+			<text>:</text>
+		</line>
+		<line linenr="036" indent="">
+			<text>gosub</text>
+			<text> </text>
+			<var>PreparePlayer</var>
+			<text>:</text>
+		</line>
+		<line linenr="037" indent="">
+			<text>gosub</text>
+			<text> </text>
+			<var>SetupReputation</var>
+			<text>:</text>
+		</line>
+		<line linenr="038" indent="" />
+		<line linenr="039" indent="">
+			<comment>* SWM3 Diplo system</comment>
+		</line>
+		<line linenr="040" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Diplomacy.Initialize</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="041" indent="" />
+		<line linenr="042" indent="">
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="043" indent="&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>sprintf</text>
+			<text>:</text>
+			<text> </text>
+			<text>pageid</text>
+			<text>=</text>
+			<var>9972</var>
+			<text> </text>
+			<text>textid</text>
+			<text>=</text>
+			<var>2229</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+			<text>,</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="044" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.SendMessage</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>message</text>
+			<text>=</text>
+			<var>$t</var>
+			<text> </text>
+			<text>log</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>forceDisplay</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>delayMs</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>author</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="045" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="046" indent="&#160;" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.StartingOptions</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="047" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="048" indent="" />
+		<line linenr="049" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>1000</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="050" indent="" />
+		<line linenr="051" indent="">
+			<comment>* Gate collision checks. For performance reason, the galaxy generator does not do it, so we do it here.</comment>
+		</line>
+		<line linenr="052" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GameCreator.CheckGates</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="053" indent="">
+			<comment>* Sometimes mines collide with each other because asteroids are too close from each other.</comment>
+		</line>
+		<line linenr="054" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GameCreator.CheckAsteroids</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="055" indent="" />
+		<line linenr="056" indent="">
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="057" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GameCreator.Generate.Prologue</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="058" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="059" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GameCreator.Generate</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="060" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="061" indent="" />
+		<line linenr="062" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Init.Monitor</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="063" indent="" />
+		<line linenr="064" indent="" interruptable="@">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.ColorText</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text>'The galaxy has been fully generated.'</text>
+			<text> </text>
+			<text>color</text>
+			<text>=</text>
+			<text>'g'</text>
+		</line>
+		<line linenr="065" indent="">
+			<text>display</text>
+			<text> </text>
+			<text>info</text>
+			<text> </text>
+			<text>box</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text> </text>
+			<var>$t</var>
+			<text>,</text>
+			<text> </text>
+			<text>icon</text>
+			<text>=</text>
+			<text> </text>
+			<var>51</var>
+			<text>,</text>
+			<text> </text>
+			<text>timeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>10000</var>
+			<text>,</text>
+			<text> </text>
+			<text>fadeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>1000</var>
+		</line>
+		<line linenr="066" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>4000</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="067" indent="">
+			<text>display</text>
+			<text> </text>
+			<text>info</text>
+			<text> </text>
+			<text>box</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text> </text>
+			<text>''</text>
+			<text>,</text>
+			<text> </text>
+			<text>icon</text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text>,</text>
+			<text> </text>
+			<text>timeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text>,</text>
+			<text> </text>
+			<text>fadeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="068" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<text>wait</text>
+			<text> </text>
+			<var>500</var>
+			<text> </text>
+			<text>ms</text>
+		</line>
+		<line linenr="069" indent="" />
+		<line linenr="070" indent="">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generating'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="071" indent="">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.generated'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="072" indent="" />
+		<line linenr="073" indent="">
+			<comment>* display subtitle text: text='You can now save your game.' duration=5000 ms</comment>
+		</line>
+		<line linenr="074" indent="" />
+		<line linenr="075" indent="">
+			<var>$plSector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>sector</text>
+		</line>
+		<line linenr="076" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.Mission.Generate</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>sector</text>
+			<text>=</text>
+			<var>$plSector</var>
+		</line>
+		<line linenr="077" indent="" />
+		<line linenr="078" indent="">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="079" indent="" />
+		<line linenr="080" indent="">
+			<var>GamestartCheck</var>
+			<text>:</text>
+		</line>
+		<line linenr="081" indent="&#160;">
+			<comment>* Check if the .cat are properly installed.</comment>
+		</line>
+		<line linenr="082" indent="&#160;">
+			<var>$maker</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>maker</text>
+			<text> </text>
+			<text>race</text>
+			<text>:</text>
+			<text> </text>
+			<text>shiptype</text>
+			<text>=</text>
+			<var>{Player Outpost}</var>
+		</line>
+		<line linenr="083" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$maker</var>
+			<text> </text>
+			<text>!=</text>
+			<text> </text>
+			<var>[Player]</var>
+		</line>
+		<line linenr="084" indent="&#160;&#160;">
+			<var>$t</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>'The catalog files '10.cat' and '10.dat' do not match those used by Mayhem 3. Please make sure the mod is properly installed.'</text>
+		</line>
+		<line linenr="085" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.SendMessage</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>message</text>
+			<text>=</text>
+			<var>$t</var>
+			<text> </text>
+			<text>log</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>forceDisplay</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+			<text> </text>
+			<text>delayMs</text>
+			<text>=</text>
+			<var>0</var>
+			<text> </text>
+			<text>author</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="086" indent="&#160;&#160;">
+			<text>display</text>
+			<text> </text>
+			<text>info</text>
+			<text> </text>
+			<text>box</text>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<text> </text>
+			<text>''</text>
+			<text>,</text>
+			<text> </text>
+			<text>icon</text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text>,</text>
+			<text> </text>
+			<text>timeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+			<text>,</text>
+			<text> </text>
+			<text>fadeout</text>
+			<text>=</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="087" indent="&#160;&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="088" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="089" indent="&#160;">
+			<comment>* Set the gamestart (credits are used to identify the gamestart). 0 shouldn't happen.</comment>
+		</line>
+		<line linenr="090" indent="&#160;">
+			<comment>* $gamestart = [PLAYERSHIP]-&gt; get amount of ware {Credits (WARE_CREDITS_UNUSED)} in cargo bay</comment>
+		</line>
+		<line linenr="091" indent="&#160;">
+			<comment>* if not $gamestart</comment>
+		</line>
+		<line linenr="092" indent="&#160;">
+			<comment>* $t = 'The current gamestart is not recognized. Mayhem 3 can only be played via the Game Creator.'</comment>
+		</line>
+		<line linenr="093" indent="&#160;">
+			<comment>* = [NULL]-&gt; call script 'Joubarbe.Lib.SendMessage' : message=$t log=[TRUE] forceDisplay=[TRUE] delayMs=0 author=null</comment>
+		</line>
+		<line linenr="094" indent="&#160;">
+			<comment>* display info box: text= '', icon= 0, timeout= 0, fadeout= 0</comment>
+		</line>
+		<line linenr="095" indent="&#160;">
+			<comment>* return null</comment>
+		</line>
+		<line linenr="096" indent="&#160;">
+			<comment>* end</comment>
+		</line>
+		<line linenr="097" indent="&#160;">
+			<comment>* set global variable: name='mayhem_gamestart' value=$gamestart</comment>
+		</line>
+		<line linenr="098" indent="&#160;">
+			<comment>* $gamestart = $gamestart * -1</comment>
+		</line>
+		<line linenr="099" indent="&#160;">
+			<comment>* = [PLAYERSHIP]-&gt; add $gamestart units of {Credits (WARE_CREDITS_UNUSED)}</comment>
+		</line>
+		<line linenr="100" indent="">
+			<text>endsub</text>
+		</line>
+		<line linenr="101" indent="" />
+		<line linenr="102" indent="">
+			<var>PreparePlayer</var>
+			<text>:</text>
+		</line>
+		<line linenr="103" indent="&#160;">
+			<var>$playerShipType</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<text>type</text>
+			<text> </text>
+			<text>code</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>object</text>
+		</line>
+		<line linenr="104" indent="&#160;">
+			<comment>* $playerRace = [PLAYERSHIP]-&gt; get maker race</comment>
+		</line>
+		<line linenr="105" indent="&#160;">
+			<var>$playerRace</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$playerOrigin</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>owner</text>
+			<text> </text>
+			<text>race</text>
+		</line>
+		<line linenr="106" indent="&#160;">
+			<var>$playerName</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>random</text>
+			<text> </text>
+			<text>name</text>
+			<text>:</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>$playerRace</var>
+		</line>
+		<line linenr="107" indent="&#160;">
+			<var>$fatherName</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>random</text>
+			<text> </text>
+			<text>name</text>
+			<text>:</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>$playerRace</var>
+		</line>
+		<line linenr="108" indent="&#160;">
+			<var>$playerNamePlus</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$playerName</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>' (Independent)'</text>
+		</line>
+		<line linenr="109" indent="&#160;">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="110" indent="&#160;&#160;">
+			<var>$playerNamePlus</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$playerName</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<text>' (Terracorp)'</text>
+		</line>
+		<line linenr="111" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>player</text>
+			<text> </text>
+			<text>name</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text> </text>
+			<var>$playerNamePlus</var>
+		</line>
+		<line linenr="112" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_playerShipType'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$playerShipType</var>
+		</line>
+		<line linenr="113" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_playerRace'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$playerRace</var>
+		</line>
+		<line linenr="114" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_playerName'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$playerName</var>
+		</line>
+		<line linenr="115" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_fatherName'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$fatherName</var>
+		</line>
+		<line linenr="116" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_playerOrigin'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$playerOrigin</var>
+		</line>
+		<line linenr="117" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetTurrets</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ship</text>
+			<text>=</text>
+			<var>[PLAYERSHIP]</var>
+			<text> </text>
+			<text>defense</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="118" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.EquipShip</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ship</text>
+			<text>=</text>
+			<var>[PLAYERSHIP]</var>
+			<text> </text>
+			<text>equipMissiles</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="119" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.AddBlueprint</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>shipType</text>
+			<text>=</text>
+			<var>$playerShipType</var>
+		</line>
+		<line linenr="120" indent="&#160;" />
+		<line linenr="121" indent="&#160;">
+			<comment>* Prologue specials.</comment>
+		</line>
+		<line linenr="122" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="123" indent="&#160;&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.progress'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>3</var>
+		</line>
+		<line linenr="124" indent="&#160;&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_OCVFirstMessage'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="125" indent="&#160;&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<var>1</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Experimental Transporter Device}</var>
+		</line>
+		<line linenr="126" indent="&#160;&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<var>20</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Advanced Satellite}</var>
+		</line>
+		<line linenr="127" indent="&#160;&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<var>15</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Chaff}</var>
+		</line>
+		<line linenr="128" indent="&#160;&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>add</text>
+			<text> </text>
+			<var>100</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Salvage Insurance}</var>
+		</line>
+		<line linenr="129" indent="&#160;&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>1</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{Transporter Device}</var>
+		</line>
+		<line linenr="130" indent="&#160;&#160;">
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>install</text>
+			<text> </text>
+			<var>1</var>
+			<text> </text>
+			<text>units</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>{CCDS MK1}</var>
+		</line>
+		<line linenr="131" indent="&#160;&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>discovered</text>
+			<text> </text>
+			<text>status</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Experimental Transporter Device}</var>
+			<text> </text>
+			<text>status</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="132" indent="&#160;&#160;" interruptable="@">
+			<var>$shipTypes</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.GetWaresFromMaintype</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>maintype</text>
+			<text>=</text>
+			<var>[SSTYPE_SHIP]</var>
+			<text> </text>
+			<text>excludeArray</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="133" indent="&#160;&#160;">
+			<var>$XS.Iterator1</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$shipTypes</var>
+		</line>
+		<line linenr="134" indent="&#160;&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="135" indent="&#160;&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator1</var>
+		</line>
+		<line linenr="136" indent="&#160;&#160;&#160;">
+			<var>$shipType</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$shipTypes</var>
+			<text>[</text>
+			<var>$XS.Iterator1</var>
+			<text>]</text>
+		</line>
+		<line linenr="137" indent="&#160;&#160;&#160;&#160;">
+			<var>$shipType.maker</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>maker</text>
+			<text> </text>
+			<text>race</text>
+			<text>:</text>
+			<text> </text>
+			<text>shiptype</text>
+			<text>=</text>
+			<var>$shipType</var>
+		</line>
+		<line linenr="138" indent="&#160;&#160;">
+			<var>$shipType.class</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>class</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>type</text>
+			<text>:</text>
+			<text> </text>
+			<text>subtype</text>
+			<text>=</text>
+			<text> </text>
+			<var>$shipType</var>
+		</line>
+		<line linenr="139" indent="&#160;&#160;">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>(</text>
+			<var>$shipType.maker</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[Terran]</var>
+			<text> </text>
+			<text>OR</text>
+			<text> </text>
+			<var>$shipType.maker</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[Remnant]</var>
+			<text>)</text>
+			<text> </text>
+			<text>AND</text>
+			<text> </text>
+			<text>(</text>
+			<var>$shipType.class</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[M3]</var>
+			<text> </text>
+			<text>OR</text>
+			<text> </text>
+			<var>$shipType.class</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[M6]</var>
+			<text>)</text>
+		</line>
+		<line linenr="140" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.AddBlueprint</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>shipType</text>
+			<text>=</text>
+			<var>$shipType</var>
+		</line>
+		<line linenr="141" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="142" indent="&#160;&#160;" interruptable="@">
+			<var>$wares</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetCraftingWares</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>all</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="143" indent="&#160;&#160;&#160;" interruptable="@">
+			<var>$food</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetCompanyWares</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>onlyOutpost</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="144" indent="&#160;&#160;&#160;">
+			<var>$wares</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>join</text>
+			<text> </text>
+			<text>arrays</text>
+			<text>:</text>
+			<text> </text>
+			<text>first</text>
+			<text>=</text>
+			<var>$wares</var>
+			<text>,</text>
+			<text> </text>
+			<text>second</text>
+			<text>=</text>
+			<var>$food</var>
+		</line>
+		<line linenr="145" indent="&#160;&#160;&#160;">
+			<var>$XS.Iterator2</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$wares</var>
+		</line>
+		<line linenr="146" indent="&#160;&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator2</var>
+		</line>
+		<line linenr="147" indent="&#160;&#160;&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator2</var>
+		</line>
+		<line linenr="148" indent="&#160;&#160;&#160;">
+			<var>$ware</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$wares</var>
+			<text>[</text>
+			<var>$XS.Iterator2</var>
+			<text>]</text>
+		</line>
+		<line linenr="149" indent="&#160;&#160;">
+			<var>$rng</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>random</text>
+			<text> </text>
+			<text>value</text>
+			<text> </text>
+			<text>between</text>
+			<text> </text>
+			<var>1500000</var>
+			<text> </text>
+			<text>and</text>
+			<text> </text>
+			<var>2000000</var>
+		</line>
+		<line linenr="150" indent="&#160;">
+			<var>$p</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>average</text>
+			<text> </text>
+			<text>price</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<var>$ware</var>
+		</line>
+		<line linenr="151" indent="&#160;">
+			<var>$n</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$rng</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>$p</var>
+		</line>
+		<line linenr="152" indent="&#160;">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$n</var>
+			<text> </text>
+			<text>&lt;=</text>
+			<text> </text>
+			<var>0</var>
+		</line>
+		<line linenr="153" indent="&#160;">
+			<var>$n</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>1</var>
+		</line>
+		<line linenr="154" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.TIS.Add</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>ware</text>
+			<text>=</text>
+			<var>$ware</var>
+			<text> </text>
+			<text>amount</text>
+			<text>=</text>
+			<var>$n</var>
+		</line>
+		<line linenr="155" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="156" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="157" indent="&#160;" />
+		<line linenr="158" indent="&#160;" interruptable="@">
+			<var>$validPos</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.GetValidPos</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>sector</text>
+			<text>=</text>
+			<var>$playerOrigin</var>
+			<text> </text>
+			<text>minDistance</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>posArray</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>verticalOnly</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="159" indent="&#160;">
+			<var>$x</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$validPos</var>
+			<text>[</text>
+			<var>0</var>
+			<text>]</text>
+		</line>
+		<line linenr="160" indent="&#160;">
+			<var>$y</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$validPos</var>
+			<text>[</text>
+			<var>1</var>
+			<text>]</text>
+		</line>
+		<line linenr="161" indent="">
+			<var>$z</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$validPos</var>
+			<text>[</text>
+			<var>2</var>
+			<text>]</text>
+		</line>
+		<line linenr="162" indent="">
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>{Neutral Race Advanced Satellite}</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$playerOrigin</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>$x</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>$y</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>$z</var>
+		</line>
+		<line linenr="163" indent="" />
+		<line linenr="164" indent="&#160;">
+			<comment>* Unlock the Trade Report menu on PLAYERHIP.</comment>
+		</line>
+		<line linenr="165" indent="&#160;">
+			<var>$report</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>alloc</text>
+			<text>:</text>
+			<text> </text>
+			<text>size</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="166" indent="&#160;">
+			<text>set</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'LitQB.TradeReport.Player'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>$report</var>
+		</line>
+		<line linenr="167" indent="&#160;">
+			<text>endsub</text>
+		</line>
+		<line linenr="168" indent="&#160;" />
+		<line linenr="169" indent="&#160;">
+			<var>SetupReputation</var>
+			<text>:</text>
+		</line>
+		<line linenr="170" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Empire]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[New Republic (Races)]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Neutral]</var>
+		</line>
+		<line linenr="171" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[CIS]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Rebel Alliance (Races)]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Neutral]</var>
+		</line>
+		<line linenr="172" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Empire]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[CIS]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Neutral]</var>
+		</line>
+		<line linenr="173" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Rebel Alliance (Races)]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[New Republic (Races)]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Neutral]</var>
+		</line>
+		<line linenr="174" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Mandalorian]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Neutral]</var>
+		</line>
+		<line linenr="175" indent="&#160;" interruptable="@">
+			<var>$commonwealth</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.GetCommonwealth</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="176" indent="&#160;&#160;">
+			<text>append</text>
+			<text> </text>
+			<var>[Mandalorian]</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$commonwealth</var>
+		</line>
+		<line linenr="177" indent="&#160;&#160;">
+			<text>append</text>
+			<text> </text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$commonwealth</var>
+		</line>
+		<line linenr="178" indent="&#160;" interruptable="@">
+			<var>$companies</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetCompanies</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="179" indent="&#160;">
+			<var>$companies</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>clone</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$companies</var>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>index</text>
+			<text> </text>
+			<var>null</var>
+			<text> </text>
+			<text>...</text>
+			<text> </text>
+			<var>null</var>
+		</line>
+		<line linenr="180" indent="&#160;&#160;">
+			<text>append</text>
+			<text> </text>
+			<var>[Private Corp.]</var>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$companies</var>
+		</line>
+		<line linenr="181" indent="&#160;&#160;">
+			<var>$XS.Iterator3</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$commonwealth</var>
+		</line>
+		<line linenr="182" indent="&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator3</var>
+		</line>
+		<line linenr="183" indent="&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator3</var>
+		</line>
+		<line linenr="184" indent="&#160;&#160;">
+			<var>$race</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$commonwealth</var>
+			<text>[</text>
+			<var>$XS.Iterator3</var>
+			<text>]</text>
+		</line>
+		<line linenr="185" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Private Corp.]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$race</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="186" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$race</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="187" indent="&#160;&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="188" indent="&#160;&#160;">
+			<var>$XS.Iterator4</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$companies</var>
+		</line>
+		<line linenr="189" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator4</var>
+		</line>
+		<line linenr="190" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator4</var>
+		</line>
+		<line linenr="191" indent="&#160;">
+			<var>$company</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$companies</var>
+			<text>[</text>
+			<var>$XS.Iterator4</var>
+			<text>]</text>
+		</line>
+		<line linenr="192" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Pirates]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="193" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Sith]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="194" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Sith OCV]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="195" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Sith Scouts]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="196" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Private Corp.]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="197" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="198" indent="&#160;">
+			<var>$XS.Iterator5</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$commonwealth</var>
+		</line>
+		<line linenr="199" indent="&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator5</var>
+		</line>
+		<line linenr="200" indent="&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator5</var>
+		</line>
+		<line linenr="201" indent="&#160;">
+			<var>$race</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$commonwealth</var>
+			<text>[</text>
+			<var>$XS.Iterator5</var>
+			<text>]</text>
+		</line>
+		<line linenr="202" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>$race</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>$company</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="203" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="204" indent="&#160;&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="205" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Sith]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Sith OCV]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="206" indent="&#160;&#160;&#160;" />
+		<line linenr="207" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Sith]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Foe]</var>
+		</line>
+		<line linenr="208" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Sith OCV]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Foe]</var>
+		</line>
+		<line linenr="209" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Sith Scouts]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Foe]</var>
+		</line>
+		<line linenr="210" indent="&#160;&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Pirates]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Foe]</var>
+		</line>
+		<line linenr="211" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Terracorp]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Private Corp.]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Friend]</var>
+		</line>
+		<line linenr="212" indent="" />
+		<line linenr="213" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.SetRelation</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race1</text>
+			<text>=</text>
+			<var>[Mandalorian]</var>
+			<text> </text>
+			<text>race2</text>
+			<text>=</text>
+			<var>[Pirates]</var>
+			<text> </text>
+			<text>relation</text>
+			<text>=</text>
+			<var>[Neutral]</var>
+		</line>
+		<line linenr="214" indent="" />
+		<line linenr="215" indent="">
+			<comment>* Create a ship of each race to update the reputation menu.</comment>
+		</line>
+		<line linenr="216" indent="" interruptable="@">
+			<var>$races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.GetCommonwealth</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="217" indent="">
+			<var>$shipType</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[PLAYERSHIP]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>ware</text>
+			<text> </text>
+			<text>type</text>
+			<text> </text>
+			<text>code</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>object</text>
+		</line>
+		<line linenr="218" indent="">
+			<var>$XS.Iterator6</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$races</var>
+		</line>
+		<line linenr="219" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator6</var>
+		</line>
+		<line linenr="220" indent="">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator6</var>
+		</line>
+		<line linenr="221" indent="">
+			<var>$race</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$races</var>
+			<text>[</text>
+			<var>$XS.Iterator6</var>
+			<text>]</text>
+		</line>
+		<line linenr="222" indent="" interruptable="@">
+			<var>$sectors</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.GetOwnedSectors</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>race</text>
+			<text>=</text>
+			<var>$race</var>
+			<text> </text>
+			<text>randomize</text>
+			<text>=</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="223" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$sectors</var>
+		</line>
+		<line linenr="224" indent="">
+			<text>continue</text>
+		</line>
+		<line linenr="225" indent="">
+			<var>$ship</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>create</text>
+			<text> </text>
+			<text>ship</text>
+			<text>:</text>
+			<text> </text>
+			<text>type</text>
+			<text>=</text>
+			<var>$shipType</var>
+			<text> </text>
+			<text>owner</text>
+			<text>=</text>
+			<var>$race</var>
+			<text> </text>
+			<text>addto</text>
+			<text>=</text>
+			<var>$playerOrigin</var>
+			<text> </text>
+			<text>x</text>
+			<text>=</text>
+			<var>-90000</var>
+			<text> </text>
+			<text>y</text>
+			<text>=</text>
+			<var>-90000</var>
+			<text> </text>
+			<text>z</text>
+			<text>=</text>
+			<var>-90000</var>
+		</line>
+		<line linenr="226" indent="">
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>known</text>
+			<text> </text>
+			<text>status</text>
+			<text> </text>
+			<text>to</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="227" indent="">
+			<var>$ship</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_ignoreKilledSignal'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="228" indent="" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.Destroy</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>object</text>
+			<text>=</text>
+			<var>$ship</var>
+			<text> </text>
+			<text>noExplosion</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="229" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="230" indent="">
+			<text>endsub</text>
+		</line>
+	</sourcetext>
+	<codearray>
+		<sval type="array" size="10">
+			<sval type="string" val="Mayhem.GameCreator.Setup" />
+			<sval type="int" val="50" />
+			<sval type="string" val="" />
+			<sval type="int" val="1" />
+			<sval type="int" val="2" />
+			<sval type="array" size="38">
+				<sval type="string" val="playerOrigin" />
+				<sval type="string" val="playerShipMaker" />
+				<sval type="string" val="t" />
+				<sval type="string" val="plSector" />
+				<sval type="string" val="maker" />
+				<sval type="string" val="playerShipType" />
+				<sval type="string" val="playerRace" />
+				<sval type="string" val="playerName" />
+				<sval type="string" val="fatherName" />
+				<sval type="string" val="playerNamePlus" />
+				<sval type="string" val="shipTypes" />
+				<sval type="string" val="shipType" />
+				<sval type="string" val="XS.Iterator1" />
+				<sval type="string" val="shipType.maker" />
+				<sval type="string" val="shipType.class" />
+				<sval type="string" val="wares" />
+				<sval type="string" val="food" />
+				<sval type="string" val="ware" />
+				<sval type="string" val="XS.Iterator2" />
+				<sval type="string" val="rng" />
+				<sval type="string" val="p" />
+				<sval type="string" val="n" />
+				<sval type="string" val="validPos" />
+				<sval type="string" val="x" />
+				<sval type="string" val="y" />
+				<sval type="string" val="z" />
+				<sval type="string" val="report" />
+				<sval type="string" val="commonwealth" />
+				<sval type="string" val="companies" />
+				<sval type="string" val="race" />
+				<sval type="string" val="XS.Iterator3" />
+				<sval type="string" val="company" />
+				<sval type="string" val="XS.Iterator4" />
+				<sval type="string" val="XS.Iterator5" />
+				<sval type="string" val="races" />
+				<sval type="string" val="XS.Iterator6" />
+				<sval type="string" val="sectors" />
+				<sval type="string" val="ship" />
+			</sval>
+			<sval type="array" size="169">
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generated" />
+					<sval type="int" val="-1610612216" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generating" />
+					<sval type="int" val="-1610611704" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generating" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="1042" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="4" />
+					<sval type="int" val="13" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1100065" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1861" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Preparing galaxy..." />
+					<sval type="int" val="4" />
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+					<sval type="int" val="50000" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="500" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.ImportShipSizes" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.GetPlayerSector" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1350" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609149" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="18" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1030" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Init.Variables" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Init.Templates" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Init.HighResearchCost" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="44" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="52" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1167" />
+					<sval type="int" val="111" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Diplomacy.Initialize" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-1610606333" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="150" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9972" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2229" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.SendMessage" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="26" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.StartingOptions" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GameCreator.CheckGates" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GameCreator.CheckAsteroids" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-1610604541" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GameCreator.Generate.Prologue" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GameCreator.Generate" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Init.Monitor" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.ColorText" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="5" />
+					<sval type="string" val="The galaxy has been fully generated." />
+					<sval type="int" val="5" />
+					<sval type="string" val="g" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1861" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10000" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1000" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4000" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1861" />
+					<sval type="int" val="5" />
+					<sval type="string" val="" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="105" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="500" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generating" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.generated" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="703" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.Mission.Generate" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="GamestartCheck" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1349" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9" />
+					<sval type="int" val="327739" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610599677" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="The catalog files '10.cat' and '10.dat' do not match those used by Mayhem 3. Please make sure the mod is properly installed." />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="16">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.SendMessage" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="9">
+					<sval type="int" val="1861" />
+					<sval type="int" val="5" />
+					<sval type="string" val="" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="1">
+					<sval type="int" val="1168" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="PreparePlayer" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="707" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="701" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1039" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1039" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="5" />
+					<sval type="string" val=" (Independent)" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-1610597368" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="9" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="5" />
+					<sval type="string" val=" (Terracorp)" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="1926" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_playerShipType" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_playerRace" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_playerName" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_fatherName" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_playerOrigin" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetTurrets" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.EquipShip" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.AddBlueprint" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-1610586365" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.progress" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_OCVFirstMessage" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048607" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="20" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048621" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="15" />
+					<sval type="int" val="9" />
+					<sval type="int" val="655360" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="100" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048587" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048610" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048591" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1487" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1048607" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.GetWaresFromMaintype" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="207" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610589943" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1349" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="2032" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="53">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610590200" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="10" />
+					<sval type="int" val="18" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="10" />
+					<sval type="int" val="17" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2023" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2026" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="9" />
+					<sval type="int" val="19" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="10" />
+					<sval type="int" val="-4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-5" />
+					<sval type="int" val="17" />
+					<sval type="int" val="9" />
+					<sval type="int" val="16" />
+					<sval type="int" val="-8" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-9" />
+					<sval type="int" val="10" />
+					<sval type="int" val="-11" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-12" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.AddBlueprint" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="81" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetCraftingWares" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetCompanyWares" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1850" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="18" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610586359" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="18" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="18" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="18" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="110" />
+					<sval type="int" val="19" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1500000" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2000001" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="629" />
+					<sval type="int" val="20" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="21" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="19" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610586872" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="21" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="5" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="21" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.TIS.Add" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="21" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="93" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.GetValidPos" />
+					<sval type="int" val="22" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="23" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="24" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="25" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="9" />
+					<sval type="int" val="459030" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="23" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="24" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="25" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="26" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="157" />
+					<sval type="int" val="5" />
+					<sval type="string" val="LitQB.TradeReport.Player" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="26" />
+				</sval>
+				<sval type="array" size="1">
+					<sval type="int" val="1168" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="101" />
+					<sval type="string" val="SetupReputation" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+					<sval type="int" val="3" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="19" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.GetCommonwealth" />
+					<sval type="int" val="27" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+					<sval type="int" val="10" />
+					<sval type="int" val="19" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetCompanies" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="132" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="135" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="30" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610579447" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="30" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="30" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="124" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="32" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610575095" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="32" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="32" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="31" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="28" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="32" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="33" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610575351" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="33" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="27" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="33" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="31" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="141" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="131" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="6" />
+					<sval type="int" val="10" />
+					<sval type="int" val="16" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="10" />
+					<sval type="int" val="6" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="10" />
+					<sval type="int" val="16" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="10" />
+					<sval type="int" val="7" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="10" />
+					<sval type="int" val="8" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="25" />
+					<sval type="int" val="10" />
+					<sval type="int" val="9" />
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.SetRelation" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="10" />
+					<sval type="int" val="19" />
+					<sval type="int" val="10" />
+					<sval type="int" val="8" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.GetCommonwealth" />
+					<sval type="int" val="34" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="707" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="3" />
+					<sval type="int" val="11" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="35" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="34" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610569719" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="35" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="35" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="34" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="35" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.GetOwnedSectors" />
+					<sval type="int" val="36" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="-536829177" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="36" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="157" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="739" />
+					<sval type="int" val="37" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="11" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="29" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-90000" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-90000" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-90000" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="1062" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="37" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="37" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_ignoreKilledSignal" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.Destroy" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="37" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="157" />
+				</sval>
+				<sval type="array" size="1">
+					<sval type="int" val="1168" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+			<sval type="array" size="70">
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="This script only runs at gamestart." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="5" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="5" />
+					<sval type="int" val="1" />
+					<sval type="string" val="&quot;Welcome onboard!&quot;" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="6" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="8" />
+					<sval type="int" val="1" />
+					<sval type="string" val="display subtitle text: text='Please do not save your game while the galaxy is being generated.' duration=900000 ms" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="8" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="9" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Make sure the galaxy is loaded and inventory set before going on." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="10" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="10" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Prologue." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="14" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="14" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Variables that need to be initialized only once." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="17" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="20" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="20" />
+					<sval type="int" val="1" />
+					<sval type="string" val="SWM3 Diplo system" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="21" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="25" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="26" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="26" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="27" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="27" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Gate collision checks. For performance reason, the galaxy generator does not do it, so we do it here." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="28" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Sometimes mines collide with each other because asteroids are too close from each other." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="29" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="32" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="33" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="33" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="39" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="41" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="41" />
+					<sval type="int" val="1" />
+					<sval type="string" val="display subtitle text: text='You can now save your game.' duration=5000 ms" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="41" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="43" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="44" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="45" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Check if the .cat are properly installed." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="51" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Set the gamestart (credits are used to identify the gamestart). 0 shouldn't happen." />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="$gamestart = [PLAYERSHIP]-&gt; get amount of ware {Credits (WARE_CREDITS_UNUSED)} in cargo bay" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="if not $gamestart" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="$t = 'The current gamestart is not recognized. Mayhem 3 can only be played via the Game Creator.'" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="= [NULL]-&gt; call script 'Joubarbe.Lib.SendMessage' : message=$t log=[TRUE] forceDisplay=[TRUE] delayMs=0 author=null" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="display info box: text= '', icon= 0, timeout= 0, fadeout= 0" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="return null" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="end" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="set global variable: name='mayhem_gamestart' value=$gamestart" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="$gamestart = $gamestart * -1" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="51" />
+					<sval type="int" val="1" />
+					<sval type="string" val="= [PLAYERSHIP]-&gt; add $gamestart units of {Credits (WARE_CREDITS_UNUSED)}" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="52" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="54" />
+					<sval type="int" val="1" />
+					<sval type="string" val="$playerRace = [PLAYERSHIP]-&gt; get maker race" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="69" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="69" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Prologue specials." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="89" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="103" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="103" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="103" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="108" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="108" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Unlock the Trade Report menu on PLAYERHIP." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="111" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="130" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="146" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="147" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="148" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="153" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="154" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="154" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Create a ship of each race to update the reputation menu." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="163" />
+					<sval type="int" val="6" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="168" />
+					<sval type="int" val="4" />
+				</sval>
+			</sval>
+			<sval type="int" val="0" />
+		</sval>
+	</codearray>
+</script>

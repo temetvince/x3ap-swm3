@@ -1286,14 +1286,14 @@
 			<text> </text>
 			<text>==</text>
 			<text> </text>
-			<var>[New Republic (Races)]</var>
+			<var>[New Republic]</var>
 		</line>
 		<line linenr="094" indent="&#160;&#160;&#160;">
 			<var>$SpecializationLevel</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>90</var>
+			<var>75</var>
 		</line>
 		<line linenr="095" indent="&#160;&#160;&#160;&#160;">
 			<text>else</text>
@@ -1329,7 +1329,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>80</var>
+			<var>70</var>
 		</line>
 		<line linenr="099" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
@@ -1359,7 +1359,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>80</var>
+			<var>70</var>
 		</line>
 		<line linenr="103" indent="&#160;&#160;&#160;&#160;">
 			<text>else</text>
@@ -1385,7 +1385,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>70</var>
+			<var>65</var>
 		</line>
 		<line linenr="105" indent="&#160;&#160;">
 			<text>else</text>
@@ -1395,7 +1395,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>60</var>
+			<var>55</var>
 		</line>
 		<line linenr="107" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
@@ -1417,7 +1417,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>65</var>
+			<var>55</var>
 		</line>
 		<line linenr="111" indent="&#160;&#160;">
 			<text>else</text>
@@ -1432,7 +1432,7 @@
 		<line linenr="113" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="114" indent="&#160;">
+		<line linenr="114" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
 		<line linenr="115" indent="&#160;">
@@ -1455,9 +1455,20 @@
 			<text>'mayhem_maxSpecializationLevel'</text>
 		</line>
 		<line linenr="117" indent="&#160;">
-			<text>end</text>
+			<var>$SpecializationLevel</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$SpecializationLevel</var>
+			<text> </text>
+			<text>-</text>
+			<text> </text>
+			<var>25</var>
 		</line>
 		<line linenr="118" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="119" indent="&#160;">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1476,7 +1487,7 @@
 			<text>=</text>
 			<var>$SpecializationLevel</var>
 		</line>
-		<line linenr="119" indent="&#160;">
+		<line linenr="120" indent="&#160;">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1495,7 +1506,7 @@
 			<text>=</text>
 			<var>$SpecializationLevel</var>
 		</line>
-		<line linenr="120" indent="">
+		<line linenr="121" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1514,7 +1525,7 @@
 			<text>=</text>
 			<var>$SpecializationLevel</var>
 		</line>
-		<line linenr="121" indent="">
+		<line linenr="122" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1533,7 +1544,7 @@
 			<text>=</text>
 			<var>$SpecializationLevel</var>
 		</line>
-		<line linenr="122" indent="">
+		<line linenr="123" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1552,11 +1563,11 @@
 			<text>=</text>
 			<var>$SpecializationLevel</var>
 		</line>
-		<line linenr="123" indent="">
+		<line linenr="124" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="124" indent="" />
-		<line linenr="125" indent="">
+		<line linenr="125" indent="" />
+		<line linenr="126" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1575,7 +1586,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="126" indent="">
+		<line linenr="127" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1594,7 +1605,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="127" indent="">
+		<line linenr="128" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1613,7 +1624,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="128" indent="">
+		<line linenr="129" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1632,7 +1643,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="129" indent="">
+		<line linenr="130" indent="">
 			<var>$station</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1651,8 +1662,8 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="130" indent="" />
-		<line linenr="131" indent="">
+		<line linenr="131" indent="" />
+		<line linenr="132" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -1690,7 +1701,7 @@
 				<sval type="string" val="galaxyProgress" />
 				<sval type="string" val="SpecializationLevel" />
 			</sval>
-			<sval type="array" size="112">
+			<sval type="array" size="113">
 				<sval type="array" size="10">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.IsOutpost" />
@@ -2264,11 +2275,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="106" />
+					<sval type="int" val="107" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610585595" />
+					<sval type="int" val="-1610585339" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
@@ -2422,7 +2433,7 @@
 					<sval type="int" val="22" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="90" />
+					<sval type="int" val="75" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -2475,7 +2486,7 @@
 					<sval type="int" val="22" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="70" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -2518,7 +2529,7 @@
 					<sval type="int" val="22" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="80" />
+					<sval type="int" val="70" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -2558,7 +2569,7 @@
 					<sval type="int" val="22" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="70" />
+					<sval type="int" val="65" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -2571,7 +2582,7 @@
 					<sval type="int" val="22" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="60" />
+					<sval type="int" val="55" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -2599,7 +2610,7 @@
 					<sval type="int" val="22" />
 					<sval type="int" val="1" />
 					<sval type="int" val="4" />
-					<sval type="int" val="65" />
+					<sval type="int" val="55" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
@@ -2618,13 +2629,28 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="101" />
+					<sval type="int" val="102" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
 					<sval type="int" val="5" />
 					<sval type="string" val="mayhem_maxSpecializationLevel" />
 					<sval type="int" val="22" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="22" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="22" />
+					<sval type="int" val="4" />
+					<sval type="int" val="25" />
+					<sval type="int" val="15" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="12" />
+					<sval type="int" val="-2" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="155" />
@@ -2835,19 +2861,19 @@
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="101" />
+					<sval type="int" val="102" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="106" />
+					<sval type="int" val="107" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="106" />
+					<sval type="int" val="107" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="111" />
+					<sval type="int" val="112" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

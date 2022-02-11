@@ -56,9 +56,36 @@
 		</line>
 		<line linenr="006" indent="" />
 		<line linenr="007" indent="">
-			<comment>*SWM3 starting terrritory adjustments</comment>
+			<comment>* SWM3 starting terrritory adjustments</comment>
 		</line>
-		<line linenr="008" indent="" interruptable="@">
+		<line linenr="008" indent="">
+			<var>$galaxy.age</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_galaxy.age'</text>
+		</line>
+		<line linenr="009" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$galaxy.age</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>-1</var>
+		</line>
+		<line linenr="010" indent="&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -72,11 +99,11 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="009" indent="" />
-		<line linenr="010" indent="">
+		<line linenr="011" indent="" />
+		<line linenr="012" indent="">
 			<comment>* Populate the entire galaxy.</comment>
 		</line>
-		<line linenr="011" indent="" interruptable="@">
+		<line linenr="013" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -90,8 +117,8 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="012" indent="" />
-		<line linenr="013" indent="" interruptable="@">
+		<line linenr="014" indent="" />
+		<line linenr="015" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -105,7 +132,7 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="014" indent="" interruptable="@">
+		<line linenr="016" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -119,7 +146,7 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="015" indent="" interruptable="@">
+		<line linenr="017" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -133,8 +160,8 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="016" indent="" />
-		<line linenr="017" indent="">
+		<line linenr="018" indent="" />
+		<line linenr="019" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -147,8 +174,10 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="int" val="0" />
-			<sval type="array" size="9">
+			<sval type="array" size="1">
+				<sval type="string" val="galaxy.age" />
+			</sval>
+			<sval type="array" size="11">
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.GameCreator.GalaxyData" />
@@ -172,6 +201,27 @@
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
 					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_galaxy.age" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-536869369" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
@@ -240,20 +290,20 @@
 					<sval type="string" val="SWM3 starting terrritory adjustments" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="4" />
+					<sval type="int" val="6" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="4" />
+					<sval type="int" val="6" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Populate the entire galaxy." />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="5" />
+					<sval type="int" val="7" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="8" />
+					<sval type="int" val="10" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

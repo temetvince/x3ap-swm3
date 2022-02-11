@@ -674,20 +674,410 @@
 			<text>=</text>
 			<text>'mayhemSW_Megawar'</text>
 		</line>
-		<line linenr="037" indent="">
+		<line linenr="037" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>23</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_DiploCycleMinDelay'</text>
+		</line>
+		<line linenr="038" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>24</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_DiploCycleMaxDelay'</text>
+		</line>
+		<line linenr="039" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>25</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_ShowDiploStats'</text>
+		</line>
+		<line linenr="040" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>26</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_showMotivation'</text>
+		</line>
+		<line linenr="041" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>27</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_MotivationMultiplier'</text>
+		</line>
+		<line linenr="042" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>28</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_DeJureConquerMotivation'</text>
+		</line>
+		<line linenr="043" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>29</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_passiveMotivationMultiplier'</text>
+		</line>
+		<line linenr="044" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>30</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_passiveMotivationThreshold'</text>
+		</line>
+		<line linenr="045" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>31</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_MotivationReductionsMultiplier'</text>
+		</line>
+		<line linenr="046" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>32</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_MotivationWarThreshold'</text>
+		</line>
+		<line linenr="047" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>33</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_PlayerWarDeclarations'</text>
+		</line>
+		<line linenr="048" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>34</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_PeaceCostMultiplier'</text>
+		</line>
+		<line linenr="049" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>35</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_PlayerCoordinatedInvasions'</text>
+		</line>
+		<line linenr="050" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>36</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_npcCoordinatedInvasions'</text>
+		</line>
+		<line linenr="051" indent="" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Joubarbe.Lib.LoadTextInteger</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>page</text>
+			<text>=</text>
+			<var>9973</var>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>37</var>
+			<text> </text>
+			<text>variable</text>
+			<text>=</text>
+			<text>'mayhemSW_WarlordMode'</text>
+		</line>
+		<line linenr="052" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="038" indent="" />
-		<line linenr="039" indent="">
+		<line linenr="053" indent="" />
+		<line linenr="054" indent="">
 			<var>UpdateWorkerAssignments</var>
 			<text>:</text>
 		</line>
-		<line linenr="040" indent="&#160;">
+		<line linenr="055" indent="&#160;">
 			<comment>* reset all Workers</comment>
 		</line>
-		<line linenr="041" indent="&#160;" interruptable="@">
+		<line linenr="056" indent="&#160;" interruptable="@">
 			<var>$Outposts</var>
 			<text> </text>
 			<text>=</text>
@@ -707,7 +1097,7 @@
 			<text>=</text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="042" indent="&#160;">
+		<line linenr="057" indent="&#160;">
 			<var>$XS.Iterator1</var>
 			<text> </text>
 			<text>=</text>
@@ -720,17 +1110,17 @@
 			<text> </text>
 			<var>$Outposts</var>
 		</line>
-		<line linenr="043" indent="&#160;&#160;">
+		<line linenr="058" indent="&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator1</var>
 		</line>
-		<line linenr="044" indent="&#160;&#160;">
+		<line linenr="059" indent="&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator1</var>
 		</line>
-		<line linenr="045" indent="&#160;">
+		<line linenr="060" indent="&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -740,7 +1130,7 @@
 			<var>$XS.Iterator1</var>
 			<text>]</text>
 		</line>
-		<line linenr="046" indent="" interruptable="@">
+		<line linenr="061" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -749,7 +1139,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="047" indent="" interruptable="@">
+		<line linenr="062" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -767,10 +1157,10 @@
 			<text>=</text>
 			<var>$outpostType</var>
 		</line>
-		<line linenr="048" indent="">
+		<line linenr="063" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="049" indent="">
+		<line linenr="064" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -788,7 +1178,7 @@
 				<sval type="string" val="outpostType" />
 				<sval type="string" val="XS.Iterator1" />
 			</sval>
-			<sval type="array" size="38">
+			<sval type="array" size="53">
 				<sval type="array" size="12">
 					<sval type="int" val="102" />
 					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
@@ -1047,7 +1437,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="28" />
+					<sval type="int" val="43" />
 				</sval>
 				<sval type="array" size="12">
 					<sval type="int" val="102" />
@@ -1147,6 +1537,216 @@
 					<sval type="int" val="5" />
 					<sval type="string" val="mayhemSW_Megawar" />
 				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="23" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DiploCycleMinDelay" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="24" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DiploCycleMaxDelay" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="25" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_ShowDiploStats" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="26" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_showMotivation" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="27" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_MotivationMultiplier" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="28" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_DeJureConquerMotivation" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="29" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_passiveMotivationMultiplier" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="30" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_passiveMotivationThreshold" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="31" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_MotivationReductionsMultiplier" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="32" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_MotivationWarThreshold" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="33" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_PlayerWarDeclarations" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="34" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_PeaceCostMultiplier" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="35" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_PlayerCoordinatedInvasions" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="36" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_npcCoordinatedInvasions" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="Joubarbe.Lib.LoadTextInteger" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9973" />
+					<sval type="int" val="4" />
+					<sval type="int" val="37" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhemSW_WarlordMode" />
+				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="0" />
@@ -1174,7 +1774,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610603255" />
+					<sval type="int" val="-1610599415" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="4" />
@@ -1211,7 +1811,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="31" />
+					<sval type="int" val="46" />
 				</sval>
 				<sval type="array" size="1">
 					<sval type="int" val="1168" />
@@ -1263,16 +1863,16 @@
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="28" />
+					<sval type="int" val="43" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="29" />
+					<sval type="int" val="44" />
 					<sval type="int" val="1" />
 					<sval type="string" val="reset all Workers" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="37" />
+					<sval type="int" val="52" />
 					<sval type="int" val="4" />
 				</sval>
 			</sval>
