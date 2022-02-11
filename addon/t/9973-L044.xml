@@ -24,6 +24,21 @@
 		<t id="20">1</t> <!-- lategame Rebel Alliance extinction. Quickly merges with New Republic (on by default, 0 to disable) -->
 		<t id="21">1</t> <!-- lategame Republic extinction. Quickly merges with Galactic Empire (on by default, 0 to disable) -->
 		<t id="22">1</t> <!-- lategame megawar. New Republic total war against Galactic Empire (on by default, 0 to disable) -->
+		<t id="23">600</t> <!-- diplomacy update cycle minimum time, in seconds (default 4h: 14400) -->
+		<t id="24">600</t> <!-- diplomacy update cycle maximum time, in seconds (default 5h: 18000) -->
+		<t id="25">1</t> <!-- show DEBUG diplomacy stats in ministry of war race overview (hidden by default, 1 to show) -->
+		<t id="26">1</t> <!-- show war motivation (default, 0 to hide, makes NPC behavior more unpredictable) -->
+		<t id="27">100</t> <!-- multiplier for all War Motivation increases from player actions (default 100) -->
+		<t id="28">25</t> <!-- Motivation gain from conquering dejure sectors (default 25, disable with 0) -->
+		<t id="29">100</t> <!-- passive Motivation growth multiplier (default 100) -->
+		<t id="30">50</t> <!-- threshold for passive Motivation growth (default 50 points) -->
+		<t id="31">100</t> <!-- multiplier for all Motivation reductions (default 100) -->
+		<t id="32">100</t> <!-- Motivation threshold for war declarations & coordinated invasions against the player (default 100 points) -->
+		<t id="33">100</t> <!-- peace cost multiplier (default 100) -->
+		<t id="34">1</t> <!-- allow war declarations vs. player (on by default, 0 to disable) -->
+		<t id="35">1</t> <!-- allow coordinated invasions vs. player (on by default, 0 to disable) -->
+		<t id="36">1</t> <!-- allow coordinated invasions between NPC empires (on by default, 0 to disable) -->
+		<t id="37">0</t> <!-- Warlord Challenge. Difficult! New game required. (off by default, 1 to activate, do not change during active savegame) -->
 	</page>
 
 	<page id="17" title="Boardcomp. objects" desc="" voice="yes">
@@ -134,7 +149,7 @@
 		<t id="2094">[author]\033GGame Setup[/author]Do you think that space exploration should be a priority?</t>
 		<t id="2097">We should explore more to awake more vengeful Sith!</t>
 		<t id="2098">[author]\033GGame Setup[/author]How do you want to ascend and prove your worth as a leader?\n\n\033WFrom this screen, you can choose a Quickstart that will advance the main plot, immediately complete your Ascension and unlock the ability to conquer your first sector. It is [u]not recommended[/u] for new players.\n\n\033WCompleting your Ascension without Quickstart will reward you with 100,000 credits.\n
-\n\033WMidgame Quickstart gives you everything you need for a healthy 4 sector player empire. A small military fleet with a capship, lots of freighters, miners, money, reputation, resources, blueprints, stations, and a special cheat TL which can load everything at once. This skips about 2-3 days of playtime \(most of the early game\) and lets you start more established. All your stations are still loaded up and you can choose your starting sectors \(once you've claimed your 4th sector, the SWM3 earlygame officially ends and the Mandalorians will arrive and cause more war\)</t>
+\n\033WMidgame Quickstart gives you everything you need for a healthy 4 sector player empire and skips about 2-3 days of playtime. All your stations are still loaded up in a special TL and you can choose your starting sectors \(not available if you play the Warlord Challenge\)</t>
 		<t id="2103">[author]\033GGame Setup[/author]Congratulations! Your personal database is now up to date. Would you like some general guidance?</t>
 		<t id="2104">No, i`m good.</t>
 		<t id="2105">What should i do now?</t>
