@@ -311,15 +311,15 @@
 			<text> </text>
 			<var>$jumpDistance</var>
 			<text> </text>
-			<text>&gt;</text>
+			<text>&lt;</text>
 			<text> </text>
-			<var>4</var>
+			<var>5</var>
 			<text> </text>
-			<text>AND</text>
+			<text>OR</text>
 			<text> </text>
 			<var>$Battlegroup.sector</var>
 			<text> </text>
-			<text>!=</text>
+			<text>==</text>
 			<text> </text>
 			<var>$targetSector</var>
 		</line>
@@ -1362,24 +1362,24 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="14" />
 					<sval type="int" val="4" />
-					<sval type="int" val="4" />
+					<sval type="int" val="5" />
 					<sval type="int" val="15" />
-					<sval type="int" val="2" />
+					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="13" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="15" />
-					<sval type="int" val="1" />
+					<sval type="int" val="0" />
 					<sval type="int" val="15" />
-					<sval type="int" val="9" />
+					<sval type="int" val="10" />
 					<sval type="int" val="7" />
 					<sval type="int" val="-1" />
-					<sval type="int" val="2" />
+					<sval type="int" val="3" />
 					<sval type="int" val="-2" />
-					<sval type="int" val="9" />
+					<sval type="int" val="10" />
 					<sval type="int" val="-4" />
-					<sval type="int" val="1" />
+					<sval type="int" val="0" />
 					<sval type="int" val="-5" />
 				</sval>
 				<sval type="array" size="8">

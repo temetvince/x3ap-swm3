@@ -1094,8 +1094,8 @@
 		<line linenr="130" indent="">
 			<comment>* gosub WaitForNextQuestion:</comment>
 		</line>
-		<line linenr="131" indent="&#160;" />
-		<line linenr="132" indent="&#160;&#160;">
+		<line linenr="131" indent="" />
+		<line linenr="132" indent="&#160;">
 			<comment>* dim $choiceIds = 2091, 2092, 2093</comment>
 		</line>
 		<line linenr="133" indent="&#160;&#160;">
@@ -1104,15 +1104,15 @@
 		<line linenr="134" indent="&#160;&#160;">
 			<comment>* = [NULL]-&gt; call script 'Mayhem.StartingOptions.Send' : questionId=2090 questionArgs=null choiceIds=$choiceIds choiceCallbacks=$choiceCallbacks popup=[TRUE]</comment>
 		</line>
-		<line linenr="135" indent="&#160;" />
+		<line linenr="135" indent="&#160;&#160;" />
 		<line linenr="136" indent="&#160;">
 			<comment>* gosub WaitForNextQuestion:</comment>
 		</line>
 		<line linenr="137" indent="&#160;" />
-		<line linenr="138" indent="&#160;&#160;">
+		<line linenr="138" indent="&#160;">
 			<comment>* dim $choiceIds = 2095, 2096, 2097</comment>
 		</line>
-		<line linenr="139" indent="">
+		<line linenr="139" indent="&#160;&#160;">
 			<comment>* dim $choiceCallbacks = 'choice33', 'choice34', 'choice35'</comment>
 		</line>
 		<line linenr="140" indent="">
@@ -1739,17 +1739,18 @@
 			<var>[TRUE]</var>
 		</line>
 		<line linenr="198" indent="" />
-		<line linenr="199" indent="">
+		<line linenr="199" indent="" />
+		<line linenr="200" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="200" indent="" />
-		<line linenr="201" indent="">
+		<line linenr="201" indent="" />
+		<line linenr="202" indent="">
 			<var>WaitForNextQuestion</var>
 			<text>:</text>
 		</line>
-		<line linenr="202" indent="">
+		<line linenr="203" indent="">
 			<text>while</text>
 			<text> </text>
 			<text>not</text>
@@ -1765,7 +1766,7 @@
 			<text>=</text>
 			<text>'mayhem_startingOptionNext'</text>
 		</line>
-		<line linenr="203" indent="">
+		<line linenr="204" indent="">
 			<var>[PLAYERSHIP]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1779,7 +1780,7 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="204" indent="">
+		<line linenr="205" indent="">
 			<var>[PLAYERSHIP]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1792,7 +1793,7 @@
 			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="205" indent="" interruptable="@">
+		<line linenr="206" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1801,10 +1802,10 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="206" indent="">
+		<line linenr="207" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="207" indent="">
+		<line linenr="208" indent="">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -1820,7 +1821,7 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="208" indent="">
+		<line linenr="209" indent="">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -1836,12 +1837,12 @@
 			<text>=</text>
 			<text>'mayhem_startingOptionAbort'</text>
 		</line>
-		<line linenr="209" indent="">
+		<line linenr="210" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="210" indent="">
+		<line linenr="211" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -2990,7 +2991,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="78">
+			<sval type="array" size="79">
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
@@ -3329,6 +3330,10 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="116" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="123" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
