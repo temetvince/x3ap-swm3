@@ -41,7 +41,7 @@
 		<t id="140">20</t> <!-- Chances (out of 1000) for every ship to drop EACH of his shield/laser when destroyed by ANYONE. (default: 20) -->
 		<t id="232">40</t> <!-- Chances (out of 1000) for every ship to drop EACH of his shield/laser when destroyed by PLAYERSHIP. (default: 40) -->
 		<t id="8">300</t> <!-- Food consumption cycle, in seconds. (default: 300) -->
-		<t id="76">5</t> <!-- People max. growth per consumption cycle. (default: 5) -->
+		<t id="76">20</t> <!-- People max. growth per consumption cycle. (default: 20) -->
 		<t id="143">6</t> <!-- Waste production factor per consumption cycle (* people). (default: 6) -->
 		<t id="205">100</t> <!-- E-Cell production multiplier (from Solar Panels perk). (default: 100) -->
 		<t id="144">2</t> <!-- Outpost product production factor per consumption cycle (* people). (default: 2) -->
@@ -104,7 +104,7 @@
 		<t id="218">0</t> <!-- During the last stage of the plot, OCV only spawns a new wave if the previous one has been totally destroyed. Makes things a lot easier if set to 1. (default: 0) -->
 		<t id="220">21600</t> <!-- Maximum time the AI can spend in "retreat mode", in seconds. (default: 21600) -->
 		<t id="223">517</t> <!-- Reputation cost multiplier to reset your reputation to 0 from a Pirate base. (default: 517) -->
-		<t id="224">0</t> <!-- No-main-turrets-ships VS station tactics. 0: the ship rotates around itself while firing, 1: the ship makes a full stop, 2: the ship circles around the station. This tactics does not apply to ships that have main turrets. In that case, they will behave like fighters, facing the targeted station at all times. (default: 0) -->
+		<t id="224">1</t> <!-- No-main-turrets-ships VS station tactics. 0: the ship rotates around itself while firing, 1: the ship makes a full stop, 2: the ship circles around the station. This tactics does not apply to ships that have main turrets. In that case, they will behave like fighters, facing the targeted station at all times. (default: 0) -->
 		<t id="225">0</t> <!-- Hide Outpost production messages. (default: 0) -->
 		<t id="260">1</t> <!-- Hide Outpost production messages for lasers, shields and missiles. (default: 1) -->
 		<t id="226">0</t> <!-- Disable player ships fallback manoeuvres. (default: 0) -->
