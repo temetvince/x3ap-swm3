@@ -245,7 +245,7 @@
 		<line linenr="026" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="027" indent="">
+		<line linenr="027" indent="&#160;">
 			<var>$tax</var>
 			<text> </text>
 			<text>=</text>
@@ -262,8 +262,76 @@
 			<var>$bonus</var>
 			<text>)</text>
 		</line>
-		<line linenr="028" indent="&#160;" />
-		<line linenr="029" indent="">
+		<line linenr="028" indent="" />
+		<line linenr="029" indent="&#160;" interruptable="@">
+			<text>if</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.IsPerkUnlocked</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>perk</text>
+			<text>=</text>
+			<text>'Tax Upgrade 2'</text>
+		</line>
+		<line linenr="030" indent="">
+			<var>$tax</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$tax</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>2</var>
+		</line>
+		<line linenr="031" indent="" interruptable="@">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.IsPerkUnlocked</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>perk</text>
+			<text>=</text>
+			<text>'Tax Upgrade 1'</text>
+		</line>
+		<line linenr="032" indent="">
+			<var>$tax</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$tax</var>
+			<text> </text>
+			<text>*</text>
+			<text> </text>
+			<var>16</var>
+			<text> </text>
+			<text>/</text>
+			<text> </text>
+			<var>10</var>
+		</line>
+		<line linenr="033" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="034" indent="&#160;" />
+		<line linenr="035" indent="">
 			<var>$WarlordMode</var>
 			<text> </text>
 			<text>=</text>
@@ -279,7 +347,7 @@
 			<text>=</text>
 			<text>'mayhemSW_WarlordMode'</text>
 		</line>
-		<line linenr="030" indent="">
+		<line linenr="036" indent="">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -290,7 +358,7 @@
 			<text> </text>
 			<var>1</var>
 		</line>
-		<line linenr="031" indent="">
+		<line linenr="037" indent="">
 			<var>$tax</var>
 			<text> </text>
 			<text>=</text>
@@ -301,8 +369,8 @@
 			<text> </text>
 			<var>2</var>
 		</line>
-		<line linenr="032" indent="" />
-		<line linenr="033" indent="">
+		<line linenr="038" indent="" />
+		<line linenr="039" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$tax</var>
@@ -327,7 +395,7 @@
 				<sval type="string" val="terraformingEffect" />
 				<sval type="string" val="WarlordMode" />
 			</sval>
-			<sval type="array" size="25">
+			<sval type="array" size="30">
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.IsPerkUnlocked" />
@@ -528,6 +596,66 @@
 					<sval type="int" val="-3" />
 					<sval type="int" val="17" />
 				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.IsPerkUnlocked" />
+					<sval type="int" val="-1610606589" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Tax Upgrade 2" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="26" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.IsPerkUnlocked" />
+					<sval type="int" val="-1610606075" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Tax Upgrade 1" />
+				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="2" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="16" />
+					<sval type="int" val="15" />
+					<sval type="int" val="13" />
+					<sval type="int" val="4" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="14" />
+					<sval type="int" val="5" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="13" />
+					<sval type="int" val="-2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="-4" />
+				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
 					<sval type="int" val="5" />
@@ -536,7 +664,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610606584" />
+					<sval type="int" val="-1610605304" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
@@ -571,7 +699,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="10">
+			<sval type="array" size="12">
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
@@ -610,7 +738,15 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="26" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="26" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="29" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

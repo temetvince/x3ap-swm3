@@ -2,7 +2,7 @@
 <?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
 <!-- Generated using X-Studio -->
 <script>
-	<name>Mayhem.Perk.SetInfo</name>
+	<name>Mayhem.Perk.Init</name>
 	<version>1</version>
 	<engineversion>50</engineversion>
 	<description></description>
@@ -10,7 +10,7 @@
 	<sourcetext>
 		<line linenr="001" indent="" />
 		<line linenr="002" indent="">
-			<comment>* Also see Mayhem.Perk.Init.</comment>
+			<comment>* Also see Mayhem.Perk.SetInfo.</comment>
 		</line>
 		<line linenr="003" indent="" />
 		<line linenr="004" indent="">
@@ -38,7 +38,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Allows this Outpost to produce lasers from its factory.'</text>
+			<var>[FALSE]</var>
 		</line>
 		<line linenr="007" indent="">
 			<text>table</text>
@@ -55,315 +55,9 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Allows this Outpost to produce missiles from its factory.'</text>
+			<var>[FALSE]</var>
 		</line>
 		<line linenr="008" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Faster research'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Increases research rate by 50 % in this sector. No effect on Hacking stations.'</text>
-		</line>
-		<line linenr="009" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Cheaper stations'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Reduces the costs of stations built in this Outpost by 50 %.'</text>
-		</line>
-		<line linenr="010" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'No food consumption'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Removes the needs for food in this Outpost.'</text>
-		</line>
-		<line linenr="011" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Extra engine tuning'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Increases the speed of all ships built in this Outpost.'</text>
-		</line>
-		<line linenr="012" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Skilled marines'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'All marines enrolled in this Outpost will start with more XP.'</text>
-		</line>
-		<line linenr="013" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Sickbay'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Allows to heal injured marines who are stationed in this Outpost. Also prevents any sort of disease to spread among people.'</text>
-		</line>
-		<line linenr="014" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Tax'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Allows this Outpost to generate credits over time per each people, but growth rate is reduced.'</text>
-		</line>
-		<line linenr="015" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Tax Upgrade 1'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Increases Tax by 60%.'</text>
-		</line>
-		<line linenr="016" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Tax Upgrade 2'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Increases Tax by 40%.'</text>
-		</line>
-		<line linenr="017" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Electromagnetic pulse'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Equips this Outpost with a devastating weapon that reset all shields in the sector.'</text>
-		</line>
-		<line linenr="018" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Adjacency perk bonus'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Adds a maximum perk to this Outpost for each other Outpost you control in adjacent sectors.'</text>
-		</line>
-		<line linenr="019" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Resupply drone'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Creates a drone that will resupply all ships in this sector.'</text>
-		</line>
-		<line linenr="020" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Solar panels'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Allows this Outpost to generate Energy Cells over time, depending on the sun efficiency of this sector.'</text>
-		</line>
-		<line linenr="021" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Free interorbital storage'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Free shipping costs from the interorbital storage accessible in Logistics -&gt; Stock.'</text>
-		</line>
-		<line linenr="022" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Dry dock'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'No maintenance cost for docked ships + maintenance factors slowly get restored down to 133%.'</text>
-		</line>
-		<line linenr="023" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Pirate contract'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Protects your own ships from pirate attacks in this sector.'</text>
-		</line>
-		<line linenr="024" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Insurance policy'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Protects this Outpost from unfortunate events.'</text>
-		</line>
-		<line linenr="025" indent="">
-			<text>table</text>
-			<text> </text>
-			<text>set</text>
-			<text> </text>
-			<var>$table</var>
-			<text> </text>
-			<text>(</text>
-			<text> </text>
-			<text>'Hacking station'</text>
-			<text> </text>
-			<text>)</text>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>'Converts the local Research station to a Hacking station. Research points are unused.'</text>
-		</line>
-		<line linenr="026" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -378,9 +72,380 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Maintenance is halved, but building ships takes twice as long.'</text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="009" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Faster research'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="010" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Cheaper stations'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="011" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'No food consumption'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="012" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Extra engine tuning'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="013" indent="">
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_marinesForcedActivation'</text>
+		</line>
+		<line linenr="014" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Skilled marines'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="015" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Sickbay'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="016" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="017" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Tax'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="018" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Tax Upgrade 1'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="019" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Tax Upgrade 2'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="020" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Electromagnetic pulse'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="021" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="022" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Adjacency perk bonus'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="023" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Resupply drone'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="024" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Solar panels'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="025" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Free interorbital storage'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="026" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Dry dock'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
 		</line>
 		<line linenr="027" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="028" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Pirate contract'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="029" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Insurance policy'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="030" indent="">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>global</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'mayhem_prologue'</text>
+		</line>
+		<line linenr="031" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Hacking station'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="032" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -395,27 +460,122 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'Deploy a unique ring of static lasertowers around the Outpost. Do not respawn.'</text>
+			<var>[FALSE]</var>
 		</line>
-		<line linenr="028" indent="" />
-		<line linenr="029" indent="">
+		<line linenr="033" indent="" />
+		<line linenr="034" indent="">
+			<text>if</text>
+			<text> </text>
+			<var>[OWNER]</var>
+			<text> </text>
+			<text>!=</text>
+			<text> </text>
+			<var>[Player]</var>
+		</line>
+		<line linenr="035" indent="&#160;">
+			<text>table</text>
+			<text> </text>
 			<text>set</text>
 			<text> </text>
-			<text>global</text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Laser manufacture'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="036" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Missile manufacture'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="037" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Solar panels'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="038" indent="&#160;">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>[OWNER]</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[Mandalorian]</var>
+		</line>
+		<line linenr="039" indent="&#160;&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$table</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'Pirate contract'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="040" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="041" indent="" />
+		<line linenr="042" indent="">
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
 			<text> </text>
 			<text>variable</text>
 			<text>:</text>
 			<text> </text>
 			<text>name</text>
 			<text>=</text>
-			<text>'mayhem_perkInfo'</text>
+			<text>'mayhem_perkTable'</text>
 			<text> </text>
 			<text>value</text>
 			<text>=</text>
 			<var>$table</var>
 		</line>
-		<line linenr="030" indent="" />
-		<line linenr="031" indent="">
+		<line linenr="043" indent="" />
+		<line linenr="044" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$table</var>
@@ -423,7 +583,7 @@
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
-			<sval type="string" val="Mayhem.Perk.SetInfo" />
+			<sval type="string" val="Mayhem.Perk.Init" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
@@ -431,7 +591,7 @@
 			<sval type="array" size="1">
 				<sval type="string" val="table" />
 			</sval>
-			<sval type="array" size="25">
+			<sval type="array" size="35">
 				<sval type="array" size="2">
 					<sval type="int" val="1706" />
 					<sval type="int" val="0" />
@@ -442,8 +602,8 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="5" />
 					<sval type="string" val="Laser manufacture" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Allows this Outpost to produce lasers from its factory." />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -451,170 +611,8 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="5" />
 					<sval type="string" val="Missile manufacture" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Allows this Outpost to produce missiles from its factory." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Faster research" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Increases research rate by 50 % in this sector. No effect on Hacking stations." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Cheaper stations" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Reduces the costs of stations built in this Outpost by 50 %." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="No food consumption" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Removes the needs for food in this Outpost." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Extra engine tuning" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Increases the speed of all ships built in this Outpost." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Skilled marines" />
-					<sval type="int" val="5" />
-					<sval type="string" val="All marines enrolled in this Outpost will start with more XP." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Sickbay" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Allows to heal injured marines who are stationed in this Outpost. Also prevents any sort of disease to spread among people." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Tax" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Allows this Outpost to generate credits over time per each people, but growth rate is reduced." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Tax Upgrade 1" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Increases Tax by 60%." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Tax Upgrade 2" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Increases Tax by 40%." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Electromagnetic pulse" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Equips this Outpost with a devastating weapon that reset all shields in the sector." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Adjacency perk bonus" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Adds a maximum perk to this Outpost for each other Outpost you control in adjacent sectors." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Resupply drone" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Creates a drone that will resupply all ships in this sector." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Solar panels" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Allows this Outpost to generate Energy Cells over time, depending on the sun efficiency of this sector." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Free interorbital storage" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Free shipping costs from the interorbital storage accessible in Logistics -&gt; Stock." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Dry dock" />
-					<sval type="int" val="5" />
-					<sval type="string" val="No maintenance cost for docked ships + maintenance factors slowly get restored down to 133%." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Pirate contract" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Protects your own ships from pirate attacks in this sector." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Insurance policy" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Protects this Outpost from unfortunate events." />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="1708" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Hacking station" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Converts the local Research station to a Hacking station. Research points are unused." />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -622,8 +620,194 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="5" />
 					<sval type="string" val="Advanced engineering" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
 					<sval type="int" val="5" />
-					<sval type="string" val="Maintenance is halved, but building ships takes twice as long." />
+					<sval type="string" val="Faster research" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Cheaper stations" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="No food consumption" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Extra engine tuning" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_marinesForcedActivation" />
+					<sval type="int" val="-1610609917" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Skilled marines" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Sickbay" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Tax" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Tax Upgrade 1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Tax Upgrade 2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Electromagnetic pulse" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-536866553" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Adjacency perk bonus" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Resupply drone" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Solar panels" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Free interorbital storage" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Dry dock" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-536865017" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Pirate contract" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Insurance policy" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_prologue" />
+					<sval type="int" val="-536864249" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Hacking station" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -631,13 +815,81 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="5" />
 					<sval type="string" val="Ring of fire" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Deploy a unique ring of static lasertowers around the Outpost. Do not respawn." />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
 				</sval>
-				<sval type="array" size="5">
-					<sval type="int" val="157" />
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604285" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="7" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
 					<sval type="int" val="5" />
-					<sval type="string" val="mayhem_perkInfo" />
+					<sval type="string" val="Laser manufacture" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Missile manufacture" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Solar panels" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604280" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="7" />
+					<sval type="int" val="10" />
+					<sval type="int" val="19" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="Pirate contract" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="5" />
+					<sval type="string" val="mayhem_perkTable" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 				</sval>
@@ -648,7 +900,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="6">
+			<sval type="array" size="9">
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
 					<sval type="int" val="2" />
@@ -656,7 +908,7 @@
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
-					<sval type="string" val="Also see Mayhem.Perk.Init." />
+					<sval type="string" val="Also see Mayhem.Perk.SetInfo." />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="0" />
@@ -667,11 +919,23 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="23" />
+					<sval type="int" val="11" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="27" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="33" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="33" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="34" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

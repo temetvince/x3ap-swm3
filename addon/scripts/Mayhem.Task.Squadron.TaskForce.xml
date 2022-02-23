@@ -2182,7 +2182,6 @@
 			<text>script</text>
 			<text> </text>
 			<call>Mayhem.Diplomacy.Motivation</call>
-			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>race</text>
@@ -2192,6 +2191,10 @@
 			<text>event</text>
 			<text>=</text>
 			<text>'counterRaidJumpBeacon'</text>
+			<text> </text>
+			<text>Battlegroup</text>
+			<text>=</text>
+			<var>null</var>
 		</line>
 		<line linenr="204" indent="&#160;">
 			<text>else</text>
@@ -4225,17 +4228,19 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="-2" />
 				</sval>
-				<sval type="array" size="10">
+				<sval type="array" size="12">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.Diplomacy.Motivation" />
 					<sval type="int" val="-2147483647" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
-					<sval type="int" val="2" />
+					<sval type="int" val="3" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="7" />
 					<sval type="int" val="5" />
 					<sval type="string" val="counterRaidJumpBeacon" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
