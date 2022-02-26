@@ -1114,7 +1114,7 @@
 			<text> </text>
 			<text>==</text>
 			<text> </text>
-			<var>[New Republic]</var>
+			<var>[New Republic (Races)]</var>
 			<text> </text>
 			<text>AND</text>
 			<text> </text>
@@ -1148,7 +1148,7 @@
 			<text> </text>
 			<text>==</text>
 			<text> </text>
-			<var>[New Republic]</var>
+			<var>[New Republic (Races)]</var>
 			<text> </text>
 			<text>AND</text>
 			<text> </text>
@@ -1368,7 +1368,7 @@
 		</line>
 		<line linenr="172" indent="" />
 		<line linenr="173" indent="">
-			<comment>* SWM3 don't claim any more sectors if the game is not in phase 3 yet and we already own 40% of the galaxy</comment>
+			<comment>* SWM3 don't claim any more sectors if the game is not in phase 3 yet and we already own 35% of the galaxy</comment>
 		</line>
 		<line linenr="174" indent="">
 			<comment>* v1.6 - player sectors are always claimable</comment>
@@ -1487,7 +1487,7 @@
 			<text> </text>
 			<text>&gt;=</text>
 			<text> </text>
-			<var>40</var>
+			<var>30</var>
 		</line>
 		<line linenr="183" indent="&#160;&#160;">
 			<comment>* Mandos can still attack the player if he rejects them in the quest!</comment>
@@ -1646,32 +1646,21 @@
 			<text>end</text>
 		</line>
 		<line linenr="195" indent="&#160;&#160;">
-			<text>do</text>
-			<text> </text>
-			<text>if</text>
-			<text> </text>
-			<var>$sector.owner</var>
-			<text> </text>
-			<text>!=</text>
-			<text> </text>
-			<var>[Player]</var>
-		</line>
-		<line linenr="196" indent="&#160;&#160;&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>[FALSE]</var>
 		</line>
-		<line linenr="197" indent="&#160;">
+		<line linenr="196" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="198" indent="">
+		<line linenr="197" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="199" indent="" />
-		<line linenr="200" indent="">
+		<line linenr="198" indent="" />
+		<line linenr="199" indent="">
 			<comment>* SWM3 features surprise attacks against the player. But during preparation we need to prevent that the sector gets claimed</comment>
 		</line>
-		<line linenr="201" indent="">
+		<line linenr="200" indent="">
 			<text>if</text>
 			<text> </text>
 			<var>$sector.owner</var>
@@ -1680,7 +1669,7 @@
 			<text> </text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="202" indent="&#160;">
+		<line linenr="201" indent="&#160;">
 			<var>$MultiInvasion</var>
 			<text> </text>
 			<text>=</text>
@@ -1699,12 +1688,12 @@
 			<text>=</text>
 			<text>'MultiInvasion'</text>
 		</line>
-		<line linenr="203" indent="&#160;">
+		<line linenr="202" indent="&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$MultiInvasion</var>
 		</line>
-		<line linenr="204" indent="&#160;&#160;">
+		<line linenr="203" indent="&#160;&#160;">
 			<var>$Diplo.MultiInvasionStatus</var>
 			<text> </text>
 			<text>=</text>
@@ -1720,7 +1709,7 @@
 			<text>=</text>
 			<text>'Diplo.MultiInvasionStatus'</text>
 		</line>
-		<line linenr="205" indent="&#160;&#160;">
+		<line linenr="204" indent="&#160;&#160;">
 			<var>$Diplo.MultiInvasionStatus.races</var>
 			<text> </text>
 			<text>=</text>
@@ -1737,7 +1726,7 @@
 			<text> </text>
 			<var>$Diplo.MultiInvasionStatus</var>
 		</line>
-		<line linenr="206" indent="&#160;&#160;">
+		<line linenr="205" indent="&#160;&#160;">
 			<var>$MultiInvasionStatus</var>
 			<text> </text>
 			<text>=</text>
@@ -1754,7 +1743,7 @@
 			<text> </text>
 			<text>)</text>
 		</line>
-		<line linenr="207" indent="&#160;&#160;">
+		<line linenr="206" indent="&#160;&#160;">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -1765,19 +1754,19 @@
 			<text> </text>
 			<var>1</var>
 		</line>
-		<line linenr="208" indent="&#160;&#160;&#160;">
+		<line linenr="207" indent="&#160;&#160;&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>[FALSE]</var>
 		</line>
-		<line linenr="209" indent="&#160;">
+		<line linenr="208" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="210" indent="">
+		<line linenr="209" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="211" indent="" />
-		<line linenr="212" indent="">
+		<line linenr="210" indent="" />
+		<line linenr="211" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>[TRUE]</var>
@@ -1825,7 +1814,7 @@
 				<sval type="string" val="Diplo.MultiInvasionStatus.races" />
 				<sval type="string" val="MultiInvasionStatus" />
 			</sval>
-			<sval type="array" size="110">
+			<sval type="array" size="109">
 				<sval type="array" size="4">
 					<sval type="int" val="701" />
 					<sval type="int" val="131074" />
@@ -2777,7 +2766,7 @@
 				</sval>
 				<sval type="array" size="19">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610586877" />
+					<sval type="int" val="-1610587133" />
 					<sval type="int" val="5" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="5" />
@@ -2859,12 +2848,12 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610586877" />
+					<sval type="int" val="-1610587133" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="26" />
 					<sval type="int" val="4" />
-					<sval type="int" val="40" />
+					<sval type="int" val="30" />
 					<sval type="int" val="15" />
 					<sval type="int" val="4" />
 					<sval type="int" val="3" />
@@ -2974,21 +2963,6 @@
 					<sval type="int" val="131075" />
 					<sval type="int" val="10" />
 				</sval>
-				<sval type="array" size="13">
-					<sval type="int" val="104" />
-					<sval type="int" val="-1610586872" />
-					<sval type="int" val="3" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="2" />
-					<sval type="int" val="10" />
-					<sval type="int" val="10" />
-					<sval type="int" val="15" />
-					<sval type="int" val="1" />
-					<sval type="int" val="3" />
-					<sval type="int" val="-1" />
-					<sval type="int" val="1" />
-					<sval type="int" val="-2" />
-				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="131075" />
@@ -2996,7 +2970,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610584829" />
+					<sval type="int" val="-1610585085" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
@@ -3019,7 +2993,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610584829" />
+					<sval type="int" val="-1610585085" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="29" />
@@ -3048,7 +3022,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610584824" />
+					<sval type="int" val="-1610585080" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="32" />
@@ -3510,7 +3484,7 @@
 				<sval type="array" size="3">
 					<sval type="int" val="83" />
 					<sval type="int" val="1" />
-					<sval type="string" val="SWM3 don't claim any more sectors if the game is not in phase 3 yet and we already own 40% of the galaxy" />
+					<sval type="string" val="SWM3 don't claim any more sectors if the game is not in phase 3 yet and we already own 35% of the galaxy" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="83" />
@@ -3535,32 +3509,32 @@
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="101" />
+					<sval type="int" val="100" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="101" />
+					<sval type="int" val="100" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="101" />
+					<sval type="int" val="100" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="101" />
+					<sval type="int" val="100" />
 					<sval type="int" val="1" />
 					<sval type="string" val="SWM3 features surprise attacks against the player. But during preparation we need to prevent that the sector gets claimed" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="109" />
+					<sval type="int" val="108" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="109" />
+					<sval type="int" val="108" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="109" />
+					<sval type="int" val="108" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

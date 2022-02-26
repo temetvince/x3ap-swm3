@@ -375,7 +375,7 @@
 			<text>]</text>
 		</line>
 		<line linenr="040" indent="&#160;">
-			<var>$rep</var>
+			<var>$rank</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
@@ -386,11 +386,18 @@
 			<text> </text>
 			<text>notoriety</text>
 			<text> </text>
+			<text>title</text>
+			<text> </text>
 			<text>to</text>
 			<text> </text>
 			<text>race</text>
 			<text> </text>
 			<var>[Player]</var>
+			<text>:</text>
+			<text> </text>
+			<text>text</text>
+			<text>=</text>
+			<var>[FALSE]</var>
 		</line>
 		<line linenr="041" indent="&#160;">
 			<var>$text</var>
@@ -402,15 +409,11 @@
 			<text>+</text>
 			<text> </text>
 			<var>$currentRace</var>
-			<text> </text>
-			<text>+</text>
-			<text> </text>
-			<text>'s'</text>
 		</line>
 		<line linenr="042" indent="&#160;&#160;">
 			<text>if</text>
 			<text> </text>
-			<var>$rep</var>
+			<var>$rank</var>
 			<text> </text>
 			<text>&gt;=</text>
 			<text> </text>
@@ -812,7 +815,7 @@
 			<text> </text>
 			<text>+</text>
 			<text> </text>
-			<text>' has been abandoned by the Independents'</text>
+			<text>' has been abandoned by the Independent'</text>
 		</line>
 		<line linenr="075" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
@@ -1238,7 +1241,7 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<text>'The Independents have given the sector '</text>
+			<text>'The Independent has given the sector '</text>
 			<text> </text>
 			<text>+</text>
 			<text> </text>
@@ -1251,10 +1254,6 @@
 			<text>+</text>
 			<text> </text>
 			<var>$return</var>
-			<text> </text>
-			<text>+</text>
-			<text> </text>
-			<text>'s'</text>
 		</line>
 		<line linenr="111" indent="" interruptable="@">
 			<text>=</text>
@@ -1495,7 +1494,7 @@
 				<sval type="string" val="allRaces" />
 				<sval type="string" val="currentRace" />
 				<sval type="string" val="XS.Iterator1" />
-				<sval type="string" val="rep" />
+				<sval type="string" val="rank" />
 				<sval type="string" val="text" />
 				<sval type="string" val="return" />
 				<sval type="string" val="allStations" />
@@ -1721,34 +1720,30 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
 				</sval>
-				<sval type="array" size="6">
-					<sval type="int" val="725" />
+				<sval type="array" size="8">
+					<sval type="int" val="1472" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
 					<sval type="int" val="10" />
 					<sval type="int" val="10" />
 					<sval type="int" val="10" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
 				</sval>
-				<sval type="array" size="19">
+				<sval type="array" size="13">
 					<sval type="int" val="104" />
 					<sval type="int" val="11" />
-					<sval type="int" val="5" />
+					<sval type="int" val="3" />
 					<sval type="int" val="5" />
 					<sval type="string" val="Transfer this sector to the " />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
-					<sval type="int" val="5" />
-					<sval type="string" val="s" />
-					<sval type="int" val="15" />
-					<sval type="int" val="11" />
-					<sval type="int" val="5" />
+					<sval type="int" val="3" />
 					<sval type="int" val="-1" />
 					<sval type="int" val="11" />
 					<sval type="int" val="-2" />
-					<sval type="int" val="11" />
-					<sval type="int" val="-4" />
 				</sval>
 				<sval type="array" size="25">
 					<sval type="int" val="104" />
@@ -2017,7 +2012,7 @@
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
 					<sval type="int" val="5" />
-					<sval type="string" val=" has been abandoned by the Independents" />
+					<sval type="string" val=" has been abandoned by the Independent" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
 					<sval type="int" val="5" />
@@ -2294,12 +2289,12 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="12" />
 				</sval>
-				<sval type="array" size="31">
+				<sval type="array" size="25">
 					<sval type="int" val="104" />
 					<sval type="int" val="21" />
-					<sval type="int" val="9" />
+					<sval type="int" val="7" />
 					<sval type="int" val="5" />
-					<sval type="string" val="The Independents have given the sector " />
+					<sval type="string" val="The Independent has given the sector " />
 					<sval type="int" val="131074" />
 					<sval type="int" val="0" />
 					<sval type="int" val="15" />
@@ -2312,11 +2307,7 @@
 					<sval type="int" val="12" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
-					<sval type="int" val="5" />
-					<sval type="string" val="s" />
-					<sval type="int" val="15" />
-					<sval type="int" val="11" />
-					<sval type="int" val="9" />
+					<sval type="int" val="7" />
 					<sval type="int" val="-1" />
 					<sval type="int" val="11" />
 					<sval type="int" val="-2" />
@@ -2324,8 +2315,6 @@
 					<sval type="int" val="-4" />
 					<sval type="int" val="11" />
 					<sval type="int" val="-6" />
-					<sval type="int" val="11" />
-					<sval type="int" val="-8" />
 				</sval>
 				<sval type="array" size="12">
 					<sval type="int" val="102" />

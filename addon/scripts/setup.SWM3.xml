@@ -1204,7 +1204,7 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="123" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="123" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1258,7 +1258,7 @@
 			<text>=</text>
 			<var>1</var>
 		</line>
-		<line linenr="127" indent="&#160;&#160;&#160;">
+		<line linenr="127" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
 		<line linenr="128" indent="&#160;&#160;&#160;">
@@ -1271,7 +1271,7 @@
 		<line linenr="131" indent="&#160;&#160;&#160;">
 			<comment>* 1.6 Warlord</comment>
 		</line>
-		<line linenr="132" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="132" indent="&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$gameVersion</var>
@@ -1281,6 +1281,20 @@
 			<var>5</var>
 		</line>
 		<line linenr="133" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+			<text>START</text>
+			<text> </text>
+			<var>[NULL]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>Mayhem.ImportShipSizes</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="134" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$outposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1300,7 +1314,7 @@
 			<text>=</text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="134" indent="&#160;&#160;&#160;">
+		<line linenr="135" indent="&#160;&#160;&#160;">
 			<var>$XS.Iterator5</var>
 			<text> </text>
 			<text>=</text>
@@ -1313,17 +1327,17 @@
 			<text> </text>
 			<var>$outposts</var>
 		</line>
-		<line linenr="135" indent="&#160;&#160;&#160;">
+		<line linenr="136" indent="&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator5</var>
 		</line>
-		<line linenr="136" indent="&#160;&#160;&#160;">
+		<line linenr="137" indent="&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator5</var>
 		</line>
-		<line linenr="137" indent="&#160;&#160;&#160;">
+		<line linenr="138" indent="&#160;&#160;&#160;">
 			<var>$outpost</var>
 			<text> </text>
 			<text>=</text>
@@ -1333,7 +1347,7 @@
 			<var>$XS.Iterator5</var>
 			<text>]</text>
 		</line>
-		<line linenr="138" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="139" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1342,7 +1356,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="139" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="140" indent="&#160;&#160;&#160;&#160;">
 			<var>$table</var>
 			<text> </text>
 			<text>=</text>
@@ -1361,7 +1375,7 @@
 			<text>=</text>
 			<text>'mayhem_perkTable'</text>
 		</line>
-		<line linenr="140" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="141" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -1378,7 +1392,7 @@
 			<text> </text>
 			<var>[FALSE]</var>
 		</line>
-		<line linenr="141" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="142" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -1395,10 +1409,10 @@
 			<text> </text>
 			<var>[FALSE]</var>
 		</line>
-		<line linenr="142" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="143" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="143" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="144" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -1412,7 +1426,7 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="144" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="145" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -1426,7 +1440,7 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="145" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="146" indent="&#160;&#160;&#160;&#160;">
 			<var>$MandoMammoths</var>
 			<text> </text>
 			<text>=</text>
@@ -1450,7 +1464,7 @@
 			<text>=</text>
 			<var>{Neutral Race Mammoth}</var>
 		</line>
-		<line linenr="146" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="147" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$XS.Iterator6</var>
 			<text> </text>
 			<text>=</text>
@@ -1463,17 +1477,17 @@
 			<text> </text>
 			<var>$MandoMammoths</var>
 		</line>
-		<line linenr="147" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="148" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator6</var>
 		</line>
-		<line linenr="148" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="149" indent="&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator6</var>
 		</line>
-		<line linenr="149" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="150" indent="&#160;&#160;&#160;&#160;">
 			<var>$Mammoth</var>
 			<text> </text>
 			<text>=</text>
@@ -1483,7 +1497,7 @@
 			<var>$XS.Iterator6</var>
 			<text>]</text>
 		</line>
-		<line linenr="150" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="151" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1492,7 +1506,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="151" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="152" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$Mammoth</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -1507,10 +1521,10 @@
 			<text>=</text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="152" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="153" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="153" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="154" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -1524,7 +1538,7 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="154" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="155" indent="&#160;&#160;&#160;&#160;">
 			<var>$galaxyProgress</var>
 			<text> </text>
 			<text>=</text>
@@ -1540,7 +1554,7 @@
 			<text>=</text>
 			<text>'mayhem_galaxy.progress'</text>
 		</line>
-		<line linenr="155" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="156" indent="&#160;&#160;&#160;&#160;">
 			<text>if</text>
 			<text> </text>
 			<var>$galaxyProgress</var>
@@ -1549,7 +1563,7 @@
 			<text> </text>
 			<var>1</var>
 		</line>
-		<line linenr="156" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="157" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$RebelOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1569,7 +1583,7 @@
 			<text>=</text>
 			<var>[Rebel Alliance]</var>
 		</line>
-		<line linenr="157" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="158" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$XS.Iterator7</var>
 			<text> </text>
 			<text>=</text>
@@ -1582,17 +1596,17 @@
 			<text> </text>
 			<var>$RebelOutposts</var>
 		</line>
-		<line linenr="158" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="159" indent="&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator7</var>
 		</line>
-		<line linenr="159" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="160" indent="&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator7</var>
 		</line>
-		<line linenr="160" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="161" indent="&#160;&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -1602,7 +1616,7 @@
 			<var>$XS.Iterator7</var>
 			<text>]</text>
 		</line>
-		<line linenr="161" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="162" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1611,7 +1625,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="162" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="163" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -1629,10 +1643,10 @@
 			<text>=</text>
 			<var>55</var>
 		</line>
-		<line linenr="163" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="164" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="164" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="165" indent="&#160;&#160;&#160;&#160;">
 			<text>else</text>
 			<text> </text>
 			<text>if</text>
@@ -1643,7 +1657,7 @@
 			<text> </text>
 			<var>2</var>
 		</line>
-		<line linenr="165" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="166" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$RepublicOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1663,7 +1677,7 @@
 			<text>=</text>
 			<var>[Republic]</var>
 		</line>
-		<line linenr="166" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="167" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$XS.Iterator8</var>
 			<text> </text>
 			<text>=</text>
@@ -1676,17 +1690,17 @@
 			<text> </text>
 			<var>$RepublicOutposts</var>
 		</line>
-		<line linenr="167" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="168" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator8</var>
 		</line>
-		<line linenr="168" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="169" indent="&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator8</var>
 		</line>
-		<line linenr="169" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="170" indent="&#160;&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -1696,7 +1710,7 @@
 			<var>$XS.Iterator8</var>
 			<text>]</text>
 		</line>
-		<line linenr="170" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="171" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1705,7 +1719,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="171" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="172" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -1723,10 +1737,10 @@
 			<text>=</text>
 			<var>70</var>
 		</line>
-		<line linenr="172" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="173" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="173" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="174" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$RebelOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1746,7 +1760,7 @@
 			<text>=</text>
 			<var>[Rebel Alliance]</var>
 		</line>
-		<line linenr="174" indent="&#160;&#160;&#160;">
+		<line linenr="175" indent="&#160;&#160;&#160;">
 			<var>$XS.Iterator9</var>
 			<text> </text>
 			<text>=</text>
@@ -1759,17 +1773,17 @@
 			<text> </text>
 			<var>$RebelOutposts</var>
 		</line>
-		<line linenr="175" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="176" indent="&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator9</var>
 		</line>
-		<line linenr="176" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="177" indent="&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator9</var>
 		</line>
-		<line linenr="177" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="178" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -1779,7 +1793,7 @@
 			<var>$XS.Iterator9</var>
 			<text>]</text>
 		</line>
-		<line linenr="178" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="179" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1788,7 +1802,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="179" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="180" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -1806,10 +1820,10 @@
 			<text>=</text>
 			<var>65</var>
 		</line>
-		<line linenr="180" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="181" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="181" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="182" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$MandalorianOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1829,7 +1843,7 @@
 			<text>=</text>
 			<var>[Mandalorian]</var>
 		</line>
-		<line linenr="182" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="183" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$XS.Iterator10</var>
 			<text> </text>
 			<text>=</text>
@@ -1842,17 +1856,17 @@
 			<text> </text>
 			<var>$MandalorianOutposts</var>
 		</line>
-		<line linenr="183" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="184" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator10</var>
 		</line>
-		<line linenr="184" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="185" indent="&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator10</var>
 		</line>
-		<line linenr="185" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="186" indent="&#160;&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -1862,7 +1876,7 @@
 			<var>$XS.Iterator10</var>
 			<text>]</text>
 		</line>
-		<line linenr="186" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="187" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1871,7 +1885,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="187" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="188" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -1889,10 +1903,10 @@
 			<text>=</text>
 			<var>65</var>
 		</line>
-		<line linenr="188" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="189" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="189" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="190" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$EmpireOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1912,7 +1926,7 @@
 			<text>=</text>
 			<var>[Empire]</var>
 		</line>
-		<line linenr="190" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="191" indent="&#160;&#160;&#160;&#160;">
 			<var>$XS.Iterator11</var>
 			<text> </text>
 			<text>=</text>
@@ -1925,17 +1939,17 @@
 			<text> </text>
 			<var>$EmpireOutposts</var>
 		</line>
-		<line linenr="191" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="192" indent="&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator11</var>
 		</line>
-		<line linenr="192" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="193" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator11</var>
 		</line>
-		<line linenr="193" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="194" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -1945,7 +1959,7 @@
 			<var>$XS.Iterator11</var>
 			<text>]</text>
 		</line>
-		<line linenr="194" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="195" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -1954,7 +1968,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="195" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="196" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -1972,10 +1986,10 @@
 			<text>=</text>
 			<var>55</var>
 		</line>
-		<line linenr="196" indent="&#160;&#160;&#160;">
+		<line linenr="197" indent="&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="197" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="198" indent="&#160;&#160;&#160;" interruptable="@">
 			<var>$CISOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -1995,7 +2009,7 @@
 			<text>=</text>
 			<var>[CIS]</var>
 		</line>
-		<line linenr="198" indent="&#160;&#160;&#160;">
+		<line linenr="199" indent="&#160;&#160;&#160;">
 			<var>$XS.Iterator12</var>
 			<text> </text>
 			<text>=</text>
@@ -2008,17 +2022,17 @@
 			<text> </text>
 			<var>$CISOutposts</var>
 		</line>
-		<line linenr="199" indent="&#160;&#160;&#160;">
+		<line linenr="200" indent="&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator12</var>
 		</line>
-		<line linenr="200" indent="&#160;&#160;&#160;">
+		<line linenr="201" indent="&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator12</var>
 		</line>
-		<line linenr="201" indent="&#160;&#160;&#160;">
+		<line linenr="202" indent="&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2028,7 +2042,7 @@
 			<var>$XS.Iterator12</var>
 			<text>]</text>
 		</line>
-		<line linenr="202" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="203" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2037,7 +2051,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="203" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="204" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2055,10 +2069,10 @@
 			<text>=</text>
 			<var>55</var>
 		</line>
-		<line linenr="204" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="205" indent="&#160;&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="205" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="206" indent="&#160;&#160;&#160;&#160;&#160;" interruptable="@">
 			<var>$NROutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2076,9 +2090,9 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[New Republic]</var>
+			<var>[New Republic (Races)]</var>
 		</line>
-		<line linenr="206" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="207" indent="&#160;&#160;&#160;&#160;&#160;">
 			<var>$XS.Iterator13</var>
 			<text> </text>
 			<text>=</text>
@@ -2091,17 +2105,17 @@
 			<text> </text>
 			<var>$NROutposts</var>
 		</line>
-		<line linenr="207" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="208" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator13</var>
 		</line>
-		<line linenr="208" indent="&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="209" indent="&#160;&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator13</var>
 		</line>
-		<line linenr="209" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
+		<line linenr="210" indent="&#160;&#160;&#160;&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2111,7 +2125,7 @@
 			<var>$XS.Iterator13</var>
 			<text>]</text>
 		</line>
-		<line linenr="210" indent="&#160;&#160;&#160;&#160;" interruptable="@">
+		<line linenr="211" indent="&#160;&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2120,7 +2134,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="211" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="212" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2138,10 +2152,10 @@
 			<text>=</text>
 			<var>55</var>
 		</line>
-		<line linenr="212" indent="&#160;&#160;&#160;">
+		<line linenr="213" indent="&#160;&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="213" indent="&#160;&#160;&#160;">
+		<line linenr="214" indent="&#160;&#160;&#160;">
 			<text>else</text>
 			<text> </text>
 			<text>if</text>
@@ -2152,7 +2166,7 @@
 			<text> </text>
 			<var>3</var>
 		</line>
-		<line linenr="214" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="215" indent="&#160;&#160;&#160;" interruptable="@">
 			<var>$RebelOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2172,7 +2186,7 @@
 			<text>=</text>
 			<var>[Rebel Alliance]</var>
 		</line>
-		<line linenr="215" indent="&#160;&#160;&#160;">
+		<line linenr="216" indent="&#160;&#160;&#160;">
 			<var>$XS.Iterator14</var>
 			<text> </text>
 			<text>=</text>
@@ -2185,17 +2199,17 @@
 			<text> </text>
 			<var>$RebelOutposts</var>
 		</line>
-		<line linenr="216" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="217" indent="&#160;&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator14</var>
 		</line>
-		<line linenr="217" indent="&#160;&#160;&#160;&#160;">
+		<line linenr="218" indent="&#160;&#160;&#160;&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator14</var>
 		</line>
-		<line linenr="218" indent="&#160;&#160;&#160;">
+		<line linenr="219" indent="&#160;&#160;&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2205,7 +2219,7 @@
 			<var>$XS.Iterator14</var>
 			<text>]</text>
 		</line>
-		<line linenr="219" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="220" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2214,7 +2228,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="220" indent="&#160;&#160;&#160;" interruptable="@">
+		<line linenr="221" indent="&#160;&#160;&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2232,10 +2246,10 @@
 			<text>=</text>
 			<var>70</var>
 		</line>
-		<line linenr="221" indent="&#160;&#160;">
+		<line linenr="222" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="222" indent="&#160;&#160;" interruptable="@">
+		<line linenr="223" indent="&#160;&#160;" interruptable="@">
 			<var>$EmpireOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2255,7 +2269,7 @@
 			<text>=</text>
 			<var>[Empire]</var>
 		</line>
-		<line linenr="223" indent="&#160;&#160;">
+		<line linenr="224" indent="&#160;&#160;">
 			<var>$XS.Iterator15</var>
 			<text> </text>
 			<text>=</text>
@@ -2268,17 +2282,17 @@
 			<text> </text>
 			<var>$EmpireOutposts</var>
 		</line>
-		<line linenr="224" indent="&#160;&#160;&#160;">
+		<line linenr="225" indent="&#160;&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator15</var>
 		</line>
-		<line linenr="225" indent="&#160;">
+		<line linenr="226" indent="&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator15</var>
 		</line>
-		<line linenr="226" indent="&#160;">
+		<line linenr="227" indent="&#160;">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2288,7 +2302,7 @@
 			<var>$XS.Iterator15</var>
 			<text>]</text>
 		</line>
-		<line linenr="227" indent="&#160;" interruptable="@">
+		<line linenr="228" indent="&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2297,7 +2311,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="228" indent="" interruptable="@">
+		<line linenr="229" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2315,10 +2329,10 @@
 			<text>=</text>
 			<var>70</var>
 		</line>
-		<line linenr="229" indent="">
+		<line linenr="230" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="230" indent="" interruptable="@">
+		<line linenr="231" indent="" interruptable="@">
 			<var>$CISOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2338,7 +2352,7 @@
 			<text>=</text>
 			<var>[CIS]</var>
 		</line>
-		<line linenr="231" indent="">
+		<line linenr="232" indent="">
 			<var>$XS.Iterator16</var>
 			<text> </text>
 			<text>=</text>
@@ -2351,17 +2365,17 @@
 			<text> </text>
 			<var>$CISOutposts</var>
 		</line>
-		<line linenr="232" indent="">
+		<line linenr="233" indent="">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator16</var>
 		</line>
-		<line linenr="233" indent="">
+		<line linenr="234" indent="">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator16</var>
 		</line>
-		<line linenr="234" indent="">
+		<line linenr="235" indent="">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2371,7 +2385,7 @@
 			<var>$XS.Iterator16</var>
 			<text>]</text>
 		</line>
-		<line linenr="235" indent="" interruptable="@">
+		<line linenr="236" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2380,7 +2394,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="236" indent="" interruptable="@">
+		<line linenr="237" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2398,10 +2412,10 @@
 			<text>=</text>
 			<var>70</var>
 		</line>
-		<line linenr="237" indent="">
+		<line linenr="238" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="238" indent="" interruptable="@">
+		<line linenr="239" indent="" interruptable="@">
 			<var>$NROutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2419,9 +2433,9 @@
 			<text> </text>
 			<text>race</text>
 			<text>=</text>
-			<var>[New Republic]</var>
+			<var>[New Republic (Races)]</var>
 		</line>
-		<line linenr="239" indent="">
+		<line linenr="240" indent="">
 			<var>$XS.Iterator17</var>
 			<text> </text>
 			<text>=</text>
@@ -2434,17 +2448,17 @@
 			<text> </text>
 			<var>$NROutposts</var>
 		</line>
-		<line linenr="240" indent="">
+		<line linenr="241" indent="">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator17</var>
 		</line>
-		<line linenr="241" indent="">
+		<line linenr="242" indent="">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator17</var>
 		</line>
-		<line linenr="242" indent="">
+		<line linenr="243" indent="">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2454,7 +2468,7 @@
 			<var>$XS.Iterator17</var>
 			<text>]</text>
 		</line>
-		<line linenr="243" indent="" interruptable="@">
+		<line linenr="244" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2463,7 +2477,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="244" indent="" interruptable="@">
+		<line linenr="245" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2481,13 +2495,13 @@
 			<text>=</text>
 			<var>75</var>
 		</line>
-		<line linenr="245" indent="">
-			<text>end</text>
-		</line>
 		<line linenr="246" indent="">
 			<text>end</text>
 		</line>
 		<line linenr="247" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="248" indent="">
 			<var>$maxSpecializationLevel</var>
 			<text> </text>
 			<text>=</text>
@@ -2503,7 +2517,7 @@
 			<text>=</text>
 			<text>'mayhem_maxSpecializationLevel'</text>
 		</line>
-		<line linenr="248" indent="">
+		<line linenr="249" indent="">
 			<var>$maxSpecializationLevel</var>
 			<text> </text>
 			<text>=</text>
@@ -2514,7 +2528,7 @@
 			<text> </text>
 			<var>25</var>
 		</line>
-		<line linenr="249" indent="" interruptable="@">
+		<line linenr="250" indent="" interruptable="@">
 			<var>$PlayerOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2534,7 +2548,7 @@
 			<text>=</text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="250" indent="">
+		<line linenr="251" indent="">
 			<var>$PlayerOutpostNb</var>
 			<text> </text>
 			<text>=</text>
@@ -2547,7 +2561,7 @@
 			<text> </text>
 			<var>$PlayerOutposts</var>
 		</line>
-		<line linenr="251" indent="">
+		<line linenr="252" indent="">
 			<var>$MandoOutposts</var>
 			<text> </text>
 			<text>=</text>
@@ -2561,7 +2575,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="252" indent="">
+		<line linenr="253" indent="">
 			<var>$XS.Iterator18</var>
 			<text> </text>
 			<text>=</text>
@@ -2574,17 +2588,17 @@
 			<text> </text>
 			<var>$PlayerOutposts</var>
 		</line>
-		<line linenr="253" indent="">
+		<line linenr="254" indent="">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator18</var>
 		</line>
-		<line linenr="254" indent="">
+		<line linenr="255" indent="">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator18</var>
 		</line>
-		<line linenr="255" indent="">
+		<line linenr="256" indent="">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2594,7 +2608,7 @@
 			<var>$XS.Iterator18</var>
 			<text>]</text>
 		</line>
-		<line linenr="256" indent="" interruptable="@">
+		<line linenr="257" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2603,7 +2617,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="257" indent="">
+		<line linenr="258" indent="">
 			<var>$spec</var>
 			<text> </text>
 			<text>=</text>
@@ -2622,7 +2636,7 @@
 			<text>=</text>
 			<text>'mayhem_specializationShip'</text>
 		</line>
-		<line linenr="258" indent="">
+		<line linenr="259" indent="">
 			<text>if</text>
 			<text> </text>
 			<var>$spec</var>
@@ -2631,7 +2645,7 @@
 			<text> </text>
 			<var>$maxSpecializationLevel</var>
 		</line>
-		<line linenr="259" indent="">
+		<line linenr="260" indent="">
 			<text>append</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2642,21 +2656,21 @@
 			<text> </text>
 			<var>$MandoOutposts</var>
 		</line>
-		<line linenr="260" indent="">
+		<line linenr="261" indent="">
 			<text>skip</text>
 			<text> </text>
 			<text>if</text>
 			<text> </text>
 			<var>$currentMandoSpec</var>
 		</line>
-		<line linenr="261" indent="">
+		<line linenr="262" indent="">
 			<var>$currentMandoSpec</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$spec</var>
 		</line>
-		<line linenr="262" indent="">
+		<line linenr="263" indent="">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -2667,20 +2681,20 @@
 			<text> </text>
 			<var>$currentMandoSpec</var>
 		</line>
-		<line linenr="263" indent="">
+		<line linenr="264" indent="">
 			<var>$currentMandoSpec</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$spec</var>
 		</line>
-		<line linenr="264" indent="">
-			<text>end</text>
-		</line>
 		<line linenr="265" indent="">
 			<text>end</text>
 		</line>
 		<line linenr="266" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="267" indent="">
 			<var>$MandoBonusSpec</var>
 			<text> </text>
 			<text>=</text>
@@ -2691,7 +2705,7 @@
 			<text> </text>
 			<var>$maxSpecializationLevel</var>
 		</line>
-		<line linenr="267" indent="">
+		<line linenr="268" indent="">
 			<var>$MandoBonusSpec</var>
 			<text> </text>
 			<text>=</text>
@@ -2702,7 +2716,7 @@
 			<text> </text>
 			<var>2</var>
 		</line>
-		<line linenr="268" indent="">
+		<line linenr="269" indent="">
 			<var>$spec</var>
 			<text> </text>
 			<text>=</text>
@@ -2713,7 +2727,7 @@
 			<text> </text>
 			<var>$MandoBonusSpec</var>
 		</line>
-		<line linenr="269" indent="">
+		<line linenr="270" indent="">
 			<var>$XS.Iterator19</var>
 			<text> </text>
 			<text>=</text>
@@ -2726,17 +2740,17 @@
 			<text> </text>
 			<var>$MandoOutposts</var>
 		</line>
-		<line linenr="270" indent="">
+		<line linenr="271" indent="">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator19</var>
 		</line>
-		<line linenr="271" indent="">
+		<line linenr="272" indent="">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator19</var>
 		</line>
-		<line linenr="272" indent="">
+		<line linenr="273" indent="">
 			<var>$outpostType</var>
 			<text> </text>
 			<text>=</text>
@@ -2746,7 +2760,7 @@
 			<var>$XS.Iterator19</var>
 			<text>]</text>
 		</line>
-		<line linenr="273" indent="" interruptable="@">
+		<line linenr="274" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -2755,7 +2769,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="274" indent="" interruptable="@">
+		<line linenr="275" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>$outpostType</var>
@@ -2773,10 +2787,10 @@
 			<text>=</text>
 			<var>$spec</var>
 		</line>
-		<line linenr="275" indent="">
+		<line linenr="276" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="276" indent="" interruptable="@">
+		<line linenr="277" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -2790,25 +2804,25 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="277" indent="">
+		<line linenr="278" indent="">
 			<var>$versionText</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<text>'updated for SWM3 1.6 Warlord.'</text>
 		</line>
-		<line linenr="278" indent="">
+		<line linenr="279" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="279" indent="" />
-		<line linenr="280" indent="">
+		<line linenr="280" indent="" />
+		<line linenr="281" indent="">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
 			<text> </text>
 			<var>$versionText</var>
 		</line>
-		<line linenr="281" indent="">
+		<line linenr="282" indent="">
 			<text>write</text>
 			<text> </text>
 			<text>to</text>
@@ -2819,12 +2833,12 @@
 			<text> </text>
 			<var>$versionText</var>
 		</line>
-		<line linenr="282" indent="">
+		<line linenr="283" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="283" indent="" />
 		<line linenr="284" indent="" />
-		<line linenr="285" indent="">
+		<line linenr="285" indent="" />
+		<line linenr="286" indent="">
 			<text>endsub</text>
 		</line>
 	</sourcetext>
@@ -2887,7 +2901,7 @@
 				<sval type="string" val="MandoBonusSpec" />
 				<sval type="string" val="XS.Iterator19" />
 			</sval>
-			<sval type="array" size="247">
+			<sval type="array" size="248">
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
 					<sval type="int" val="0" />
@@ -3074,11 +3088,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="246" />
+					<sval type="int" val="247" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610549755" />
+					<sval type="int" val="-1610549499" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="6" />
@@ -3694,7 +3708,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610550269" />
+					<sval type="int" val="-1610550013" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="6" />
@@ -3706,6 +3720,14 @@
 					<sval type="int" val="-1" />
 					<sval type="int" val="3" />
 					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="Mayhem.ImportShipSizes" />
+					<sval type="int" val="-2147483646" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="12" />
+					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -3725,7 +3747,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610584823" />
+					<sval type="int" val="-1610584567" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="23" />
@@ -3778,7 +3800,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="101" />
+					<sval type="int" val="102" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
@@ -3812,7 +3834,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610582263" />
+					<sval type="int" val="-1610582007" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="25" />
@@ -3846,7 +3868,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="113" />
+					<sval type="int" val="114" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
@@ -3864,7 +3886,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610579197" />
+					<sval type="int" val="-1610578941" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
@@ -3895,7 +3917,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610579447" />
+					<sval type="int" val="-1610579191" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="27" />
@@ -3932,15 +3954,15 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="124" />
+					<sval type="int" val="125" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="214" />
+					<sval type="int" val="215" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610566395" />
+					<sval type="int" val="-1610566139" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
@@ -3971,7 +3993,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610576887" />
+					<sval type="int" val="-1610576631" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="28" />
@@ -4008,7 +4030,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="134" />
+					<sval type="int" val="135" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4028,7 +4050,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610574839" />
+					<sval type="int" val="-1610574583" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="29" />
@@ -4065,7 +4087,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="142" />
+					<sval type="int" val="143" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4085,7 +4107,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610572791" />
+					<sval type="int" val="-1610572535" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="30" />
@@ -4122,7 +4144,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="150" />
+					<sval type="int" val="151" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4142,7 +4164,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610570743" />
+					<sval type="int" val="-1610570487" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="32" />
@@ -4179,7 +4201,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="158" />
+					<sval type="int" val="159" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4199,7 +4221,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610568695" />
+					<sval type="int" val="-1610568439" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="34" />
@@ -4236,7 +4258,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="166" />
+					<sval type="int" val="167" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4256,7 +4278,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610566647" />
+					<sval type="int" val="-1610566391" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -4293,15 +4315,15 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="174" />
+					<sval type="int" val="175" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="214" />
+					<sval type="int" val="215" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610557947" />
+					<sval type="int" val="-1610557691" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
@@ -4332,7 +4354,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610564087" />
+					<sval type="int" val="-1610563831" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="37" />
@@ -4369,7 +4391,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="184" />
+					<sval type="int" val="185" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4389,7 +4411,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610562039" />
+					<sval type="int" val="-1610561783" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="38" />
@@ -4426,7 +4448,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="192" />
+					<sval type="int" val="193" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4446,7 +4468,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610559991" />
+					<sval type="int" val="-1610559735" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="39" />
@@ -4483,7 +4505,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="200" />
+					<sval type="int" val="201" />
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
@@ -4503,7 +4525,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610557943" />
+					<sval type="int" val="-1610557687" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="40" />
@@ -4540,7 +4562,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="208" />
+					<sval type="int" val="209" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
@@ -4593,7 +4615,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610553335" />
+					<sval type="int" val="-1610553079" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="45" />
@@ -4628,7 +4650,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610553597" />
+					<sval type="int" val="-1610553341" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="46" />
@@ -4650,7 +4672,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536812281" />
+					<sval type="int" val="-536812025" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="47" />
@@ -4668,7 +4690,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610553592" />
+					<sval type="int" val="-1610553336" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="46" />
@@ -4692,7 +4714,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
@@ -4747,7 +4769,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610550775" />
+					<sval type="int" val="-1610550519" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="49" />
@@ -4784,7 +4806,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="236" />
+					<sval type="int" val="237" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
@@ -4805,7 +4827,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610549752" />
+					<sval type="int" val="-1610549496" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="7" />
@@ -4995,63 +5017,59 @@
 					<sval type="string" val="1.6 Warlord" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="109" />
+					<sval type="int" val="110" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="119" />
+					<sval type="int" val="120" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="130" />
+					<sval type="int" val="131" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="140" />
+					<sval type="int" val="141" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="148" />
+					<sval type="int" val="149" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="156" />
+					<sval type="int" val="157" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="164" />
+					<sval type="int" val="165" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="172" />
+					<sval type="int" val="173" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="180" />
+					<sval type="int" val="181" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="190" />
+					<sval type="int" val="191" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="198" />
+					<sval type="int" val="199" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="206" />
+					<sval type="int" val="207" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="214" />
+					<sval type="int" val="215" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="214" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="231" />
+					<sval type="int" val="215" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
@@ -5059,27 +5077,31 @@
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="242" />
+					<sval type="int" val="233" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="244" />
+					<sval type="int" val="243" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="244" />
+					<sval type="int" val="245" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="245" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="246" />
+					<sval type="int" val="247" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="246" />
+					<sval type="int" val="247" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="246" />
+					<sval type="int" val="247" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

@@ -229,7 +229,7 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="024" indent="&#160;&#160;">
+		<line linenr="024" indent="&#160;">
 			<var>$rallyGate</var>
 			<text> </text>
 			<text>=</text>
@@ -248,14 +248,32 @@
 			<text>=</text>
 			<text>'rallyGate'</text>
 		</line>
-		<line linenr="025" indent="&#160;&#160;" />
-		<line linenr="026" indent="&#160;&#160;" interruptable="@">
+		<line linenr="025" indent="&#160;&#160;">
+			<var>$rallyGate.sector</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$member</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'rallyGate.sector'</text>
+		</line>
+		<line linenr="026" indent="&#160;&#160;" />
+		<line linenr="027" indent="&#160;&#160;" interruptable="@">
 			<text>if</text>
 			<text> </text>
 			<text>not</text>
 			<text> </text>
 			<var>[NULL]</var>
-			<text> </text>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>call</text>
@@ -263,13 +281,14 @@
 			<text>script</text>
 			<text> </text>
 			<call>Mayhem.Squadron.IsLeader</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>ship</text>
 			<text>=</text>
 			<var>$member</var>
 		</line>
-		<line linenr="027" indent="&#160;&#160;" interruptable="@">
+		<line linenr="028" indent="&#160;&#160;" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<text>wait</text>
@@ -278,10 +297,10 @@
 			<text> </text>
 			<text>ms</text>
 		</line>
-		<line linenr="028" indent="&#160;&#160;">
-			<comment>*remove any wrong ships which can sometimes end up being a member</comment>
-		</line>
 		<line linenr="029" indent="&#160;&#160;">
+			<comment>* remove any wrong ships which can sometimes end up being a member</comment>
+		</line>
+		<line linenr="030" indent="&#160;&#160;">
 			<var>$index</var>
 			<text> </text>
 			<text>=</text>
@@ -304,7 +323,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="030" indent="&#160;&#160;">
+		<line linenr="031" indent="&#160;&#160;">
 			<text>remove</text>
 			<text> </text>
 			<text>element</text>
@@ -321,7 +340,7 @@
 			<text> </text>
 			<var>$index</var>
 		</line>
-		<line linenr="031" indent="&#160;">
+		<line linenr="032" indent="&#160;&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -338,7 +357,7 @@
 			<text> </text>
 			<var>$members</var>
 		</line>
-		<line linenr="032" indent="&#160;">
+		<line linenr="033" indent="&#160;">
 			<var>$member</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -357,39 +376,61 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="033" indent="&#160;">
+		<line linenr="034" indent="&#160;">
+			<var>$member</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'rallyGate.sector'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="035" indent="&#160;">
 			<text>continue</text>
 		</line>
-		<line linenr="034" indent="&#160;&#160;">
+		<line linenr="036" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="035" indent="&#160;" />
-		<line linenr="036" indent="&#160;">
-			<text>skip</text>
+		<line linenr="037" indent="&#160;&#160;" />
+		<line linenr="038" indent="&#160;">
+			<var>$member.sector</var>
 			<text> </text>
-			<text>if</text>
+			<text>=</text>
 			<text> </text>
 			<var>$member</var>
 			<text>-&gt;</text>
 			<text> </text>
-			<text>is</text>
-			<text> </text>
-			<text>in</text>
-			<text> </text>
-			<text>same</text>
+			<text>get</text>
 			<text> </text>
 			<text>sector</text>
-			<text> </text>
-			<text>as</text>
-			<text> </text>
-			<var>$rallyGate</var>
 		</line>
-		<line linenr="037" indent="&#160;&#160;">
+		<line linenr="039" indent="&#160;">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$rallyGate.sector</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>$member.sector</var>
+		</line>
+		<line linenr="040" indent="&#160;&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="038" indent="&#160;" interruptable="@">
+		<line linenr="041" indent="&#160;" interruptable="@">
 			<var>$distance</var>
 			<text> </text>
 			<text>=</text>
@@ -413,7 +454,7 @@
 			<text>=</text>
 			<var>$rallyGate</var>
 		</line>
-		<line linenr="039" indent="">
+		<line linenr="042" indent="">
 			<text>if</text>
 			<text> </text>
 			<var>$distance</var>
@@ -422,25 +463,25 @@
 			<text> </text>
 			<var>14000</var>
 		</line>
-		<line linenr="040" indent="">
+		<line linenr="043" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="041" indent="">
+		<line linenr="044" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="042" indent="">
+		<line linenr="045" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="043" indent="" />
-		<line linenr="044" indent="" />
-		<line linenr="045" indent="" />
 		<line linenr="046" indent="" />
-		<line linenr="047" indent="&#160;">
+		<line linenr="047" indent="" />
+		<line linenr="048" indent="" />
+		<line linenr="049" indent="" />
+		<line linenr="050" indent="&#160;">
 			<comment>* surprise claim player and switch to attack phase</comment>
 		</line>
-		<line linenr="048" indent="">
+		<line linenr="051" indent="">
 			<var>$sectorOwner</var>
 			<text> </text>
 			<text>=</text>
@@ -454,7 +495,7 @@
 			<text> </text>
 			<text>race</text>
 		</line>
-		<line linenr="049" indent="">
+		<line linenr="052" indent="">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -465,7 +506,7 @@
 			<text> </text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="050" indent="" interruptable="@">
+		<line linenr="053" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -487,7 +528,7 @@
 			<text>=</text>
 			<var>$race</var>
 		</line>
-		<line linenr="051" indent="">
+		<line linenr="054" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -504,9 +545,9 @@
 			<text> </text>
 			<var>$targetSector</var>
 		</line>
-		<line linenr="052" indent="" />
-		<line linenr="053" indent="" />
-		<line linenr="054" indent="">
+		<line linenr="055" indent="" />
+		<line linenr="056" indent="" />
+		<line linenr="057" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -519,7 +560,7 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="16">
+			<sval type="array" size="18">
 				<sval type="string" val="race" />
 				<sval type="string" val="Diplo.MultiInvasionStatus" />
 				<sval type="string" val="Diplo.MultiInvasionStatus.races" />
@@ -533,11 +574,13 @@
 				<sval type="string" val="member" />
 				<sval type="string" val="XS.Iterator1" />
 				<sval type="string" val="rallyGate" />
+				<sval type="string" val="rallyGate.sector" />
 				<sval type="string" val="index" />
+				<sval type="string" val="member.sector" />
 				<sval type="string" val="distance" />
 				<sval type="string" val="sectorOwner" />
 			</sval>
-			<sval type="array" size="35">
+			<sval type="array" size="38">
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
 					<sval type="int" val="5" />
@@ -626,7 +669,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610605047" />
+					<sval type="int" val="-1610604279" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="11" />
@@ -659,10 +702,18 @@
 					<sval type="string" val="rallyGate" />
 					<sval type="int" val="12" />
 				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="156" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="string" val="rallyGate.sector" />
+					<sval type="int" val="13" />
+				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.Squadron.IsLeader" />
-					<sval type="int" val="-536864764" />
+					<sval type="int" val="-536864252" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
 					<sval type="int" val="1" />
@@ -677,7 +728,7 @@
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="1083" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
 					<sval type="int" val="131074" />
@@ -690,7 +741,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="13" />
+					<sval type="int" val="14" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="1708" />
@@ -710,17 +761,39 @@
 					<sval type="int" val="0" />
 					<sval type="int" val="0" />
 				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="string" val="rallyGate.sector" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
 					<sval type="int" val="12" />
 				</sval>
-				<sval type="array" size="6">
-					<sval type="int" val="733" />
+				<sval type="array" size="4">
+					<sval type="int" val="703" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="10" />
-					<sval type="int" val="-536864249" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-536863481" />
+					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="12" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
@@ -730,7 +803,7 @@
 				<sval type="array" size="10">
 					<sval type="int" val="102" />
 					<sval type="string" val="Joubarbe.Lib.GetDistance" />
-					<sval type="int" val="14" />
+					<sval type="int" val="16" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
 					<sval type="int" val="2" />
@@ -741,10 +814,10 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610605309" />
+					<sval type="int" val="-1610604541" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="14" />
+					<sval type="int" val="16" />
 					<sval type="int" val="4" />
 					<sval type="int" val="14000" />
 					<sval type="int" val="15" />
@@ -767,14 +840,14 @@
 					<sval type="int" val="701" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="6" />
-					<sval type="int" val="15" />
+					<sval type="int" val="17" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610604280" />
+					<sval type="int" val="-1610603512" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="15" />
+					<sval type="int" val="17" />
 					<sval type="int" val="10" />
 					<sval type="int" val="10" />
 					<sval type="int" val="15" />
@@ -849,61 +922,61 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="17" />
+					<sval type="int" val="18" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="19" />
+					<sval type="int" val="20" />
 					<sval type="int" val="1" />
 					<sval type="string" val="remove any wrong ships which can sometimes end up being a member" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="26" />
 					<sval type="int" val="6" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="26" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="26" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="29" />
+					<sval type="int" val="32" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="30" />
+					<sval type="int" val="33" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="30" />
+					<sval type="int" val="33" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="30" />
+					<sval type="int" val="33" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="30" />
+					<sval type="int" val="33" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="30" />
+					<sval type="int" val="33" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="30" />
+					<sval type="int" val="33" />
 					<sval type="int" val="1" />
 					<sval type="string" val="surprise claim player and switch to attack phase" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="34" />
+					<sval type="int" val="37" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="34" />
+					<sval type="int" val="37" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

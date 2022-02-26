@@ -2091,6 +2091,14 @@
 		</line>
 		<line linenr="170" indent="&#160;&#160;">
 			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$WarDuration</var>
+			<text> </text>
+			<text>&gt;</text>
+			<text> </text>
+			<var>0</var>
 		</line>
 		<line linenr="171" indent="&#160;&#160;" interruptable="@">
 			<text>=</text>
@@ -3004,7 +3012,7 @@
 			<text> </text>
 			<text>!=</text>
 			<text> </text>
-			<var>[New Republic]</var>
+			<var>[New Republic (Races)]</var>
 			<text> </text>
 			<text>AND</text>
 			<text> </text>
@@ -4534,7 +4542,7 @@
 				<sval type="string" val="randomSector" />
 				<sval type="string" val="isClaimable" />
 			</sval>
-			<sval type="array" size="309">
+			<sval type="array" size="310">
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
 					<sval type="int" val="5" />
@@ -4697,7 +4705,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610541815" />
+					<sval type="int" val="-1610541559" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="21" />
@@ -4801,7 +4809,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="100" />
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
 				</sval>
 				<sval type="array" size="25">
 					<sval type="int" val="104" />
@@ -6036,7 +6044,22 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610556155" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="26" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="15" />
+					<sval type="int" val="2" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="2" />
+					<sval type="int" val="-2" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="105" />
@@ -6079,7 +6102,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610576637" />
+					<sval type="int" val="-1610576381" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="26" />
@@ -6102,7 +6125,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536835065" />
+					<sval type="int" val="-536834809" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6120,11 +6143,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="153" />
+					<sval type="int" val="154" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610575099" />
+					<sval type="int" val="-1610574843" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="26" />
@@ -6176,7 +6199,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536833529" />
+					<sval type="int" val="-536833273" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6194,11 +6217,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="153" />
+					<sval type="int" val="154" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610573563" />
+					<sval type="int" val="-1610573307" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="23" />
@@ -6221,7 +6244,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610573821" />
+					<sval type="int" val="-1610573565" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6245,7 +6268,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="153" />
+					<sval type="int" val="154" />
 				</sval>
 				<sval type="array" size="21">
 					<sval type="int" val="104" />
@@ -6272,7 +6295,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610572029" />
+					<sval type="int" val="-1610571773" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="23" />
@@ -6295,7 +6318,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536830713" />
+					<sval type="int" val="-536830457" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6334,11 +6357,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="174" />
+					<sval type="int" val="175" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610570491" />
+					<sval type="int" val="-1610570235" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="23" />
@@ -6361,7 +6384,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536829177" />
+					<sval type="int" val="-536828921" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6408,11 +6431,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="174" />
+					<sval type="int" val="175" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610568955" />
+					<sval type="int" val="-1610568699" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="23" />
@@ -6435,7 +6458,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536827641" />
+					<sval type="int" val="-536827385" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6482,11 +6505,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="174" />
+					<sval type="int" val="175" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610568187" />
+					<sval type="int" val="-1610567931" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="23" />
@@ -6538,7 +6561,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610566653" />
+					<sval type="int" val="-1610566397" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="24" />
@@ -6576,7 +6599,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536825081" />
+					<sval type="int" val="-536824825" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6594,7 +6617,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="181" />
+					<sval type="int" val="182" />
 				</sval>
 				<sval type="array" size="27">
 					<sval type="int" val="104" />
@@ -6627,7 +6650,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610563581" />
+					<sval type="int" val="-1610563325" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="27" />
@@ -6650,7 +6673,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610565117" />
+					<sval type="int" val="-1610564861" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -6674,7 +6697,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="187" />
+					<sval type="int" val="188" />
 				</sval>
 				<sval type="array" size="19">
 					<sval type="int" val="104" />
@@ -6720,7 +6743,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610564088" />
+					<sval type="int" val="-1610563832" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="27" />
@@ -6744,7 +6767,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610563576" />
+					<sval type="int" val="-1610563320" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="26" />
@@ -6839,7 +6862,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610559997" />
+					<sval type="int" val="-1610559741" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="35" />
@@ -6875,7 +6898,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610560760" />
+					<sval type="int" val="-1610560504" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="42" />
@@ -6914,7 +6937,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610559992" />
+					<sval type="int" val="-1610559736" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="24" />
@@ -6938,7 +6961,7 @@
 				</sval>
 				<sval type="array" size="77">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610559480" />
+					<sval type="int" val="-1610559224" />
 					<sval type="int" val="23" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="20" />
@@ -7026,7 +7049,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610557949" />
+					<sval type="int" val="-1610557693" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="43" />
@@ -7058,7 +7081,7 @@
 				</sval>
 				<sval type="array" size="49">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610557949" />
+					<sval type="int" val="-1610557693" />
 					<sval type="int" val="15" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="34" />
@@ -7117,7 +7140,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610557944" />
+					<sval type="int" val="-1610557688" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -7141,7 +7164,7 @@
 				</sval>
 				<sval type="array" size="25">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610556413" />
+					<sval type="int" val="-1610556157" />
 					<sval type="int" val="7" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="27" />
@@ -7174,7 +7197,7 @@
 				</sval>
 				<sval type="array" size="10">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610556413" />
+					<sval type="int" val="-1610556157" />
 					<sval type="int" val="2" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="44" />
@@ -7239,7 +7262,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610551293" />
+					<sval type="int" val="-1610551037" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="28" />
@@ -7274,7 +7297,7 @@
 				</sval>
 				<sval type="array" size="51">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610554104" />
+					<sval type="int" val="-1610553848" />
 					<sval type="int" val="15" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="48" />
@@ -7347,7 +7370,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610551293" />
+					<sval type="int" val="-1610551037" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="28" />
@@ -7382,7 +7405,7 @@
 				</sval>
 				<sval type="array" size="25">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610551805" />
+					<sval type="int" val="-1610551549" />
 					<sval type="int" val="7" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="28" />
@@ -7421,11 +7444,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610551288" />
+					<sval type="int" val="-1610551032" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="52" />
@@ -7460,7 +7483,7 @@
 				</sval>
 				<sval type="array" size="37">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610546173" />
+					<sval type="int" val="-1610545917" />
 					<sval type="int" val="11" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="28" />
@@ -7499,7 +7522,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610548733" />
+					<sval type="int" val="-1610548477" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="29" />
@@ -7516,7 +7539,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610549501" />
+					<sval type="int" val="-1610549245" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -7531,15 +7554,15 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="279" />
+					<sval type="int" val="280" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="250" />
+					<sval type="int" val="251" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610548731" />
+					<sval type="int" val="-1610548475" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -7563,11 +7586,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="279" />
+					<sval type="int" val="280" />
 				</sval>
 				<sval type="array" size="25">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610546173" />
+					<sval type="int" val="-1610545917" />
 					<sval type="int" val="7" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="26" />
@@ -7617,7 +7640,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610546173" />
+					<sval type="int" val="-1610545917" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -7638,7 +7661,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610546429" />
+					<sval type="int" val="-1610546173" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -7662,15 +7685,15 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="279" />
+					<sval type="int" val="280" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="279" />
+					<sval type="int" val="280" />
 				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="105" />
@@ -7688,7 +7711,7 @@
 				</sval>
 				<sval type="array" size="37">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610543869" />
+					<sval type="int" val="-1610543613" />
 					<sval type="int" val="11" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="28" />
@@ -7733,7 +7756,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536802809" />
+					<sval type="int" val="-536802553" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="36" />
@@ -7751,11 +7774,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1167" />
-					<sval type="int" val="295" />
+					<sval type="int" val="296" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610543864" />
+					<sval type="int" val="-1610543608" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="55" />
@@ -7791,7 +7814,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610543096" />
+					<sval type="int" val="-1610542840" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="24" />
@@ -7895,7 +7918,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610537463" />
+					<sval type="int" val="-1610537207" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="58" />
@@ -7922,7 +7945,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536796921" />
+					<sval type="int" val="-536796665" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="53" />
@@ -7939,7 +7962,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610537725" />
+					<sval type="int" val="-1610537469" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="53" />
@@ -7955,7 +7978,7 @@
 				<sval type="array" size="10">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.IsClaimable" />
-					<sval type="int" val="-1610537725" />
+					<sval type="int" val="-1610537469" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
 					<sval type="int" val="2" />
@@ -7967,7 +7990,7 @@
 				<sval type="array" size="10">
 					<sval type="int" val="102" />
 					<sval type="string" val="Mayhem.Diplomacy.MultiInvasion.Start" />
-					<sval type="int" val="-1610537720" />
+					<sval type="int" val="-1610537464" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="12" />
 					<sval type="int" val="2" />
@@ -7978,11 +8001,11 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="294" />
+					<sval type="int" val="295" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="283" />
+					<sval type="int" val="284" />
 				</sval>
 				<sval type="array" size="1">
 					<sval type="int" val="1168" />
@@ -8027,7 +8050,7 @@
 				</sval>
 				<sval type="array" size="37">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610535416" />
+					<sval type="int" val="-1610535160" />
 					<sval type="int" val="11" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="56" />
@@ -8069,7 +8092,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536793081" />
+					<sval type="int" val="-536792825" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="53" />
@@ -8086,7 +8109,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610533885" />
+					<sval type="int" val="-1610533629" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="53" />
@@ -8113,7 +8136,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610533880" />
+					<sval type="int" val="-1610533624" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="61" />
@@ -8134,7 +8157,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="131">
+			<sval type="array" size="130">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -8358,321 +8381,313 @@
 					<sval type="int" val="1" />
 					<sval type="string" val="never offer any peace before at least 1 full war cycle has passed" />
 				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="132" />
-					<sval type="int" val="5" />
-				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="133" />
+					<sval type="int" val="134" />
 					<sval type="int" val="1" />
 					<sval type="string" val="peace base cost is 300k credits per player owned sector" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="137" />
+					<sval type="int" val="138" />
 					<sval type="int" val="1" />
 					<sval type="string" val="after ~2 days of war there is 20% chance to get a white peace offer" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="142" />
+					<sval type="int" val="143" />
 					<sval type="int" val="1" />
 					<sval type="string" val="after ~18h of war peace cost starts to go down by 10% on each cycle" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="143" />
+					<sval type="int" val="144" />
 					<sval type="int" val="1" />
 					<sval type="string" val="at this point there is a 1% chance to get a white peace" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="148" />
+					<sval type="int" val="149" />
 					<sval type="int" val="1" />
 					<sval type="string" val="during first ~18h in a war peace cost gets randomly up to 30% more expensive and there is 40% additional chance to get no peace offer at all. None of this happens if player has only very little bad reputation." />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="152" />
+					<sval type="int" val="153" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="153" />
+					<sval type="int" val="154" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="153" />
+					<sval type="int" val="154" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="153" />
+					<sval type="int" val="154" />
 					<sval type="int" val="1" />
 					<sval type="string" val="lowest rank of vanilla reputation always makes reparations 50% more expensive +25% risk to get no peace offer" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="160" />
+					<sval type="int" val="161" />
 					<sval type="int" val="1" />
 					<sval type="string" val="having only little bad rep makes reparations cheap + 5% additional chance to get early white peace offer" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="174" />
+					<sval type="int" val="175" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="174" />
+					<sval type="int" val="175" />
 					<sval type="int" val="1" />
 					<sval type="string" val="enemy Motivation at 0 halves reparation demands and has additional 25% chance to offer a white peace" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="180" />
+					<sval type="int" val="181" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="180" />
+					<sval type="int" val="181" />
 					<sval type="int" val="1" />
 					<sval type="string" val="each point of motivation increases peace cost by 0,25%" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="181" />
+					<sval type="int" val="182" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="181" />
+					<sval type="int" val="182" />
 					<sval type="int" val="1" />
 					<sval type="string" val="if we end up with any remaining peace cost, randomness follows up" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="184" />
+					<sval type="int" val="185" />
 					<sval type="int" val="1" />
 					<sval type="string" val="faction can always still randomly act stubborn, not offering any peace when they actually should" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="186" />
+					<sval type="int" val="187" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="186" />
+					<sval type="int" val="187" />
 					<sval type="int" val="1" />
 					<sval type="string" val="otherwise they slightly randomize actual cost for each new peace offer" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="187" />
+					<sval type="int" val="188" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="188" />
+					<sval type="int" val="189" />
 					<sval type="int" val="1" />
 					<sval type="string" val="if final peace cost ends up laughably low we round it down into a white peace offer" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="190" />
+					<sval type="int" val="191" />
 					<sval type="int" val="1" />
 					<sval type="string" val="extremely long war of ~4 days or more guarantees white peace" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="192" />
+					<sval type="int" val="193" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="193" />
+					<sval type="int" val="194" />
 					<sval type="int" val="1" />
 					<sval type="string" val="at war against a smaller NPC empire" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="200" />
+					<sval type="int" val="201" />
 					<sval type="int" val="1" />
 					<sval type="string" val="enemy passively looses current Motivation relative to 5 times the size difference in %" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="201" />
+					<sval type="int" val="202" />
 					<sval type="int" val="1" />
 					<sval type="string" val="loss is always at least the absolute 5 times size difference" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="206" />
+					<sval type="int" val="207" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="206" />
+					<sval type="int" val="207" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Capitulation, becoming a vassal to player" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="214" />
+					<sval type="int" val="215" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="214" />
+					<sval type="int" val="215" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="214" />
+					<sval type="int" val="215" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Tutorial" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="220" />
+					<sval type="int" val="221" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="222" />
+					<sval type="int" val="223" />
 					<sval type="int" val="1" />
 					<sval type="string" val="check if an active operation must be aborted" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="228" />
+					<sval type="int" val="229" />
 					<sval type="int" val="1" />
 					<sval type="string" val="abort if player repaired his rep since last cycle or if sector became unknown or Sith" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="236" />
+					<sval type="int" val="237" />
 					<sval type="int" val="1" />
 					<sval type="string" val="during preparation phase we abort if we don't have at least 2 remaining member BG" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="238" />
+					<sval type="int" val="239" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="238" />
+					<sval type="int" val="239" />
 					<sval type="int" val="1" />
 					<sval type="string" val="after the go code we only abort after every member got killed" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 					<sval type="int" val="1" />
 					<sval type="string" val="** Attempt new Coordinated Invasion ***" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="240" />
+					<sval type="int" val="241" />
 					<sval type="int" val="1" />
 					<sval type="string" val="** first check vs. Player with small risk to even try, but it tries every sector" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="242" />
+					<sval type="int" val="243" />
 					<sval type="int" val="1" />
 					<sval type="string" val="flat risk from permanent war 3% to only target dejure sectors 1% vs. every sector" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="248" />
+					<sval type="int" val="249" />
 					<sval type="int" val="1" />
 					<sval type="string" val="25% chance to fake a dejure status to enable standard sector as valid target" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="250" />
+					<sval type="int" val="251" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="250" />
+					<sval type="int" val="251" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="250" />
+					<sval type="int" val="251" />
 					<sval type="int" val="1" />
 					<sval type="string" val="War Motivation based risk, 0,25% per point above 100" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="256" />
+					<sval type="int" val="257" />
 					<sval type="int" val="1" />
 					<sval type="string" val="25% chance to fake a dejure status to enable standard sector as valid target" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="259" />
+					<sval type="int" val="260" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="260" />
+					<sval type="int" val="261" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="261" />
+					<sval type="int" val="262" />
 					<sval type="int" val="1" />
 					<sval type="string" val="**then vs. NPCs (each faction always tries against 1 completely random non-player sector. Fails very often when its not the required dejure or not claimable.)" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="265" />
+					<sval type="int" val="266" />
 					<sval type="int" val="1" />
 					<sval type="string" val="50% chance to fake a dejure status to enable any sector as valid target" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="269" />
+					<sval type="int" val="270" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="269" />
+					<sval type="int" val="270" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="269" />
+					<sval type="int" val="270" />
 					<sval type="int" val="1" />
 					<sval type="string" val="lastly apply pending Motivation reductions (to take effect at next cycle). All increases already got applied before this cycle with Mayhem.Diplomacy.Motivation" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="272" />
+					<sval type="int" val="273" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="272" />
-					<sval type="int" val="2" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="276" />
+					<sval type="int" val="273" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="277" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="278" />
 					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="277" />
-					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="278" />
@@ -8683,24 +8698,24 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="279" />
+					<sval type="int" val="280" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="280" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="292" />
+					<sval type="int" val="293" />
 					<sval type="int" val="1" />
 					<sval type="string" val="stops if it started an operation (found a player sector that has enough enemy BGs in range)" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="293" />
+					<sval type="int" val="294" />
 					<sval type="int" val="7" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="293" />
-					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="293" />
+					<sval type="int" val="294" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
@@ -8709,10 +8724,14 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="295" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="296" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="308" />
+					<sval type="int" val="309" />
 					<sval type="int" val="4" />
 				</sval>
 			</sval>
