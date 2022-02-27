@@ -298,7 +298,7 @@
 			<text>ms</text>
 		</line>
 		<line linenr="029" indent="&#160;&#160;">
-			<comment>* remove any wrong ships which can sometimes end up being a member</comment>
+			<comment>*when a squadron leader dies sometimes a follower ends up being a member, we remove them here</comment>
 		</line>
 		<line linenr="030" indent="&#160;&#160;">
 			<var>$index</var>
@@ -398,11 +398,124 @@
 		<line linenr="035" indent="&#160;">
 			<text>continue</text>
 		</line>
-		<line linenr="036" indent="&#160;">
+		<line linenr="036" indent="&#160;&#160;">
 			<text>end</text>
 		</line>
 		<line linenr="037" indent="&#160;&#160;" />
-		<line linenr="038" indent="&#160;">
+		<line linenr="038" indent="&#160;&#160;">
+			<text>if</text>
+			<text> </text>
+			<text>!</text>
+			<var>$rallyGate</var>
+			<text> </text>
+			<text>OR</text>
+			<text> </text>
+			<text>!</text>
+			<var>$rallyGate.sector</var>
+		</line>
+		<line linenr="039" indent="&#160;&#160;">
+			<comment>* members without rally gate to go to sometimes seem to happen if the fleet leader switching messes up. They would block the entire operation so we also remove them</comment>
+		</line>
+		<line linenr="040" indent="&#160;&#160;">
+			<var>$index</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>index</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<var>$member</var>
+			<text> </text>
+			<text>in</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$members</var>
+			<text> </text>
+			<text>offset</text>
+			<text>=</text>
+			<var>0</var>
+		</line>
+		<line linenr="041" indent="&#160;&#160;">
+			<text>remove</text>
+			<text> </text>
+			<text>element</text>
+			<text> </text>
+			<text>from</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$members</var>
+			<text> </text>
+			<text>at</text>
+			<text> </text>
+			<text>index</text>
+			<text> </text>
+			<var>$index</var>
+		</line>
+		<line linenr="042" indent="&#160;">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$Diplo.MultiInvasionMembers</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$race</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$members</var>
+		</line>
+		<line linenr="043" indent="&#160;">
+			<var>$member</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'rallyGate'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="044" indent="&#160;">
+			<var>$member</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<text>local</text>
+			<text> </text>
+			<text>variable</text>
+			<text>:</text>
+			<text> </text>
+			<text>name</text>
+			<text>=</text>
+			<text>'rallyGate.sector'</text>
+			<text> </text>
+			<text>value</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="045" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="046" indent="&#160;&#160;" />
+		<line linenr="047" indent="&#160;">
 			<var>$member.sector</var>
 			<text> </text>
 			<text>=</text>
@@ -414,7 +527,7 @@
 			<text> </text>
 			<text>sector</text>
 		</line>
-		<line linenr="039" indent="&#160;">
+		<line linenr="048" indent="&#160;">
 			<text>skip</text>
 			<text> </text>
 			<text>if</text>
@@ -425,12 +538,12 @@
 			<text> </text>
 			<var>$member.sector</var>
 		</line>
-		<line linenr="040" indent="&#160;&#160;">
+		<line linenr="049" indent="&#160;&#160;">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="041" indent="&#160;" interruptable="@">
+		<line linenr="050" indent="&#160;" interruptable="@">
 			<var>$distance</var>
 			<text> </text>
 			<text>=</text>
@@ -454,7 +567,7 @@
 			<text>=</text>
 			<var>$rallyGate</var>
 		</line>
-		<line linenr="042" indent="">
+		<line linenr="051" indent="">
 			<text>if</text>
 			<text> </text>
 			<var>$distance</var>
@@ -463,25 +576,25 @@
 			<text> </text>
 			<var>14000</var>
 		</line>
-		<line linenr="043" indent="">
+		<line linenr="052" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="044" indent="">
+		<line linenr="053" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="045" indent="">
+		<line linenr="054" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="046" indent="" />
-		<line linenr="047" indent="" />
-		<line linenr="048" indent="" />
-		<line linenr="049" indent="" />
-		<line linenr="050" indent="&#160;">
+		<line linenr="055" indent="" />
+		<line linenr="056" indent="" />
+		<line linenr="057" indent="" />
+		<line linenr="058" indent="" />
+		<line linenr="059" indent="&#160;">
 			<comment>* surprise claim player and switch to attack phase</comment>
 		</line>
-		<line linenr="051" indent="">
+		<line linenr="060" indent="">
 			<var>$sectorOwner</var>
 			<text> </text>
 			<text>=</text>
@@ -495,7 +608,7 @@
 			<text> </text>
 			<text>race</text>
 		</line>
-		<line linenr="052" indent="">
+		<line linenr="061" indent="">
 			<text>do</text>
 			<text> </text>
 			<text>if</text>
@@ -506,7 +619,7 @@
 			<text> </text>
 			<var>[Player]</var>
 		</line>
-		<line linenr="053" indent="" interruptable="@">
+		<line linenr="062" indent="" interruptable="@">
 			<text>=</text>
 			<text> </text>
 			<var>[NULL]</var>
@@ -528,7 +641,7 @@
 			<text>=</text>
 			<var>$race</var>
 		</line>
-		<line linenr="054" indent="">
+		<line linenr="063" indent="">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -545,9 +658,9 @@
 			<text> </text>
 			<var>$targetSector</var>
 		</line>
-		<line linenr="055" indent="" />
-		<line linenr="056" indent="" />
-		<line linenr="057" indent="">
+		<line linenr="064" indent="" />
+		<line linenr="065" indent="" />
+		<line linenr="066" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
@@ -580,7 +693,7 @@
 				<sval type="string" val="distance" />
 				<sval type="string" val="sectorOwner" />
 			</sval>
-			<sval type="array" size="38">
+			<sval type="array" size="44">
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
 					<sval type="int" val="5" />
@@ -669,7 +782,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610604279" />
+					<sval type="int" val="-1610602743" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="11" />
@@ -774,6 +887,71 @@
 					<sval type="int" val="112" />
 					<sval type="int" val="12" />
 				</sval>
+				<sval type="array" size="19">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604541" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="15" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="15" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="15" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="10" />
+					<sval type="int" val="65556" />
+					<sval type="int" val="-3" />
+				</sval>
+				<sval type="array" size="8">
+					<sval type="int" val="1083" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="5">
+					<sval type="int" val="136" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="9" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="string" val="rallyGate" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="155" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="string" val="rallyGate.sector" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="703" />
 					<sval type="int" val="131074" />
@@ -782,7 +960,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536863481" />
+					<sval type="int" val="-536861945" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="13" />
@@ -814,7 +992,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610604541" />
+					<sval type="int" val="-1610603005" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="16" />
@@ -844,7 +1022,7 @@
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610603512" />
+					<sval type="int" val="-1610601976" />
 					<sval type="int" val="3" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="17" />
@@ -890,7 +1068,7 @@
 					<sval type="string" val="" />
 				</sval>
 			</sval>
-			<sval type="array" size="21">
+			<sval type="array" size="24">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -928,7 +1106,7 @@
 				<sval type="array" size="3">
 					<sval type="int" val="20" />
 					<sval type="int" val="1" />
-					<sval type="string" val="remove any wrong ships which can sometimes end up being a member" />
+					<sval type="string" val="when a squadron leader dies sometimes a follower ends up being a member, we remove them here" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="26" />
@@ -942,41 +1120,54 @@
 					<sval type="int" val="26" />
 					<sval type="int" val="2" />
 				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="27" />
+					<sval type="int" val="1" />
+					<sval type="string" val="members without rally gate to go to sometimes seem to happen if the fleet leader switching messes up. They would block the entire operation so we also remove them" />
+				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="32" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="33" />
+					<sval type="int" val="32" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="38" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="33" />
+					<sval type="int" val="39" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="39" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="33" />
+					<sval type="int" val="39" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="33" />
+					<sval type="int" val="39" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="33" />
+					<sval type="int" val="39" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="33" />
+					<sval type="int" val="39" />
 					<sval type="int" val="1" />
 					<sval type="string" val="surprise claim player and switch to attack phase" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="37" />
+					<sval type="int" val="43" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="37" />
+					<sval type="int" val="43" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>
