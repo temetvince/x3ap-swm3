@@ -84,6 +84,10 @@
 			<text>+</text>
 			<text> </text>
 			<var>$ship2.size</var>
+			<text> </text>
+			<text>+</text>
+			<text> </text>
+			<var>150</var>
 		</line>
 		<line linenr="007" indent="" />
 		<line linenr="008" indent="">
@@ -161,20 +165,26 @@
 					<sval type="int" val="14" />
 					<sval type="int" val="-4" />
 				</sval>
-				<sval type="array" size="13">
+				<sval type="array" size="19">
 					<sval type="int" val="104" />
 					<sval type="int" val="4" />
-					<sval type="int" val="3" />
+					<sval type="int" val="5" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="3" />
 					<sval type="int" val="15" />
 					<sval type="int" val="11" />
-					<sval type="int" val="3" />
+					<sval type="int" val="4" />
+					<sval type="int" val="150" />
+					<sval type="int" val="15" />
+					<sval type="int" val="11" />
+					<sval type="int" val="5" />
 					<sval type="int" val="-1" />
 					<sval type="int" val="11" />
 					<sval type="int" val="-2" />
+					<sval type="int" val="11" />
+					<sval type="int" val="-4" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
