@@ -320,6 +320,18 @@
 <t id="10">[justify][author]\033YTutorial[/author]The %s is currently offering you to [yellow]make peace[/yellow] and end the war.\n\nAfter some time at war factions will offer peace to you. You can accept it in the ministry of war.\nTheir conditions are frequently updated and they tend to get better for you over time.\n\nAt first its likely that they want to get payed with resources to make up for their losses.\nThese reparations will get a lot cheaper if you simply wait for your enemy to become tired of the war. Eventually you will always get an offer for a white peace at no cost.\n\nYou get much better offers if your reputation is only slightly damaged or if they don't hold any war motivation against you.\n\n\nAccepting a peace will repair your entire bad reputation back to neutral. But their war motivation will NOT get reduced and can even start to grow passively again if it was %s or higher. But even at very high war motivation they will still always respect a fairly long period of truce period and don't declare another war right away.[/justify]</t>
 </page>
 	<page id="7325" title="Mayhem 1">
-		<t id='15'>You own this sector.\n\nIf you abandon it, all your stations will be destroyed.\nIf you give this sector to another race, all your stations will be transferred to this race and you will gain 1 \033MFavor point\033X.\nIn all cases, all your ships will get undocked and station credits will be wired into your main account. Giving sectors away also lowers war motivation for every faction, especially with the receiver of the sector, and even more if its his dejure sector.</t>
+		<t id="15">You own this sector.\n\nIf you abandon it, all your stations will be destroyed.\nIf you give this sector to another race, all your stations will be transferred to this race and you will gain 1 \033MFavor point\033X.\nIn all cases, all your ships will get undocked and station credits will be wired into your main account. Giving sectors away also lowers war motivation for every faction, especially with the receiver of the sector, and even more if its his dejure sector.</t>
+</page>
+	<page id="382008" title="Script Cmd Names" descr="">
+<t id="522">COMMAND_MAP_GALAXY</t>
+</page>
+	<page id="382010" title="Script Cmd Names" descr="">
+<t id="522">Map Galaxy</t>
+</page>
+	<page id="382011" title="Script Cmd Shorts" descr="">
+<t id="522">Map</t>
+</page>
+	<page id="382022" title="Script user help" descr="">
+<t id="522">Reveals the galaxy map. Cannot fully map sectors or place satellites \(use Explorer Workers for that\).\nThe pilot always needs to return back to friendly, civilized space to ask around for new directions. Uses Fly Safe and avoids hostile sectors.</t>
 </page>
 </language>
